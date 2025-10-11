@@ -18,18 +18,6 @@ function goToHome() {
 </script>
 
 <style scoped>
-.page-header {
-  width: 100%;
-  height: calc(1.55rem + 2px);
-  display: flex;
-  justify-content: space-between; /* Corrected */
-  align-items: center;
-  padding: 0 0.2rem;
-  border-bottom: 2px solid #000;
-  /* Removed gap from .page-header */
-  z-index: 100;
-}
-
 .logo {
   width: 1.62rem;
   height: 1rem;
@@ -41,26 +29,32 @@ function goToHome() {
 .nav {
   display: flex;
   gap: 0.2rem;
-  margin-left: 0.4rem; /* Corrected */
-  flex: 1; /* Added */
+  margin-left: 0.4rem;
+  flex: 1;
 }
 
 .nav-link {
   color: #111;
   text-decoration: none;
   font-size: 0.24rem;
-  border-right: 2px solid #111; /* Added */
-  padding-right: 0.2rem; /* Added */
-  line-height: 1; /* Added */
-  cursor: pointer; /* Added */
+  border-right: 2px solid #111;
+  padding-right: 0.2rem;
+  line-height: 1;
+  cursor: pointer;
 }
 
 .nav-link:last-child {
-  border-right: none; /* Added */
+  border-right: none;
 }
 
 .nav-link.router-link-active {
   font-weight: 700;
   color: #caa45f;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
 }
 </style>

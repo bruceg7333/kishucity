@@ -68,8 +68,6 @@ onUnmounted(() => {
     position: relative; /* Keep relative for children that might need absolute positioning relative to the page */
   }
 
-  /* Removed .page-header styles as they are now in AppHeader */
-
   .content-wrapper {
     display: flex;
     flex-direction: row;

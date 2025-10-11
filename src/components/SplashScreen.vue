@@ -83,6 +83,13 @@ onUnmounted(() => {
   user-select: none;
   opacity: 0;
 }
+
+@media (max-width: 768px) {
+  .logod img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
 .splash.entered .logod img {
   animation: fadeIn 0.8s ease both;
 }

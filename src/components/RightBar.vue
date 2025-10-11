@@ -6,7 +6,7 @@
     <div class="divider"></div>
     <slot name="extra"></slot>
     <div class="slogan">{{ slogan }}</div>
-    <button :class="['fab', { open: fabOpen }]" @click="$emit('fab-click')"></button>
+    <FabButton :open="fabOpen" @click="$emit('fab-click')" />
     <div class="langs">
       <template v-if="showLangOptions">
         <div class="lang" @click="setLang('ja')">
@@ -46,6 +46,7 @@
 
 <script setup>
 import { ref, watch } from 'vue';
+import FabButton from './FabButton.vue';
 
 const props = defineProps({
   slogan: { type: String, default: '开启您的未来之旅' },
@@ -110,34 +111,13 @@ watch(
   font-size: 0.28rem;
   letter-spacing: 0.06rem;
   margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
   font-weight: bold;
   user-select: none;
   font-family:
     "Gen-Jyuu-Gothic-P-Bold-2", "SourceHanSansCN-Regular", sans-serif;
 }
-.fab {
-  position: absolute;
-  right: 0;
-  left: 0;
-  bottom: 2rem;
-  width: 0.76rem;
-  height: 0.76rem;
-  border-radius: 50%;
-  border: none;
-  background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEwAAABLCAYAAADakmGTAAADO0lEQVR4nO2cv08UQRSAvzsQKayIIdGERAgxaiGNxMpODJqolbGRgmBLZeO/QENlQ+IfYGUCjUSs6IjQWGBCJBgaCZErjAU5zmDmfHPC3h3szt3sz/clr7ni9s23s3N7M2+mRDIMAneB28BN4BpwRT6/FMjoN7AP/AC+A1+BL8CafJ5LLgCTwBtgCzjuUmzJd07KNTLPOLAAVLooqV1U5FrjWZNWBp7JI+NbUrtYkxzKKfBxJo+BzQRFBWNTckod14GVFIkKxorkmDg9wGvgMMWybBxKrj1JSbsKrGZAVDBWJfdYuQfsZVCWjT1pQyy8AKoZlmWjKm3xymwORAVj1pewPMqy0XVp0zmWZWO6W7Lu52TMOi+q0taOGInpf2BaoiJtdqIPWC+QLBvr0vbIzBVQlo25qLLuALUCC6uJg1CYKZGNAsuysRF2emhGZTVi5jxZF4FdFdWIXXHSINjlXgJDEce7PDMkTlpi5om2tVc1xfbJObSTPexRJy9tOWZE3DQJa9v1lP9u7ELugCyUOr3hFoCqLDRXbA97orLOpE8cNR7Jh+nMM1XUHZUkfspjqbTHzGRc7gVueJT1B/goY0AcmEdnAuj1cK0BccWUx3eYxZhEnWTRY3umzJ0Y85i8qap5J4uocdDveTweM8JGPV7APCLPPX5/3IyaX8nhHDXIN8NlqfpTwjFYkl+wXFTvxcBRSUZ/XxzJa0UtpgaZMfmB7w7gc2pkyWfibVjy2SbtYRHRMSwaR+ZX8iBLGSfMQTnPmwM8sG+E7eSuWf7YMYPkN48XMIP++w7/S5ocn7bYUpMEdVdZmK1Y8Pz6E3q2oiSbozY93a2a1Mh3Mh/WI3Vb/V3My5VbOuManvqMa1m62qesZJ0gxtGxXQT5UEgF0ag70nXJcDStS5rnczntWSfIsjg6VSrwtmgWItDSjVbvtI621TtmDXE+RXc1LcyLm5ZoBeLpaKpADG62NCZ/2cILhVfA5/M0aBX1vwhdRY3W6Uer07foTpCI6F4jB3Q3mwO6X9IB3ZHrQOH3fKs0z7Isem6FA3oyigN69o4DerqTI3p+mCN6Qp0DegZiB+gpm47k5hxXPSk4CsBfmd8ZC+N6zTUAAAAASUVORK5CYII=) no-repeat center/contain;
-  cursor: pointer;
-  margin: 0 auto;
-  transition:
-    transform 0.35s ease,
-    background-image 0s linear 0.35s;
-}
-.fab.open {
-  transform: rotate(180deg);
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEwAAABLCAYAAADakmGTAAAD6UlEQVR4nO2czUtUURjGfyoZSCFEBkVSRCQuamOSBIGLQDcua2OBIrpRNy6kP8CN0LIWuWgZ6EqhhSC4cCdoUYipIIYEiaEghOikTNzhvXI93jtz59zPmTkPPJuZe9+PZ/Sec97z3lNFMrgBPAEeAc3AXeCmfH5FiegvsAv8Bn4CP4DvwKJ8Xpa4BHQC74ANIBsSN8Rmp/goebQCH4D9EEXy4r74ai010aqBF/IvE7VIXlyUGKpToEdedAGrCQqlclViSh0eAHMpEkrlnMSYOGqAN8BRisWyeSSx1iQl2i1goQSEUrkgsceKZ8BOCYplc0dyiAWvgEwJi2UzI7lEiuEyEErlcFSClaNYNkMXrbeMxbLZG5ZYz8vkmVWIGck1EO7FtA5MC/clZy3UAksVJJbNJcm9aIxXoFg2x4sV6zFwUsGCnYgGvmCVRJYrWCyby37LQ30BnFgl44/AegoSXpdYdgPY6Csk1mVgW9P4IXBH7NQBswmKNSsxIDEdatrZFk08MRggyDXFqDXSTCUg1pTLKLcWwN6gl1hWnWgzYLADLjYnYhRrwqXeNRDQ5qZXDa0rpKBHFLtVMU1RxsWXEyMh2XYtc8+EGPyYi/3RCMUadfE3FqL9GdX4NeA45CTeuwzL/cBpiD5OxaYT1eI7zFyORaMz9ET0y39yeQC/DGkxnxFbTtSKzyhy6XE6mozIicXPjiHeRkeAoT4r93YoNuvEV1R5TNqOrAflXoSOsrLxUK8k+BQ40LB1IPc6UR/DhsyePag0R+zI5legQUn0YZGbKTtyjxMNYjuOHCyteB2Ts6w0jzQqCd8HtnzcuyXXOtEYcnNLIVpa8TZGhxZ/AU1K4reBlTz3rMg1TjSJrThjt7RiOmanFv8ALYoA1z0aWBblOydaxEbccVta8S0Bx1l5eLcrQlwF5h3XzMtnTrRrDhZh0NIq19mXhPOsTA/UZUet/JLTLnO4roDTkaC0tEp8R+gf0K0IU+Oy4O2Wa5OM1dIq0QCcHMIbQymKMzWBWGxzkawtZTGmJpCS+QtLwzNM7aJJ9TPMjJL+mRslzTzMP3PzsLTM9BtKZaZv1pL+mVtLmmqFf+aqFeVQD/sSUw65epipuPrjnnMbz9T0C3PS6czsGhXmuV0jsy+Znxf2JTE733l5Yecb01uRl669FeXavdMf0KZn9w6mP8yVnv1hmA7ECyzYgYjpcT3Hgj2umC7qM/ruosb06RfXp2/DvAlSJMy7Rhowb7NpwLwvqQHzRq4GKv6dbyNaxGLZMOdWaMCcjKIBc/aOBszpTpow54dpwpxQpwFzBmIAmFM2NVE257iak4KLAfAfus4inR4ZgyYAAAAASUVORK5CYII=);
-  transition:
-    transform 0.35s ease,
-    background-image 0s;
-}
+
 .langs {
   position: absolute;
   right: 0;

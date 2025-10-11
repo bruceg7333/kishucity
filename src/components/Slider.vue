@@ -353,6 +353,12 @@ onUnmounted(() => {
   z-index: 13;
   pointer-events: none;
 }
+
+@media (max-width: 768px) {
+  .v-indicator {
+    right: 0.5rem;
+  }
+}
 .v-indicator span {
   width: 3px;
   height: 0.16rem;
