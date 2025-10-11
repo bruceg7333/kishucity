@@ -206,8 +206,8 @@ onUnmounted(() => {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
-  padding-top: 60px;
+  padding: .5rem;
+  padding-top: 0.5rem;
   gap: 0;
   width: 100%;
   box-sizing: border-box;
@@ -220,7 +220,7 @@ onUnmounted(() => {
   padding: 0;
   width: 100%;
   box-sizing: border-box;
-  margin-bottom: 40px;
+  margin-bottom: 0.5rem;
 }
 .cards {
   position: relative;
@@ -238,8 +238,6 @@ onUnmounted(() => {
 .cards .group {
   display: flex;
   gap: 0.35rem;
-  margin-left: 0.175rem;
-  margin-right: 0.175rem;
 }
 .oval {
   background: url(../../assets/bgs.654635ba.png) center/cover no-repeat;

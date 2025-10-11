@@ -7,6 +7,14 @@
         <br />
         <span>共享资产升值红利</span>
       </div>
+      COMING SOON
+    </div>
+    <div class="content"  v-if="false">
+      <div class="title">
+        <span>加入 KISHU CITY</span>
+        <br />
+        <span>共享资产升值红利</span>
+      </div>
       <div class="panel left">
         <div class="card line">
           <div class="tokenCol">
@@ -42,7 +50,7 @@
       </div>
       <button class="buy">立即购买</button>
     </div>
-    <div class="panel right">
+    <div class="panel right" v-if="false">
       <div class="circle">
         <div class="c c1"></div>
         <div class="c c2"></div>
@@ -131,6 +139,7 @@ onUnmounted(() => {
   font-size: 0.32rem;
   font-weight: bold;
   width: 100%;
+  margin-bottom: 2rem;
 }
 .content {
   position: absolute;
@@ -138,10 +147,12 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   gap: 0;
   padding: 0;
   top: 0;
   flex-wrap: wrap;
+  text-align: center;
 }
 .panel.left {
   width: 4.6rem;
