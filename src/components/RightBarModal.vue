@@ -90,7 +90,7 @@
           </div>
         </div>
       </div>
-      <footer>
+      <footer class="menu-footer">
         <div class="links">
           <a>使用条款</a>
           <a>隐私政策</a>
