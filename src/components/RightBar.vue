@@ -83,7 +83,7 @@ watch(
 
 <style scoped>
 .right-bar {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     width: 1.45rem;

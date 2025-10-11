@@ -22,12 +22,12 @@ function goToHome() {
   width: 100%;
   height: calc(1.55rem + 2px);
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between; /* Corrected */
   align-items: center;
-  padding: 0 1rem;
-  border-bottom: 2px solid #000; /* Assuming this border is common for all headers */
-  gap: 1rem;
-  z-index: 100; /* Ensure header is on top */
+  padding: 0 0.2rem;
+  border-bottom: 2px solid #000;
+  /* Removed gap from .page-header */
+  z-index: 100;
 }
 
 .logo {
@@ -40,19 +40,27 @@ function goToHome() {
 
 .nav {
   display: flex;
-  gap: 1rem; /* Adjust gap as needed */
-  margin-left: auto; /* Push nav to the right */
+  gap: 0.2rem;
+  margin-left: 0.4rem; /* Corrected */
+  flex: 1; /* Added */
 }
 
 .nav-link {
   color: #111;
   text-decoration: none;
   font-size: 0.24rem;
-  /* Add other styles for nav links */
+  border-right: 2px solid #111; /* Added */
+  padding-right: 0.2rem; /* Added */
+  line-height: 1; /* Added */
+  cursor: pointer; /* Added */
+}
+
+.nav-link:last-child {
+  border-right: none; /* Added */
 }
 
 .nav-link.router-link-active {
-  font-weight: bold;
-  color: #caa45f; /* Highlight active link */
+  font-weight: 700;
+  color: #caa45f;
 }
 </style>

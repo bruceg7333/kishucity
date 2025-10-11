@@ -73,7 +73,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-right: 2px solid #000; /* Added for visual separation */
 }
 
 .side-title {
