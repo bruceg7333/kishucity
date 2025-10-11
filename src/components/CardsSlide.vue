@@ -222,6 +222,15 @@ onUnmounted(() => {
   box-sizing: border-box;
   margin-bottom: 0.5rem;
 }
+@media (max-width: 768px) {
+  .content {
+    padding-top: 1.5rem;
+  }
+  .title {
+    margin-bottom: 1rem;
+  }
+}
+
 .cards {
   position: relative;
   width: 100%;

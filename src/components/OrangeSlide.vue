@@ -7,7 +7,7 @@
         <br />
         <span>共享资产升值红利</span>
       </div>
-      COMING SOON
+      ICO COMING SOON
     </div>
     <div class="content"  v-if="false">
       <div class="title">
