@@ -40,154 +40,154 @@ a();
 const X = {
   props: { slides: { type: Array, default: () => [] } },
   setup(e) {
-    const a = e,
-      b = [
+    const props = e,
+      defaultSlides = [
         new URL("./assets/banner1.080d5b46.png", window.location).href,
         new URL("./assets/banner2.95462274.png", window.location).href,
       ],
-      y = s(() => (a.slides && a.slides.length ? a.slides : b)),
-      k = s(() => (y.value.length < 2 ? 2 : y.value.length)),
-      h = l(0),
-      L = l(1),
-      C = l("up"),
-      E = l(0),
-      R = l(!1),
-      U = l(!1),
-      T = l(!1),
-      I = l(0),
-      O = l(null);
-    let X = !1,
-      Y = null;
-    const H = l(!0),
-      q = l(!1);
-    let B = null,
-      Q = null;
-    function S() {
-      Y && (clearTimeout(Y), (Y = null));
+      slides = s(() => (props.slides && props.slides.length ? props.slides : defaultSlides)),
+      slidesCount = s(() => (slides.value.length < 2 ? 2 : slides.value.length)),
+      currentIndex = l(0),
+      nextIndex = l(1),
+      scrollDirection = l("up"),
+      translateY = l(0),
+      isTransitionEnabled = l(!1),
+      isAnimating = l(!1),
+      isDragging = l(!1),
+      dragStartY = l(0),
+      viewportRef = l(null);
+    let isWheeling = !1,
+      transitionEndTimeout = null;
+    const isCurrentSlideActive = l(!0),
+      isWaitingForLeaveEnd = l(!1);
+    let leaveEndResolver = null,
+      leaveEndTimeout = null;
+    function clearTransitionEndTimeout() {
+      transitionEndTimeout && (clearTimeout(transitionEndTimeout), (transitionEndTimeout = null));
     }
-    function x() {
-      (Q && (clearTimeout(Q), (Q = null)), (B = null), (q.value = !1));
+    function clearLeaveEndTimeout() {
+      (leaveEndTimeout && (clearTimeout(leaveEndTimeout), (leaveEndTimeout = null)), (leaveEndResolver = null), (isWaitingForLeaveEnd.value = !1));
     }
-    function V() {
-      if (q.value && B) {
-        const e = B;
-        (x(), e());
+    function resolveLeaveEnd() {
+      if (isWaitingForLeaveEnd.value && leaveEndResolver) {
+        const resolver = leaveEndResolver;
+        (clearLeaveEndTimeout(), resolver());
       }
     }
-    async function K() {
-      ((h.value = L.value),
+    async function resetSlideState() {
+      ((currentIndex.value = nextIndex.value),
         await A(),
-        (R.value = !1),
-        (E.value = 0),
+        (isTransitionEnabled.value = !1),
+        (translateY.value = 0),
         await A(),
-        (U.value = !1),
-        (H.value = !0),
-        (L.value = (h.value + 1) % k.value),
-        (C.value = "up"),
-        (X = !1),
-        S());
+        (isAnimating.value = !1),
+        (isCurrentSlideActive.value = !0),
+        (nextIndex.value = (currentIndex.value + 1) % slidesCount.value),
+        (scrollDirection.value = "up"),
+        (isWheeling = !1),
+        clearTransitionEndTimeout());
     }
-    async function G() {
-      U.value && (await K());
+    async function handleTransitionEnd() {
+      isAnimating.value && (await resetSlideState());
     }
-    function z(e) {
-      U.value ||
-        q.value ||
-        ((T.value = !0),
-        (R.value = !1),
-        (I.value = "touches" in e ? e.touches[0].clientY : e.clientY),
-        (C.value = "up"),
-        (L.value = (h.value + 1) % k.value),
-        window.addEventListener("mousemove", Z),
-        window.addEventListener("mouseup", j),
-        window.addEventListener("touchmove", Z, { passive: !1 }),
-        window.addEventListener("touchend", j),
-        window.addEventListener("touchcancel", j));
+    function handleDragStart(event) {
+      isAnimating.value ||
+        isWaitingForLeaveEnd.value ||
+        ((isDragging.value = !0),
+        (isTransitionEnabled.value = !1),
+        (dragStartY.value = "touches" in event ? event.touches[0].clientY : event.clientY),
+        (scrollDirection.value = "up"),
+        (nextIndex.value = (currentIndex.value + 1) % slidesCount.value),
+        window.addEventListener("mousemove", handleDragMove),
+        window.addEventListener("mouseup", handleDragEnd),
+        window.addEventListener("touchmove", handleDragMove, { passive: !1 }),
+        window.addEventListener("touchend", handleDragEnd),
+        window.addEventListener("touchcancel", handleDragEnd));
     }
-    function Z(e) {
-      if (!T.value) return;
-      "preventDefault" in e && e.preventDefault();
-      const a = ("touches" in e ? e.touches[0].clientY : e.clientY) - I.value,
-        s = O.value;
-      let l = (a / (s ? s.clientHeight : window.innerHeight)) * 100;
-      (l < 0
-        ? ((C.value = "up"),
-          (L.value = (h.value + 1) % k.value),
-          l < -100 && (l = -100))
-        : l > 0 &&
-          ((C.value = "down"),
-          (L.value = (h.value - 1 + k.value) % k.value),
-          l > 100 && (l = 100)),
-        (E.value = l));
+    function handleDragMove(event) {
+      if (!isDragging.value) return;
+      "preventDefault" in event && event.preventDefault();
+      const dragDelta = ("touches" in event ? event.touches[0].clientY : event.clientY) - dragStartY.value,
+        viewport = viewportRef.value;
+      let dragPercentage = (dragDelta / (viewport ? viewport.clientHeight : window.innerHeight)) * 100;
+      (dragPercentage < 0
+        ? ((scrollDirection.value = "up"),
+          (nextIndex.value = (currentIndex.value + 1) % slidesCount.value),
+          dragPercentage < -100 && (dragPercentage = -100))
+        : dragPercentage > 0 &&
+          ((scrollDirection.value = "down"),
+          (nextIndex.value = (currentIndex.value - 1 + slidesCount.value) % slidesCount.value),
+          dragPercentage > 100 && (dragPercentage = 100)),
+        (translateY.value = dragPercentage));
     }
-    function P(e) {
+    function animateToNextSlide(direction) {
       return (
-        "up" === e
-          ? ((C.value = "up"), (L.value = (h.value + 1) % k.value))
-          : ((C.value = "down"), (L.value = (h.value - 1 + k.value) % k.value)),
-        (U.value = !0),
-        S(),
-        new Promise((e) => {
-          ((q.value = !0), (B = e), (H.value = !1));
-          const a = y.value[h.value];
-          Q = setTimeout(
+        "up" === direction
+          ? ((scrollDirection.value = "up"), (nextIndex.value = (currentIndex.value + 1) % slidesCount.value))
+          : ((scrollDirection.value = "down"), (nextIndex.value = (currentIndex.value - 1 + slidesCount.value) % slidesCount.value)),
+        (isAnimating.value = !0),
+        clearTransitionEndTimeout(),
+        new Promise((resolve) => {
+          ((isWaitingForLeaveEnd.value = !0), (leaveEndResolver = resolve), (isCurrentSlideActive.value = !1));
+          const currentSlide = slides.value[currentIndex.value];
+          leaveEndTimeout = setTimeout(
             () => {
-              if (B) {
-                const e = B;
-                (x(), e());
+              if (leaveEndResolver) {
+                const resolver = leaveEndResolver;
+                (clearLeaveEndTimeout(), resolver());
               }
             },
-            "string" == typeof a ? 10 : 2400,
+            "string" == typeof currentSlide ? 10 : 2400,
           );
         }).then(() => {
-          ((R.value = !0),
-            (E.value = "up" === e ? -100 : 100),
-            (Y = setTimeout(() => {
-              U.value && K();
+          ((isTransitionEnabled.value = !0),
+            (translateY.value = "up" === direction ? -100 : 100),
+            (transitionEndTimeout = setTimeout(() => {
+              isAnimating.value && resetSlideState();
             }, 1500)));
         })
       );
     }
-    function j() {
-      T.value &&
-        ((T.value = !1),
-        U.value ||
-          q.value ||
-          ("up" === C.value && E.value <= -20
-            ? P("up")
-            : "down" === C.value && E.value >= 20
-              ? P("down")
-              : ((R.value = !0),
-                (E.value = 0),
+    function handleDragEnd() {
+      isDragging.value &&
+        ((isDragging.value = !1),
+        isAnimating.value ||
+          isWaitingForLeaveEnd.value ||
+          ("up" === scrollDirection.value && translateY.value <= -20
+            ? animateToNextSlide("up")
+            : "down" === scrollDirection.value && translateY.value >= 20
+              ? animateToNextSlide("down")
+              : ((isTransitionEnabled.value = !0),
+                (translateY.value = 0),
                 setTimeout(() => {
-                  R.value = !1;
+                  isTransitionEnabled.value = !1;
                 }, 820)),
-          window.removeEventListener("mousemove", Z),
-          window.removeEventListener("mouseup", j),
-          window.removeEventListener("touchmove", Z),
-          window.removeEventListener("touchend", j),
-          window.removeEventListener("touchcancel", j)));
+          window.removeEventListener("mousemove", handleDragMove),
+          window.removeEventListener("mouseup", handleDragEnd),
+          window.removeEventListener("touchmove", handleDragMove),
+          window.removeEventListener("touchend", handleDragEnd),
+          window.removeEventListener("touchcancel", handleDragEnd)));
     }
-    function _(e) {
-      if (U.value || T.value || X || q.value) return;
-      e.preventDefault();
-      const a = e.deltaY;
-      Math.abs(a) < 10 || ((X = !0), P(a > 0 ? "up" : "down"));
+    function handleWheel(event) {
+      if (isAnimating.value || isDragging.value || isWheeling || isWaitingForLeaveEnd.value) return;
+      event.preventDefault();
+      const deltaY = event.deltaY;
+      Math.abs(deltaY) < 10 || ((isWheeling = !0), animateToNextSlide(deltaY > 0 ? "up" : "down"));
     }
     return (
       n(() => {
-        L.value = (h.value + 1) % k.value;
-        const e = O.value;
-        e && e.addEventListener("wheel", _, { passive: !1 });
+        nextIndex.value = (currentIndex.value + 1) % slidesCount.value;
+        const viewport = viewportRef.value;
+        viewport && viewport.addEventListener("wheel", handleWheel, { passive: !1 });
       }),
       t(() => {
-        (window.removeEventListener("mousemove", Z),
-          window.removeEventListener("mouseup", j),
-          window.removeEventListener("touchmove", Z),
-          window.removeEventListener("touchend", j),
-          window.removeEventListener("touchcancel", j));
-        const e = O.value;
-        (e && e.removeEventListener("wheel", _), S(), x());
+        (window.removeEventListener("mousemove", handleDragMove),
+          window.removeEventListener("mouseup", handleDragEnd),
+          window.removeEventListener("touchmove", handleDragMove),
+          window.removeEventListener("touchend", handleDragEnd),
+          window.removeEventListener("touchcancel", handleDragEnd));
+        const viewport = viewportRef.value;
+        (viewport && viewport.removeEventListener("wheel", handleWheel), clearTransitionEndTimeout(), clearLeaveEndTimeout());
       }),
       (e, a) => (
         i(),
@@ -197,10 +197,10 @@ const X = {
             {
               class: "viewport",
               ref: (e, a) => {
-                ((a.viewportRef = e), (O.value = e));
+                ((a.viewportRef = e), (viewportRef.value = e));
               },
-              onMousedown: z,
-              onTouchstart: z,
+              onMousedown: handleDragStart,
+              onTouchstart: handleDragStart,
               onDragstart: a[0] || (a[0] = r(() => {}, ["prevent"])),
             },
             [
@@ -208,15 +208,15 @@ const X = {
                 v(
                   e.$slots,
                   "item",
-                  { item: c(y)[L.value], index: L.value, active: !1 },
+                  { item: c(slides)[nextIndex.value], index: nextIndex.value, active: !1 },
                   () => [
-                    "string" == typeof c(y)[L.value]
+                    "string" == typeof c(slides)[nextIndex.value]
                       ? (i(),
                         u(
                           "img",
                           {
                             key: 0,
-                            src: c(y)[L.value],
+                            src: c(slides)[nextIndex.value],
                             alt: "slide",
                             draggable: "false",
                           },
@@ -224,7 +224,7 @@ const X = {
                           8,
                           N,
                         ))
-                      : (i(), p(f(c(y)[L.value]), { key: 1, active: !1 })),
+                      : (i(), p(f(c(slides)[nextIndex.value]), { key: 1, active: !1 })),
                   ],
                   !0,
                 ),
@@ -234,24 +234,24 @@ const X = {
                 {
                   class: "slide top",
                   style: d({
-                    transform: `translateY(${E.value}%)`,
-                    transition: R.value ? "" : "none",
+                    transform: `translateY(${translateY.value}%)`,
+                    transition: isTransitionEnabled.value ? "" : "none",
                   }),
-                  onTransitionend: G,
+                  onTransitionend: handleTransitionEnd,
                 },
                 [
                   v(
                     e.$slots,
                     "item",
-                    { item: c(y)[h.value], index: h.value, active: H.value },
+                    { item: c(slides)[currentIndex.value], index: currentIndex.value, active: isCurrentSlideActive.value },
                     () => [
-                      "string" == typeof c(y)[h.value]
+                      "string" == typeof c(slides)[currentIndex.value]
                         ? (i(),
                           u(
                             "img",
                             {
                               key: 0,
-                              src: c(y)[h.value],
+                              src: c(slides)[currentIndex.value],
                               alt: "slide",
                               draggable: "false",
                             },
@@ -261,8 +261,8 @@ const X = {
                           ))
                         : (i(),
                           p(
-                            f(c(y)[h.value]),
-                            { key: 1, active: H.value, onLeaveend: V },
+                            f(c(slides)[currentIndex.value]),
+                            { key: 1, active: isCurrentSlideActive.value, onLeaveend: resolveLeaveEnd },
                             null,
                             8,
                             ["active"],
@@ -282,12 +282,12 @@ const X = {
               m,
               null,
               w(
-                c(k),
+                c(slidesCount),
                 (e) => (
                   i(),
                   u(
                     "span",
-                    { key: e, class: g({ on: e - 1 === h.value }) },
+                    { key: e, class: g({ on: e - 1 === currentIndex.value }) },
                     null,
                     2,
                   )
@@ -302,12 +302,12 @@ const X = {
               m,
               null,
               w(
-                c(k),
+                c(slidesCount),
                 (e) => (
                   i(),
                   u(
                     "span",
-                    { key: "v" + e, class: g({ on: e - 1 === h.value }) },
+                    { key: "v" + e, class: g({ on: e - 1 === currentIndex.value }) },
                     null,
                     2,
                   )
@@ -329,9 +329,8 @@ a();
 const q = {
   props: { active: { type: Boolean, default: !1 } },
   emits: ["leaveend"],
-  setup(e, { emit: a }) {
-    const s = e,
-      t = [
+  setup(props, { emit }) {
+    const imageUrls = [
         new URL("./assets/i1.77b7a461.png", window.location).href,
         new URL("./assets/i2.3fa22f26.png", window.location).href,
         new URL("./assets/i3.f239815b.png", window.location).href,
@@ -339,51 +338,51 @@ const q = {
         new URL("./assets/i5.9eace426.png", window.location).href,
         new URL("./assets/i6.321fd21a.png", window.location).href,
       ],
-      v = l(!1),
-      c = l(!1);
-    let d = null;
-    function r() {
+      isEntered = l(!1),
+      isLeaving = l(!1);
+    let leaveTimeout = null;
+    function enterAnimation() {
       requestAnimationFrame(() => {
-        v.value = !0;
+        isEntered.value = !0;
       });
     }
     return (
       b(
-        () => s.active,
-        (e) => {
-          e
-            ? (d && clearTimeout(d), (c.value = !1), (v.value = !1), r())
-            : ((c.value = !0),
-              d && clearTimeout(d),
-              (d = setTimeout(() => {
-                ((c.value = !1), (v.value = !1), a("leaveend"));
+        () => props.active,
+        (isActive) => {
+          isActive
+            ? (leaveTimeout && clearTimeout(leaveTimeout), (isLeaving.value = !1), (isEntered.value = !1), enterAnimation())
+            : ((isLeaving.value = !0),
+              leaveTimeout && clearTimeout(leaveTimeout),
+              (leaveTimeout = setTimeout(() => {
+                ((isLeaving.value = !1), (isEntered.value = !1), emit("leaveend"));
               }, 1e3)));
         },
       ),
       n(() => {
-        s.active && r();
+        props.active && enterAnimation();
       }),
       y(() => {
-        d && clearTimeout(d);
+        leaveTimeout && clearTimeout(leaveTimeout);
       }),
       (e, a) => (
         i(),
         u(
           "div",
-          { class: g(["orange", { entered: v.value, leaving: c.value }]) },
+          { class: g(["orange", { entered: isEntered.value, leaving: isLeaving.value }]) },
           [
             o("div", Y, [
               (i(),
               u(
                 m,
                 null,
-                w(t, (e, a) =>
+                w(imageUrls, (imageUrl, index) =>
                   o(
                     "img",
                     {
-                      key: a,
-                      src: e,
-                      class: g("c" + (a + 1)),
+                      key: index,
+                      src: imageUrl,
+                      class: g("c" + (index + 1)),
                       draggable: "false",
                     },
                     null,
@@ -472,40 +471,39 @@ a();
 const Q = {
   props: { active: { type: Boolean, default: !1 } },
   emits: ["leaveend"],
-  setup(e, { emit: a }) {
-    const s = e,
-      t = l(!1),
-      o = l(!1);
-    let v = null;
-    function c() {
+  setup(props, { emit }) {
+    const isEntered = l(!1),
+      isLeaving = l(!1);
+    let leaveTimeout = null;
+    function enterAnimation() {
       requestAnimationFrame(() => {
-        t.value = !0;
+        isEntered.value = !0;
       });
     }
     return (
       b(
-        () => s.active,
-        (e) => {
-          e
-            ? (v && clearTimeout(v), (o.value = !1), (t.value = !1), c())
-            : ((o.value = !0),
-              v && clearTimeout(v),
-              (v = setTimeout(() => {
-                ((o.value = !1), (t.value = !1), a("leaveend"));
+        () => props.active,
+        (isActive) => {
+          isActive
+            ? (leaveTimeout && clearTimeout(leaveTimeout), (isLeaving.value = !1), (isEntered.value = !1), enterAnimation())
+            : ((isLeaving.value = !0),
+              leaveTimeout && clearTimeout(leaveTimeout),
+              (leaveTimeout = setTimeout(() => {
+                ((isLeaving.value = !1), (isEntered.value = !1), emit("leaveend"));
               }, 500)));
         },
       ),
       n(() => {
-        s.active && c();
+        props.active && enterAnimation();
       }),
       y(() => {
-        v && clearTimeout(v);
+        leaveTimeout && clearTimeout(leaveTimeout);
       }),
       (e, a) => (
         i(),
         u(
           "div",
-          { class: g(["slide2", { entered: t.value, leaving: o.value }]) },
+          { class: g(["slide2", { entered: isEntered.value, leaving: isLeaving.value }]) },
           B,
           2,
         )
