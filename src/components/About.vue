@@ -10,34 +10,15 @@
         <img :src="a12Image" alt="draw" draggable="false" />
       </section>
     </main>
-    <RightBar :fab-open="isFabOpen" @fab-click="toggleFab" />
-    <Modal name="mm">
-      <template #default>
-        <RightBarModal v-if="isFabOpen" @close="closeFab" />
-      </template>
-    </Modal>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
 import { useRouter } from 'vue-router'; // Assuming vue-router is used
-import RightBar from './RightBar.vue';
-import RightBarModal from './RightBarModal.vue';
-import Modal from './Modal.vue';
 
-const isFabOpen = ref(false);
 const router = useRouter();
 
 const a12Image = new URL('../../assets/a12.1423f002.png', import.meta.url).href;
-
-function toggleFab() {
-  isFabOpen.value = !isFabOpen.value;
-}
-
-function closeFab() {
-  isFabOpen.value = false;
-}
 
 // goToHome function is no longer needed here as it's in AppHeader
 </script>

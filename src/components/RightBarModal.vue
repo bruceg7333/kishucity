@@ -140,7 +140,7 @@ function closeModal() {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  z-index: 11;
+  z-index: 113;
 }
 .menu-panel {
   width: calc(100% - 1.45rem);

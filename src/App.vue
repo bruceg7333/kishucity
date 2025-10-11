@@ -7,16 +7,19 @@
       <a href="#" @click.prevent="copyAddress" class="nav-link">复制地址</a>
       <a href="#" @click.prevent="disconnectWallet" class="nav-link">断开链接</a>
     </AppHeader>
-    <router-view v-slot="{ Component }">
-      <transition name="route-fade" mode="out-in">
-        <component :is="Component" />
-      </transition>
-    </router-view>
+    <AppLayout>
+      <router-view v-slot="{ Component }">
+        <transition name="route-fade" mode="out-in">
+          <component :is="Component" />
+        </transition>
+      </router-view>
+    </AppLayout>
   </div>
 </template>
 
 <script setup>
 import AppHeader from './components/AppHeader.vue';
+import AppLayout from './components/AppLayout.vue';
 import { useRouter } from 'vue-router';
 
 const router = useRouter();
