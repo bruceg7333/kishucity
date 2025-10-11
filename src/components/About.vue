@@ -1,9 +1,5 @@
 <template>
   <div class="page about">
-    <header class="page-header">
-      <div class="logo" @click="goToHome"></div>
-      <div class="title2">公司介绍</div>
-    </header>
     <main class="content">
       <section class="text-col">
         <p>KISHU CITY（$KSC）是一个以现实资产与区块链融合为基础的链上文化共创项目。项目以真实不动产作为底层支撑，结合 Web3 技术构建了一个既去掉线下实体入驻，又实现线上协同治理的开放社区。通过引入人工智能、数字身份与去中心化自治（DAO）机制，KISHU CITY 致力于打造一个可持续进化、具有文化生命力的超级 IP 生态系统，让每一位参与者不仅能够以提案、投票等方式直接参与空间规划，内容创作与社区规则的制定，还能通过发行 IP、创建衍生品牌和文化内容来实现个人与群体的价值创新。</p>
@@ -43,9 +39,7 @@ function closeFab() {
   isFabOpen.value = false;
 }
 
-function goToHome() {
-  router.push('/');
-}
+// goToHome function is no longer needed here as it's in AppHeader
 </script>
 
 <style scoped>
@@ -61,25 +55,14 @@ body,
   background: #fff;
   overflow: hidden;
 }
-.page-header {
-  height: calc(1.55rem + 2px);
-  display: flex;
-  align-items: center;
-  border-bottom: 2px solid #000;
-}
-.logo {
-  width: 1.62rem;
-  height: 1rem;
-  background: url(../../assets/logo.d7845fb0.png) no-repeat center/contain;
-  border-right: 1px solid #3e3a3a;
-  cursor: pointer;
-}
+/* Removed .page-header and .logo styles as they are now in AppHeader */
 .title2 {
   font-size: 0.28rem;
-  padding-left: 0.3rem;
+  /* Removed padding-left as header padding handles spacing */
 }
+
 .content {
-  height: calc(100% - 1.55rem - 2px);
+  height: calc(100% - 1.55rem - 2px); /* Adjust height to account for new header */
   margin-right: calc(1.45rem + 2px);
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;

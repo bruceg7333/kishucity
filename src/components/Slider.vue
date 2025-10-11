@@ -211,16 +211,14 @@ function animateToNextSlide(direction) {
     isCurrentSlideActive.value = false;
 
     const currentSlide = internalSlides.value[currentIndex.value];
-    leaveEndTimeout = setTimeout(
-      () => {
-        if (leaveEndResolver) {
-          const resolver = leaveEndResolver;
-          clearLeaveEndTimeout();
-          resolver();
-        }
-      },
-      typeof currentSlide === 'string' ? 10 : 2400 // Adjust timing based on slide type
-    );
+        // Set a fallback timeout, but primarily rely on the component's leaveend event
+        leaveEndTimeout = setTimeout(() => {
+          if (leaveEndResolver) {
+            const resolver = leaveEndResolver;
+            clearLeaveEndTimeout();
+            resolver();
+          }
+        }, 3000); // Max fallback timeout of 3 seconds
   }).then(() => {
     isTransitionEnabled.value = true;
     translateY.value = direction === 'up' ? -100 : 100;

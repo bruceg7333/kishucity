@@ -1,5 +1,12 @@
 <template>
   <div id="app">
+    <AppHeader>
+      <router-link to="/" class="nav-link">Home</router-link>
+      <router-link to="/assets" class="nav-link">我的资产</router-link>
+      <router-link to="/invite-rank" class="nav-link">邀请排行</router-link>
+      <a href="#" @click.prevent="copyAddress" class="nav-link">复制地址</a>
+      <a href="#" @click.prevent="disconnectWallet" class="nav-link">断开链接</a>
+    </AppHeader>
     <router-view v-slot="{ Component }">
       <transition name="route-fade" mode="out-in">
         <component :is="Component" />
@@ -9,7 +16,20 @@
 </template>
 
 <script setup>
-// No direct import of Home here, as it's handled by router-view
+import AppHeader from './components/AppHeader.vue';
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+
+function copyAddress() {
+  alert('Address copied!');
+  // In a real application, you would copy the address to the clipboard
+}
+
+function disconnectWallet() {
+  alert('Wallet disconnected!');
+  // In a real application, you would disconnect the user's wallet
+}
 </script>
 
 <style>

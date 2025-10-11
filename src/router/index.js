@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from '../components/Home.vue';
 import About from '../components/About.vue';
-// import Assets from '../components/Assets.vue'; // Will be created later
+import Assets from '../components/Assets.vue';
+import InviteRank from '../components/InviteRank.vue';
 
 const routes = [
   {
@@ -17,8 +18,12 @@ const routes = [
   {
     path: '/assets',
     name: 'assets',
-    // component: Assets, // Will be uncommented once Assets.vue is created
-    component: () => import('../components/Assets.vue'), // Dynamic import for code splitting
+    component: Assets,
+  },
+  {
+    path: '/invite-rank',
+    name: 'invite-rank',
+    component: InviteRank,
   },
 ];
 
