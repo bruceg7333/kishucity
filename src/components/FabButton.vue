@@ -4,7 +4,7 @@
   </button>
 </template>
 
-<style scoped>
+<style>
 .fab {
   position: relative;
   width: 0.76rem;

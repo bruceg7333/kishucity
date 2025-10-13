@@ -4,11 +4,13 @@
     <nav class="nav">
       <slot></slot> <!-- Slot for dynamic content -->
     </nav>
+    <FabButton class="mobile" />
   </header>
 </template>
 
 <script setup>
 import { useRouter } from 'vue-router';
+import FabButton from './FabButton.vue';
 
 const router = useRouter();
 
@@ -18,6 +20,19 @@ function goToHome() {
 </script>
 
 <style scoped>
+
+.mobile {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.25rem;
+}
+
+@media (min-width: 769px) {
+  .mobile {
+    display: none;
+  }
+}
+
 .logo {
   width: 1.62rem;
   height: 1rem;

@@ -8,7 +8,6 @@
         </div>
       </template>
     </RightBar>
-    <FabButton v-if="isMobile" @click="toggleFab" />
     <FabButton v-if="!isMobile" :class="{ open: isFabOpen }" class="fab-desktop" @click="toggleFab" />
     <Transition name="mm">
       <RightBarModal v-if="isFabOpen" @close="closeFab" />
