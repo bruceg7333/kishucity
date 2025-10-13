@@ -22,10 +22,10 @@
         </div>
         <div class="divider">
           <div class="dot">
-            <img 
+            <!-- <img 
               src="../../base64_images/base64_image_1.txt"
               alt=""
-            />
+            /> -->
           </div>
         </div>
         <div class="rate">1USDC=10KSC</div>
