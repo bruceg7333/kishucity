@@ -6,7 +6,6 @@
     <div class="divider"></div>
     <slot name="extra"></slot>
     <div class="slogan">{{ slogan }}</div>
-    <FabButton :open="fabOpen" @click="$emit('fab-click')" />
     <div class="langs">
       <template v-if="showLangOptions">
         <div class="lang" @click="setLang('ja')">
@@ -46,16 +45,12 @@
 
 <script setup>
 import { ref, watch } from 'vue';
-import FabButton from './FabButton.vue';
 import { jaFlag,enFlag,zhFlag,noticeImage } from '../assets/base64_images';
 
 const props = defineProps({
   slogan: { type: String, default: '开启您的未来之旅' },
-  fabOpen: { type: Boolean, default: false },
   showLangs: { type: Boolean, default: false },
 });
-
-const emit = defineEmits(['fab-click']);
 
 const showLangOptions = ref(false);
 const currentLang = ref('zh');
