@@ -2,8 +2,8 @@
   <div class="page">
     <div class="content-wrapper">
       <main class="page-main">
-      <Slider :slides="slides" />
-    </main>
+        <Slider :slides="slides" />
+      </main>
     </div>
   </div>
 </template>

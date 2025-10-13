@@ -9,10 +9,12 @@
         draggable="false"
       />
     </div>
+    <SlideMask title="Cloud Slide" subtitle="A visual experience" maskOpacity="0.7"></SlideMask>
   </div>
 </template>
 
 <script setup>
+import SlideMask from './SlideMask.vue';
 import { ref, watch, onMounted, onUnmounted } from 'vue';
 
 const props = defineProps({

@@ -1,14 +1,14 @@
 <template>
   <div :class="['splash', { entered: isEntered, leaving: isLeaving }]">
-    <div class="mask"></div>
     <div class="logod logo">
-      
     </div>
+    <SlideMask title="Page 1" subtitle="Page 1 Slogan" maskOpacity="0.7"></SlideMask>
   </div>
 </template>
 
 <script setup>
 import { ref, watch, onMounted, onUnmounted } from 'vue';
+import SlideMask from './SlideMask.vue';
 
 const props = defineProps({
   active: { type: Boolean, default: false },
@@ -63,11 +63,7 @@ onUnmounted(() => {
   width: 100%;
   height: 100%;
   overflow: hidden;
-}
-.mask {
-  position: absolute;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.85);
+  background-color: #d88159;
 }
 .logod {
   position: absolute;

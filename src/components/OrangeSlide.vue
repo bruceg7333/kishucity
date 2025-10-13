@@ -1,14 +1,7 @@
 <template>
   <div :class="['slide2', { entered: isEntered, leaving: isLeaving }]">
     <div class="bg"></div>
-    <div class="content">
-      <div class="title">
-        <span>加入 KISHU CITY</span>
-        <br />
-        <span>共享资产升值红利</span>
-      </div>
-      ICO COMING SOON
-    </div>
+    <slide-mask title="加入 KISHU CITY 共享资产升值红利" subtitle="ICO COMING SOON" maskOpacity="0.7"></slide-mask>
     <div class="content"  v-if="false">
       <div class="title">
         <span>加入 KISHU CITY</span>
@@ -71,6 +64,7 @@
 
 <script setup>
 import { ref, watch, onMounted, onUnmounted } from 'vue';
+import SlideMask from './SlideMask.vue';
 
 const props = defineProps({
   active: { type: Boolean, default: false },
@@ -131,28 +125,6 @@ onUnmounted(() => {
   inset: 0;
   background: url(../../assets/banner2.95462274.png) center/cover no-repeat;
   filter: brightness(0.88);
-}
-.title {
-  position: relative;
-  z-index: 11;
-  text-align: center;
-  font-size: 0.32rem;
-  font-weight: bold;
-  width: 100%;
-  margin-bottom: 2rem;
-}
-.content {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 0;
-  padding: 0;
-  top: 0;
-  flex-wrap: wrap;
-  text-align: center;
 }
 .panel.left {
   width: 4.6rem;

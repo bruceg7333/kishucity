@@ -1,12 +1,7 @@
 <template>
   <div :class="['slide3', { entered: isEntered, leaving: isLeaving }]">
     <div class="bg"></div>
-    <div class="content">
-      <div class="title">
-        <span>每一个加入纪州的人，都是叙事者、治理者、创造者。</span>
-        <br />
-        <span>选择你的归属藩......</span>
-      </div>
+    <slide-mask title="每一个加入纪州的人，都是叙事者、治理者、创造者。选择你的归属藩......" maskOpacity="0.7">
       <div class="cards">
         <div
           class="track"
@@ -48,11 +43,12 @@
           </div>
         </div>
       </div>
-    </div>
+    </slide-mask>
   </div>
 </template>
 
 <script setup>
+import SlideMask from './SlideMask.vue';
 import { ref, watch, onMounted, onUnmounted, nextTick } from 'vue';
 
 const props = defineProps({
@@ -200,36 +196,7 @@ onUnmounted(() => {
   background: url(../../assets/banner3.32d11929.png) center/cover no-repeat;
   filter: brightness(0.9);
 }
-.content {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: .5rem;
-  padding-top: 0.5rem;
-  gap: 0;
-  width: 100%;
-  box-sizing: border-box;
-}
-.title {
-  color: #fff;
-  font-weight: 700;
-  font-size: 0.32rem;
-  text-align: left;
-  padding: 0;
-  width: 100%;
-  box-sizing: border-box;
-  margin-bottom: 0.5rem;
-}
-@media (max-width: 768px) {
-  .content {
-    padding-top: 1.5rem;
-  }
-  .title {
-    margin-bottom: 1rem;
-  }
-}
+
 
 .cards {
   position: relative;

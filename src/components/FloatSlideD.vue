@@ -10,10 +10,12 @@
         draggable="false"
       />
     </div>
+    <SlideMask title="Float Slide D" subtitle="Dynamic elements" maskOpacity="0.7"></SlideMask>
   </div>
 </template>
 
 <script setup>
+import SlideMask from './SlideMask.vue';
 import { ref, watch, onMounted, onUnmounted } from 'vue';
 
 const props = defineProps({
