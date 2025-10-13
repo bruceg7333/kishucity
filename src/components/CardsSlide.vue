@@ -48,7 +48,7 @@
 </template>
 
 <script setup>
-import SlideMask from './SlideMask.vue';
+import SlideMask from './SlideMaskAlways.vue';
 import { ref, watch, onMounted, onUnmounted, nextTick } from 'vue';
 
 const props = defineProps({
@@ -109,56 +109,56 @@ const cardsData = [
     name: 'SONIK CLAN',
     sub: '音 藩',
     tags: '音乐制作 / DJ / 声音艺术',
-    img: new URL('../../assets/a17.bf29b7f8.png', import.meta.url).href,
+    img: '/assets/a17.bf29b7f8.png',
   },
   {
     num: '02',
     name: 'KAGE CLAN',
     sub: '影 藩',
     tags: '影视 / 剧场 / 表演 / 角色叙事',
-    img: new URL('../../assets/a18.d4524d08.png', import.meta.url).href,
+    img: '/assets/a18.d4524d08.png',
   },
   {
     num: '03',
     name: 'MONO CLAN',
     sub: '造 藩',
     tags: '建筑 / 手工艺 / 空间美学',
-    img: new URL('../../assets/a19.adbcfe31.png', import.meta.url).href,
+    img: '/assets/a19.adbcfe31.png',
   },
   {
     num: '04',
     name: 'MONO CLAN',
     sub: '文 藩',
     tags: '写作 / 策展 / 编辑出版',
-    img: new URL('../../assets/a20.69f5db4a.png', import.meta.url).href,
+    img: '/assets/a20.69f5db4a.png',
   },
   {
     num: '05',
     name: 'SAGE CLAN',
     sub: '機 藩',
     tags: 'AI艺术 / 算法美学 / 技术创作',
-    img: new URL('../../assets/a21.bac865f5.png', import.meta.url).href,
+    img: '/assets/a21.bac865f5.png',
   },
   {
     num: '06',
     name: 'NEON CLAN',
     sub: '霓 藩',
     tags: '虚拟角色 / ACGN / 插画 / Vtuber文化',
-    img: new URL('../../assets/a22.34fbe812.png', import.meta.url).href,
+    img: '/assets/a22.34fbe812.png',
   },
   {
     num: '07',
     name: 'YORU CLAN',
     sub: '夜 藩',
     tags: '派对文化 / 品牌运营 / 社交实验',
-    img: new URL('../../assets/a23.6f6cb13b.png', import.meta.url).href,
+    img: '/assets/a23.6f6cb13b.png',
   },
   {
     num: '08',
     name: 'GENKA CLAN',
     sub: '幻 藩',
     tags: '沉浸式Play空间 / Metaverse入口站',
-    img: new URL('../../assets/a24.13103615.png', import.meta.url).href,
+    img: '/assets/a24.13103615.png',
   },
 ];
 
@@ -193,7 +193,7 @@ onUnmounted(() => {
 .bg {
   position: absolute;
   inset: 0;
-  background: url(../../assets/banner3.32d11929.png) center/cover no-repeat;
+  background: url(/assets/banner3.32d11929.png) center/cover no-repeat;
   filter: brightness(0.9);
 }
 
@@ -216,7 +216,7 @@ onUnmounted(() => {
   gap: 0.35rem;
 }
 .oval {
-  background: url(../../assets/bgs.654635ba.png) center/cover no-repeat;
+  background: url(/assets/bgs.654635ba.png) center/cover no-repeat;
   border-radius: 0.5rem;
   padding: 0;
   display: flex;

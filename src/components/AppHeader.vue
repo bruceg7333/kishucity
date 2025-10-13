@@ -36,7 +36,7 @@ function goToHome() {
 .logo {
   width: 1.62rem;
   height: 1rem;
-  background: url(../../assets/logo.d7845fb0.png) no-repeat center/contain;
+  background: url(/assets/logo.d7845fb0.png) no-repeat center/contain;
   border-right: 1px solid #3e3a3a;
   cursor: pointer;
 }

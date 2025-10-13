@@ -42,11 +42,6 @@ const maskBackground = computed(() => `rgba(0, 0, 0, ${props.maskOpacity})`);
   color: #fff;
   pointer-events: none; /* Allow clicks to pass through the mask */
 }
-@media (min-width: 769px) { /* Hide on larger screens */
-  .mask-content {
-    display: none;
-  }
-}
 .title {
   font-size: 0.32rem;
   font-weight: bold;

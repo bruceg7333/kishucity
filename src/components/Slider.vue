@@ -84,8 +84,8 @@ const props = defineProps({
 });
 
 const defaultSlides = [
-  new URL('../../assets/banner1.080d5b46.png', import.meta.url).href,
-  new URL('../../assets/banner2.95462274.png', import.meta.url).href,
+  '/assets/banner1.080d5b46.png',
+'/assets/banner2.95462274.png',
 ];
 
 const internalSlides = computed(() =>

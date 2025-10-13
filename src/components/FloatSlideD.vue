@@ -25,10 +25,10 @@ const props = defineProps({
 const emit = defineEmits(['leaveend']);
 
 const imageUrls = [
-  new URL('../../assets/d1.ac8ec8e3.png', import.meta.url).href,
-  new URL('../../assets/d2.39f80b01.png', import.meta.url).href,
-  new URL('../../assets/d3.ba1efc3d.png', import.meta.url).href,
-  new URL('../../assets/d4.57f8ee73.png', import.meta.url).href,
+  '/assets/d1.ac8ec8e3.png',
+'/assets/d2.39f80b01.png',
+'/assets/d3.ba1efc3d.png',
+'/assets/d4.57f8ee73.png',
 ];
 
 const isEntered = ref(false);

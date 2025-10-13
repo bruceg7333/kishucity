@@ -109,13 +109,13 @@ const emit = defineEmits(['close']);
 const router = useRouter();
 
 // Image paths
-const logoImage = new URL('../../assets/logo.d7845fb0.png', import.meta.url).href;
-const a6Image = new URL('../../assets/a6.097be1d1.png', import.meta.url).href;
-const a7Image = new URL('../../assets/a7.55faabb4.png', import.meta.url).href;
-const a8Image = new URL('../../assets/a8.1d9f5f76.png', import.meta.url).href;
-const a9Image = new URL('../../assets/a9.a071301b.png', import.meta.url).href;
-const a10Image = new URL('../../assets/a10.a9ec1a1f.png', import.meta.url).href;
-const a11Image = new URL('../../assets/a11.37aed859.png', import.meta.url).href;
+const logoImage = '/assets/logo.d7845fb0.png';
+const a6Image = '/assets/a6.097be1d1.png';
+const a7Image = '/assets/a7.55faabb4.png';
+const a8Image = '/assets/a8.1d9f5f76.png';
+const a9Image = '/assets/a9.a071301b.png';
+const a10Image = '/assets/a10.a9ec1a1f.png';
+const a11Image = '/assets/a11.37aed859.png';
 
 function handleMaskClick(event) {
   if (event.target === event.currentTarget) {

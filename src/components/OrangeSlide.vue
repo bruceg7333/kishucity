@@ -64,7 +64,7 @@
 
 <script setup>
 import { ref, watch, onMounted, onUnmounted } from 'vue';
-import SlideMask from './SlideMask.vue';
+import SlideMask from './SlideMaskAlways.vue';
 
 const props = defineProps({
   active: { type: Boolean, default: false },
@@ -123,7 +123,7 @@ onUnmounted(() => {
 .bg {
   position: absolute;
   inset: 0;
-  background: url(../../assets/banner2.95462274.png) center/cover no-repeat;
+  background: url(/assets/banner2.95462274.png) center/cover no-repeat;
   filter: brightness(0.88);
 }
 .panel.left {
@@ -166,10 +166,10 @@ onUnmounted(() => {
   background: #fff;
 }
 .icon.usdc {
-  background: url(../../assets/a13.05e53c72.png) center/cover no-repeat;
+  background: url(/assets/a13.05e53c72.png) center/cover no-repeat;
 }
 .icon.ksc {
-  background: url(../../assets/c11.0ddec226.png) center/cover no-repeat;
+  background: url(/assets/c11.0ddec226.png) center/cover no-repeat;
 }
 .name {
   font-weight: 600;

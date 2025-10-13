@@ -51,9 +51,9 @@
                 <div>成功</div>
               </div>
               <div class="pager">
-                <img src="./assets/prev.png" alt="" class="prev" />
+                <!-- <img src="./assets/prev.png" alt="" class="prev" />
                 <span class="num">1</span>
-                <img src="./assets/next.png" alt="" class="next" />
+                <img src="./assets/next.png" alt="" class="next" /> -->
               </div>
             </div>
           </div>
@@ -71,9 +71,9 @@
                 <div><button>提取</button></div>
               </div>
               <div class="pager">
-                <img src="./assets/prev.png" alt="" class="prev" />
+                <!-- <img src="./assets/prev.png" alt="" class="prev" />
                 <span class="num">1</span>
-                <img src="./assets/next.png" alt="" class="next" />
+                <img src="./assets/next.png" alt="" class="next" /> -->
               </div>
             </div>
           </div>
@@ -119,10 +119,10 @@ const nftFilter = ref('all');
 
 const gImage = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAkCAYAAABrLwHZAAAAyklEQVRIia3UOw7CMBBF0QvZRiqnYBspYNcuWAYNXXYBBUKypcjyZz52a+nI45m3lxACzrMCEfheJ0BP4AYsHixDG/AGHlashHbgsGBV6H+hxZqQFutCGmwISTERJMHE0AhTQT1MDbUwE1TDzFCJuaAz5oYyNgXKWJwBYQj6ELunV22p3NWDHak8N5jLnAKe/8wNlg1wgbVumsHWaJjA3pypwdHQqkBJAsSgNE4iUJPNIagNehe0bI0maF1BVdCzz0owepdjBl/A5we6lWSAphwUuAAAAABJRU5ErkJggg==";
 const rImage = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAkCAYAAABrLwHZAAAAxElEQVRIia3POw7CMBBF0YsFu0iVNCyDIqwaCvZARUGXbSAhJFuKjD/z8Wtmpjmad5jn+QkcgSuw4UgATsAZeACTF1uBN7B4wRCrXUaAIc4hYNjtbjBktwvMMRdYwsxgDTOBLUwN9jAVKMHEoBQTgRqsC2qxJmjBqqAVK4F3D/YXDzbFekv8brViOfSru3mwIoShZhXSYk1Ig3UhKSaCJJgY6mEqqIWpoRpmgkqYGcoxF7TH3FDChkAJu42AEvYBXl4I4AsOgWSwqc6zvQAAAABJRU5ErkJggg==";
-const kscIcon = new URL('../../assets/c11.0ddec226.png', import.meta.url).href;
-const nftIcon = new URL('../../assets/c1.68c418a7.png', import.meta.url).href;
-const a12Image = new URL('../../assets/a12.1423f002.png', import.meta.url).href;
-const a13Image = new URL('../../assets/a13.05e53c72.png', import.meta.url).href;
+const kscIcon = '/assets/c11.0ddec226.png';
+const nftIcon = '/assets/c1.68c418a7.png';
+const a12Image = '/assets/a12.1423f002.png';
+const a13Image = '/assets/a13.05e53c72.png';
 
 function selectTab(tab) {
   currentTab.value = tab;

@@ -25,11 +25,11 @@ const props = defineProps({
 const emit = defineEmits(['leaveend']);
 
 const imageUrls = [
-  new URL('../../assets/e1.3b42a54f.png', import.meta.url).href,
-  new URL('../../assets/e2.ad8de915.png', import.meta.url).href,
-  new URL('../../assets/e3.7506ff3b.png', import.meta.url).href,
-  new URL('../../assets/e4.5ad9c094.png', import.meta.url).href,
-  new URL('../../assets/e5.57e1fcb0.png', import.meta.url).href,
+  '/assets/e1.3b42a54f.png',
+'/assets/e2.ad8de915.png',
+'/assets/e3.7506ff3b.png',
+'/assets/e4.5ad9c094.png',
+'/assets/e5.57e1fcb0.png',
 ];
 
 const isEntered = ref(false);
@@ -84,7 +84,7 @@ onUnmounted(() => {
 .bg {
   position: absolute;
   inset: 0;
-  background: url(../../assets/banner5.f4c6c54b.png) center/cover no-repeat;
+  background: url(/assets/banner5.f4c6c54b.png) center/cover no-repeat;
   opacity: 0.95;
 }
 .floats {

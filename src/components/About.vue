@@ -18,7 +18,7 @@ import { useRouter } from 'vue-router'; // Assuming vue-router is used
 
 const router = useRouter();
 
-const a12Image = new URL('../../assets/a12.1423f002.png', import.meta.url).href;
+const a12Image = '/assets/a12.1423f002.png';
 
 // goToHome function is no longer needed here as it's in AppHeader
 </script>
