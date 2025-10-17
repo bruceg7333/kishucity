@@ -17,12 +17,24 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
+import { useRouter } from 'vue-router';
 import RightBar from './RightBar.vue';
 import RightBarModal from './RightBarModal.vue';
 import FabButton from './FabButton.vue';
+import AppHeader from './AppHeader.vue';
+
+const router = useRouter();
 
 const isFabOpen = ref(false);
 const isMobile = ref(false);
+
+function goToHome() {
+  router.push('/');
+}
+
+function goToAbout() {
+  router.push('/about');
+}
 
 function toggleFab() {
   isFabOpen.value = !isFabOpen.value;

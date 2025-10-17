@@ -5,12 +5,14 @@
       <slot></slot> <!-- Slot for dynamic content -->
     </nav>
     <FabButton class="mobile" />
+    <LanguageSwitcher />
   </header>
 </template>
 
 <script setup>
 import { useRouter } from 'vue-router';
 import FabButton from './FabButton.vue';
+import LanguageSwitcher from './LanguageSwitcher.vue';
 
 const router = useRouter();
 

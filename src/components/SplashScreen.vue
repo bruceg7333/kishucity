@@ -2,7 +2,7 @@
   <div :class="['splash', { entered: isEntered, leaving: isLeaving }]">
     <div class="logod logo">
     </div>
-    <SlideMask title="Page 1" subtitle="Page 1 Slogan" maskOpacity="0.7"></SlideMask>
+    <SlideMask :title="$i18n.t('slides.splash.title')" :subtitle="$i18n.t('slides.splash.subtitle')" maskOpacity="0.7"></SlideMask>
   </div>
 </template>
 
