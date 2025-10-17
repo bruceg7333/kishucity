@@ -2,6 +2,7 @@
   <div :class="['slide3', { entered: isEntered, leaving: isLeaving }]">
     <div class="bg"></div>
     <slide-mask title="每一个加入纪州的人，都是叙事者、治理者、创造者。选择你的归属藩......" maskOpacity="0.7">
+      <a class="btn-join">加入部藩</a>
       <div class="cards">
         <div
           class="track"
@@ -18,13 +19,13 @@
               <div class="img">
                 <img :src="card.img" alt="" />
               </div>
-              <div class="ft">
+              <!-- <div class="ft">
                 <div class="tags">{{ card.tags }}</div>
                 <button class="btn">加入部藩</button>
-              </div>
+              </div> -->
             </div>
           </div>
-          <div class="group clone">
+          <div class="group clone" style="margin-left: 20px;">
             <div class="oval" v-for="(card, index) in cardsData" :key="'g2-' + index">
               <div class="hd">
                 <div class="num">{{ card.num }}</div>
@@ -35,10 +36,10 @@
               <div class="img">
                 <img :src="card.img" alt="" />
               </div>
-              <div class="ft">
+              <!-- <div class="ft">
                 <div class="tags">{{ card.tags }}</div>
                 <button class="btn">加入部藩</button>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -197,6 +198,15 @@ onUnmounted(() => {
   filter: brightness(0.9);
 }
 
+.btn-join {
+  font-size: .45rem;
+  line-height: 1;
+  font-weight: bold;
+  color: #fff;
+  background: #000; 
+  border-radius: 0.24rem; 
+  text-decoration: underline;
+}
 
 .cards {
   position: relative;

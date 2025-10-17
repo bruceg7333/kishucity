@@ -34,7 +34,7 @@ const maskBackground = computed(() => `rgba(0, 0, 0, ${props.maskOpacity})`);
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.5rem;
   padding: 0.5rem;
   box-sizing: border-box;
   text-align: center;
