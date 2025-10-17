@@ -35,23 +35,23 @@ export default {
       property: {
         title: '箱根强罗别墅',
         summary: 'Perched atop Rusutsu Resort, this exclusive villa offers nothing but endless powder-white slopes and crisp mountain air. From your doorstep, carve fresh tracks down pristine runs, with majestic Mt. Yotei as your backdrop—a true ski-out experience like no other.',
-        coverImage: '/public/properties/hotel1/cover.png',
+        coverImage: '/properties/hotel1/cover.png',
         details: {
           designedBy: {
             text: 'Snøhetta is a transdisciplinary practice including architecture, landscape architecture, interior architecture, art, product design, graphic and digital design, often integrating a combination of disciplines across its projects. From the beginning in Norway in 1989, Snøhetta\'s approach has been framed by environmental and cultural sensitivity, inspired by the Brundtland Commission\'s UN report on sustainability, released in 1987. Snøhetta\'s first significant commission was in 1989 for Bibliotheca Alexandrina, reviving the ancient library in Alexandria, Egypt. This was followed by commissions for the Norwegian National Opera and Ballet in Oslo and the National September 11 Memorial Museum Pavilion in New York, followed by many projects on all scales around the globe. Today, Snøhetta has more than 320 employees from 40 nations across eight regional studios spanning from Oslo to New York, Innsbruck, Paris, Adelaide, Melbourne, Hong Kong, and Shenzhen.',
-            image: '/public/properties/hotel1/image1.jpg',
+            image: '/properties/hotel1/image1.jpg',
           },
           concept: {
             text: 'Spaces are gently zoned to bring harmony to mind, body, and spirit—shared areas that inspire the senses through connection with nature and people, wellness spaces that care for the body, and private areas that invite introspection. These distinct functions flow seamlessly into one another, enriching every aspect of your stay.',
-            image: '/public/properties/hotel1/image2.png',
+            image: '/properties/hotel1/image2.png',
           },
           mind: {
             text: 'Embraced by Mt. Yotei—Sharing Time, Nurturing Sensibility. In a setting unlike the everyday, a shared meal and quiet conversation gently bring hearts closer together. Above the dining room awaits a secluded seat, offering a panoramic embrace of untouched nature. With a book or a glass of wine in hand, immerse yourself in quiet contemplation and solitude. A year-round natural hot spring infinity bath, seamlessly connected to panoramic views. Uninterrupted skies stretch infinitely, filling the space with an extraordinary sense of openness.',
-            image: '/public/properties/hotel1/image3.jpg',
+            image: '/properties/hotel1/image3.jpg',
           },
           body: {
             text: 'Beneath the surface, a quiet journey to reconnect with your inner power. A fully equipped gym featuring Technogym® machines. An invigorating bath zone complete with sauna, cold plunge, and open-air relaxation space. Volcanic stone lines the walls and floors, enveloping you in the primal energy of the earth. Step into a sanctuary where light recedes and the senses awaken—this meditation bath offers a cave-like retreat for stillness and reflection. Flow between exertion and repose, from energizing gym sessions to the quiet comfort of warm waters.',
-            image: '/public/properties/hotel1/image4.png',
+            image: '/properties/hotel1/image4.png',
           },
         },
         images: [], // No longer needed as images are part of details
