@@ -89,7 +89,6 @@ body {
   display: flex;
   flex: 1;
   height: calc(100% - 1.45rem - 2px);
-  margin-right: calc(1.45rem + 2px);
 }
 
 @media (max-width: 768px) {
