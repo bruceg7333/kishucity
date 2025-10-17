@@ -1,8 +1,8 @@
 <template>
   <div :class="['splash', { entered: isEntered, leaving: isLeaving }]">
-    <SlideMask :title="$i18n.t('设置展示页面')"  maskOpacity="0.7"></SlideMask>
-    <div class="title">{{ $i18n.t('设置展示页面') }}</div>
-  </div>
+    <SlideMask :title="$i18n.t('Device SHow')"  maskOpacity="0.7"></SlideMask>
+    <div class="title">{{ $i18n.t('Devices Show') }}</div>
+  </div>  
 </template>
 
 <script setup>
