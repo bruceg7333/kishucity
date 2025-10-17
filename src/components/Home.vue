@@ -19,6 +19,7 @@ import FloatSlideD from './FloatSlideD.vue';
 import OrangeSlide from './OrangeSlide.vue';
 import FloatSlideE from './FloatSlideE.vue';
 import CardsSlide from './CardsSlide.vue';
+import DevicesShow from './DevicesShow.vue';
 
 // Data and state from the original home.js
 const showLoginOptions = ref(false);
@@ -42,6 +43,7 @@ const goToAssets = () => {
 const slides = [
   SplashScreen,
   CloudSlide,
+  DevicesShow,
   FloatSlideD,
   OrangeSlide,
   FloatSlideE,
