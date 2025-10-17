@@ -31,10 +31,9 @@ export default {
 }
 
 .property-card {
-  border: 1px solid #e0e0e0;
+  /* border: 1px solid #e0e0e0; */
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-  background-color: #fff;
+  /* background-color: #fff; */
   transition: transform 0.2s ease-in-out;
 }
 
@@ -51,7 +50,9 @@ export default {
 }
 
 .property-info {
-  padding: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+
 }
 .property-card h3 {
   margin-top: 0;

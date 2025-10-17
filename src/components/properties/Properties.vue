@@ -1,16 +1,18 @@
 <template>
   <div class="properties-page">
-    <h2>Properties</h2>
-    <div class="card-list">
-      <PropertyCard
-        v-for="property in properties"
-        :key="property.id"
-        :id="property.id"
-        :title="property.title"
-        :subtitle="property.subtitle"
-        :summary="property.summary"
-        :cover="property.cover"
-      />
+    <div class="container">
+      <h2>Properties</h2>
+      <div class="card-list">
+        <PropertyCard
+          v-for="property in properties"
+          :key="property.id"
+          :id="property.id"
+          :title="property.title"
+          :subtitle="property.subtitle"
+          :summary="property.summary"
+          :cover="property.cover"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -41,9 +43,9 @@ export default {
 <style scoped>
 h2 {
   font-size: 0.5em; /* Reduced from 0.3em */
-  margin-bottom: 20px;
+  margin-bottom: 1.2em;
 }
-.properties-page {
+.container  {
   padding: 20px;
 }
 
