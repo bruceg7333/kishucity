@@ -16,7 +16,7 @@
             <div class="texts">
               <div class="title">生态</div>
               <div class="subs">
-                <a>创作者生态</a>
+                <a href="/properties">创作者生态</a>
                 <i class="sep"></i>
                 <a>物件生态</a>
                 <i class="sep"></i>

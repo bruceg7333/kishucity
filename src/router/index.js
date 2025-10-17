@@ -3,6 +3,8 @@ import Home from '../components/Home.vue';
 import About from '../components/About.vue';
 import Assets from '../components/Assets.vue';
 import InviteRank from '../components/InviteRank.vue';
+import Properties from '../components/properties/Properties.vue';
+import PropertyDetail from '../components/properties/PropertyDetail.vue';
 
 const routes = [
   {
@@ -25,6 +27,16 @@ const routes = [
     name: 'invite-rank',
     component: InviteRank,
   },
+  {
+    path: '/properties',
+    name: 'properties',
+    component: Properties,
+  },
+  {
+    path: '/properties/:id',
+    name: 'property-detail',
+    component: PropertyDetail,
+  }
 ];
 
 const router = createRouter({
