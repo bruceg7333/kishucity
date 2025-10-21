@@ -41,6 +41,7 @@ function handleFabClick() {
   padding: 0 0.2rem;
   border-bottom: 2px solid #000;
   z-index: 100;
+  box-sizing: border-box;
 }
 
 .mobile {

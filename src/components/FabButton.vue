@@ -1,6 +1,6 @@
 <template>
   <button class="fab" @click="handleClick">
-    <slot>+</slot>
+    <slot></slot>
   </button>
 </template>
 
@@ -25,7 +25,7 @@ function handleClick() {
   transition:
     transform 0.35s ease,
     background-image 0s linear 0.35s;
-  z-index: 500;
+  /* z-index: 500; */
 }
 
 .fab.open {

@@ -2,10 +2,11 @@
   <div class="menu-mask" @click="handleMaskClick">
     <div class="menu-panel">
       <header class="menu-header">
-        <div class="logoh" @click.stop="closeModal">
+        <div class="logoh">
           <img :src="logoImage" alt="" draggable="false" />
         </div>
         <span>目 录</span>
+        <button class="close-button" @click="closeModal">X</button>
       </header>
       <div class="grid">
         <div class="cell">
@@ -141,16 +142,30 @@ function closeModal() {
   justify-content: center;
   align-items: flex-start;
   z-index: 113;
+  /* background: rgba(0, 0, 0, 0.5); */
 }
+
+  @media (max-width: 768px) {
+    .menu-mask {
+      display: flex; /* Show on mobile */
+    }
+  }
+
 .menu-panel {
   width: calc(100% - 1.45rem);
   height: 100vh;
   background: #fff;
   margin-right: 1.45rem;
   border-right: 2px solid #000;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
+
 .menu-header {
   height: 1.55rem;
+  min-height: 1.55rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -158,7 +173,9 @@ function closeModal() {
   letter-spacing: 0.06rem;
   border-bottom: 2px solid #000;
   position: relative;
+  background: #fff;
 }
+
 .logoh {
   position: absolute;
   left: 0;
@@ -170,7 +187,13 @@ function closeModal() {
   align-items: center;
   border-right: 2px solid #000;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
+
+.logoh:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
 .logoh img {
   width: 1rem;
   height: 1rem;
@@ -178,37 +201,54 @@ function closeModal() {
   -webkit-user-drag: none;
   user-select: none;
 }
+
 .grid {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   grid-auto-rows: auto;
   margin-left: 1.62rem;
-  height: calc(100% - 1.55rem - 1.2rem);
+  flex: 1;
   border-left: 2px solid #000;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
+
 .cell {
   border-bottom: 2px solid #000;
+  background: #fff;
+  transition: background-color 0.3s ease;
 }
+
+.cell:hover {
+  background: rgba(0, 0, 0, 0.02);
+}
+
 .cell:last-child,
 .cell:nth-child(5) {
   border-bottom: none;
 }
+
 .cell:nth-child(odd) {
   border-right: 2px solid #000;
 }
+
 .cell-inner {
   height: 100%;
+  min-height: 2rem;
   display: flex;
   align-items: center;
-  padding: 0 0.5rem;
+  padding: 0.4rem 0.8rem;
   box-sizing: border-box;
-  gap: 0.3rem;
+  gap: 0.5rem;
 }
+
 .icon {
   width: 1.2rem;
+  min-width: 1.2rem;
   display: flex;
   justify-content: center;
 }
+
 .icon img {
   width: 1rem;
   height: 1rem;
@@ -216,15 +256,19 @@ function closeModal() {
   -webkit-user-drag: none;
   user-select: none;
 }
+
 .texts {
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
+
 .title {
   font-size: 0.35rem;
   font-weight: 700;
   margin-bottom: 0.12rem;
 }
+
 .subs {
   display: flex;
   flex-wrap: wrap;
@@ -235,24 +279,29 @@ function closeModal() {
   cursor: pointer;
   position: relative;
 }
+
 .subs a {
   position: relative;
   text-decoration: none;
   color: inherit;
+  padding: 0.1rem 0;
 }
+
 .subs a:after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -0.02rem;
-  height: 2px;
+  bottom: 0;
+  height: 1px;
   background: #000;
   width: 0;
   transition: width 0.3s ease;
 }
+
 .subs a:hover:after {
   width: 100%;
 }
+
 .subs .sep {
   display: inline-block;
   width: 1px;
@@ -260,30 +309,227 @@ function closeModal() {
   background: #000;
   transform: translateY(1px);
 }
+
 .menu-footer {
-  margin-top: auto;
-  height: 1.2rem;
+  min-height: 1.2rem;
   background: #0b0b0b;
   display: flex;
   align-items: center;
   padding-left: 1.62rem;
+  border-top: 1px solid #000;
 }
+
 .links {
   display: flex;
   gap: 1rem;
   margin-left: 1rem;
+  flex-wrap: wrap;
+  padding: 0.2rem 0;
 }
+
 .links a {
   color: #9fa0a0;
   font-size: 0.19rem;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease;
+  padding: 0.1rem 0;
 }
+
 .links a:hover {
   color: #fff;
-  transition: all 0.3s ease;
 }
+.close-button {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu-mask {
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  .menu-panel {
+    width: 100%;
+    margin: 0;
+    border-right: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    height: 100vh;
+  }
+
+  .close-button {
+    display: block; /* Hidden by default */
+    position: absolute;
+    right: 0.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 0.4rem;
+    cursor: pointer;
+    color: #333;
+    padding: 0.2rem;
+    z-index: 10;
+  }
+
+  .menu-header {
+    height: 1.2rem;
+    min-height: 1.2rem;
+    font-size: 0.4rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .logoh {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .logoh img {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+
+  .grid {
+    margin-left: 0;
+    grid-template-columns: 1fr;
+    border-left: none;
+    padding: 0.2rem;
+    gap: 0.2rem;
+  }
+
+  .cell {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.2rem;
+  }
+
+  .cell:last-child,
+  .cell:nth-child(5) {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .cell:nth-child(odd) {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .cell-inner {
+    padding: 0.3rem 0.5rem;
+    min-height: 1.6rem;
+  }
+
+  .icon {
+    width: 1rem;
+    min-width: 1rem;
+  }
+
+  .icon img {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+
+  .title {
+    font-size: 0.32rem;
+    margin-bottom: 0.08rem;
+  }
+
+  .subs {
+    font-size: 0.24rem;
+    gap: 0.16rem;
+  }
+
+  .subs .sep {
+    height: 0.16rem;
+  }
+
+  .menu-footer {
+    min-height: 1rem;
+    padding: 0.2rem;
+    justify-content: center;
+  }
+
+  .links {
+    margin: 0;
+    justify-content: center;
+    gap: 0.8rem;
+  }
+
+  .links a {
+    font-size: 0.18rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .menu-header {
+    height: 1rem;
+    min-height: 1rem;
+    font-size: 0.35rem;
+  }
+
+  .logoh {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .logoh img {
+    width: 0.7rem;
+    height: 0.7rem;
+  }
+
+  .cell-inner {
+    padding: 0.25rem 0.4rem;
+    min-height: 1.4rem;
+    gap: 0.4rem;
+  }
+
+  .icon {
+    width: 0.8rem;
+    min-width: 0.8rem;
+  }
+
+  .icon img {
+    width: 0.6rem;
+    height: 0.6rem;
+  }
+
+  .title {
+    font-size: 0.28rem;
+  }
+
+  .subs {
+    font-size: 0.22rem;
+    gap: 0.12rem;
+  }
+
+  .links {
+    gap: 0.6rem;
+  }
+
+  .links a {
+    font-size: 0.16rem;
+  }
+}
+
+/* Transitions */
+.mm-enter-active,
+.mm-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.mm-enter-from,
+.mm-leave-to {
+  opacity: 0;
+}
+
+.mm-enter-active .menu-panel,
+.mm-leave-active .menu-panel {
+  transition: transform 0.3s ease;
+}
+
+.mm-enter-from .menu-panel,
+.mm-leave-to .menu-panel {
+  transform: translateX(100%);
+}
+
 @font-face {
   font-family: "Gen-Jyuu-Gothic-P-Bold-2";
   src: url(../../assets/Gen-Jyuu-Gothic-P-Bold-2.9c3d5b1f.woff) format("woff");
