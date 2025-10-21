@@ -6,7 +6,7 @@
           <img :src="logoImage" alt="" draggable="false" />
         </div>
         <span>{{ t('menu.catalog') }}</span>
-        <button class="close-button" @click="closeModal">{{ t('menu.close') }}</button>
+        <button class="close-button" @click="closeModal">x</button>
       </header>
       <div class="grid">
         <div class="cell">
