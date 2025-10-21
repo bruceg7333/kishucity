@@ -2,11 +2,10 @@
   <header class="page-header">
     <div class="logo" @click="goToHome"></div>
     <nav class="nav">
-      <router-link to="/" class="nav-link">Home</router-link>
-      <router-link to="/assets" class="nav-link">我的资产</router-link>
-      <router-link to="/invite-rank" class="nav-link">邀请排行</router-link>
-      <a href="#" @click.prevent="copyAddress" class="nav-link">复制地址</a>
-      <a href="#" @click.prevent="disconnectWallet" class="nav-link">断开链接</a>
+      <router-link to="/properties" class="nav-link">properties</router-link>
+      <router-link to="/about" class="nav-link">about us</router-link>
+      <router-link to="/how-it-works" class="nav-link">how it works</router-link>
+      <router-link to="/white-papers" class="nav-link">white papers</router-link>
     </nav>
     <FabButton class="mobile" @click="handleFabClick" />
     <LanguageSwitcher class="mobile-lang-wrapper" />
