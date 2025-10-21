@@ -7,7 +7,8 @@
       <router-link to="/how-it-works" class="nav-link">{{ $t('header.how_it_works') }}</router-link>
       <router-link to="/white-papers" class="nav-link">{{ $t('header.white_papers') }}</router-link>
     </nav>
-    <FabButton class="mobile" @click="handleFabClick" />
+    <!-- <FabButton class="mobile" @click="handleFabClick" /> -->
+    <BurgerButton class="mobile" @click="handleFabClick" lineColor="#fcc89e" />
     <LanguageSwitcher class="mobile-lang-wrapper" />
   </header>
 </template>
@@ -17,6 +18,7 @@ import { useRouter } from 'vue-router';
 import FabButton from './FabButton.vue';
 import LanguageSwitcher from './LanguageSwitcher.vue';
 import { useI18n } from 'vue-i18n';
+import BurgerButton from './BurgerButton.vue';
 
 const { t } = useI18n();
 
