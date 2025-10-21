@@ -4,7 +4,7 @@
       <aside class="sidebar">
         <div class="side-title">
           <img :src="gImage" alt="" />
-          我的资产
+          {{ $t('assets.my_assets') }}
           <img :src="rImage" alt="" />
         </div>
         <ul>
@@ -23,32 +23,32 @@
         <div v-if="currentTab === 'ksc'" class="ksc-grid">
           <div class="col-left">
             <div class="ksc-head">
-              <div class="title">KSC 余额</div>
+              <div class="title">{{ $t('assets.ksc_balance') }}</div>
               <div class="value">1000.00</div>
               <div class="actions">
-                <button>提取</button>
-                <button>质押</button>
+                <button>{{ $t('assets.withdraw') }}</button>
+                <button>{{ $t('assets.stake') }}</button>
               </div>
             </div>
             <div class="box">
-              <div class="box-title">KSC 交易记录</div>
+              <div class="box-title">{{ $t('assets.ksc_transaction_history') }}</div>
               <div class="thead">
-                <div>时间</div>
-                <div>类型</div>
-                <div>数量</div>
-                <div>状态</div>
+                <div>{{ $t('assets.time') }}</div>
+                <div>{{ $t('assets.type') }}</div>
+                <div>{{ $t('assets.amount') }}</div>
+                <div>{{ $t('assets.status') }}</div>
               </div>
               <div class="row">
                 <div>2023-10-26</div>
-                <div>购买</div>
+                <div>{{ $t('assets.buy') }}</div>
                 <div>+100</div>
-                <div>成功</div>
+                <div>{{ $t('assets.success') }}</div>
               </div>
               <div class="row">
                 <div>2023-10-25</div>
-                <div>质押</div>
+                <div>{{ $t('assets.stake') }}</div>
                 <div>-50</div>
-                <div>成功</div>
+                <div>{{ $t('assets.success') }}</div>
               </div>
               <div class="pager">
                 <!-- <img src="./assets/prev.png" alt="" class="prev" />
@@ -59,16 +59,16 @@
           </div>
           <div class="col-right">
             <div class="box">
-              <div class="box-title center">KSC 质押</div>
+              <div class="box-title center">{{ $t('assets.ksc_staking') }}</div>
               <div class="thead">
-                <div>质押数量</div>
-                <div>收益</div>
-                <div>操作</div>
+                <div>{{ $t('assets.stake_amount') }}</div>
+                <div>{{ $t('assets.earnings') }}</div>
+                <div>{{ $t('assets.action') }}</div>
               </div>
               <div class="row">
                 <div>100</div>
                 <div>10</div>
-                <div><button>提取</button></div>
+                <div><button>{{ $t('assets.withdraw') }}</button></div>
               </div>
               <div class="pager">
                 <!-- <img src="./assets/prev.png" alt="" class="prev" />
@@ -81,28 +81,28 @@
 
         <div v-else-if="currentTab === 'nft'" class="nft-wrap">
           <div class="nft-filter">
-            <span :class="{ on: nftFilter === 'all' }" @click="selectNftFilter('all')"><i></i>全部</span>
-            <span :class="{ on: nftFilter === 'staked' }" @click="selectNftFilter('staked')"><i></i>已质押</span>
-            <span :class="{ on: nftFilter === 'unstaked' }" @click="selectNftFilter('unstaked')"><i></i>未质押</span>
+            <span :class="{ on: nftFilter === 'all' }" @click="selectNftFilter('all')"><i></i>{{ $t('assets.all') }}</span>
+            <span :class="{ on: nftFilter === 'staked' }" @click="selectNftFilter('staked')"><i></i>{{ $t('assets.staked') }}</span>
+            <span :class="{ on: nftFilter === 'unstaked' }" @click="selectNftFilter('unstaked')"><i></i>{{ $t('assets.unstaked') }}</span>
           </div>
           <div class="nft-box">
             <div class="thead">
-              <div>名称</div>
+              <div>{{ $t('assets.name') }}</div>
               <div>ID</div>
-              <div>状态</div>
-              <div>操作</div>
+              <div>{{ $t('assets.status') }}</div>
+              <div>{{ $t('assets.action') }}</div>
             </div>
             <div class="row">
               <div class="thumb"><img :src="a12Image" alt="" /></div>
               <div>#123</div>
-              <div>已质押</div>
-              <div><button>提取</button></div>
+              <div>{{ $t('assets.staked') }}</div>
+              <div><button>{{ $t('assets.withdraw') }}</button></div>
             </div>
             <div class="row">
               <div class="thumb"><img :src="a13Image" alt="" /></div>
               <div>#124</div>
-              <div>未质押</div>
-              <div><button>质押</button></div>
+              <div>{{ $t('assets.unstaked') }}</div>
+              <div><button>{{ $t('assets.stake') }}</button></div>
             </div>
           </div>
         </div>
@@ -113,6 +113,9 @@
 
 <script setup>
 import { ref } from 'vue';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 
 const currentTab = ref('ksc');
 const nftFilter = ref('all');

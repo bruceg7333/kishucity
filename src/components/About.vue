@@ -2,9 +2,9 @@
   <div class="page about">
     <main class="content">
       <section class="text-col">
-        <p v-html="$i18n.t('about.paragraph1')"></p>
-        <p v-html="$i18n.t('about.paragraph2')"></p>
-        <p v-html="$i18n.t('about.paragraph3')"></p>
+        <p v-html="t('about.paragraph1')"></p>
+        <p v-html="t('about.paragraph2')"></p>
+        <p v-html="t('about.paragraph3')"></p>
       </section>
       <section class="art-col">
         <img :src="a12Image" alt="draw" draggable="false" />
@@ -15,6 +15,9 @@
 
 <script setup>
 import { useRouter } from 'vue-router'; // Assuming vue-router is used
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 
 const router = useRouter();
 

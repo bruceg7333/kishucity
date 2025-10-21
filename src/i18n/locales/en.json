@@ -1,0 +1,128 @@
+{
+  "properties": "Properties",
+  "about_us": "About Us",
+  "how_it_works": "How it works",
+  "white_papers": "White Papers",
+  "header": {
+    "properties": "Properties",
+    "about_us": "About Us",
+    "how_it_works": "How it works",
+    "white_papers": "White Papers"
+  },
+  "menu": {
+    "catalog": "Catalog",
+    "ecology": {
+      "title": "Ecology",
+      "creator": "Creator Ecology",
+      "object": "Object Ecology",
+      "economy": "Economic Ecology"
+    },
+    "finance": {
+      "title": "Finance",
+      "pledge": "Pledge",
+      "nft_mall": "NFT Mall"
+    },
+    "about_us": {
+      "title": "About Us",
+      "company_intro": "Company Introduction",
+      "project_intro": "Project Introduction",
+      "partners": "Partners",
+      "team_intro": "Team Introduction"
+    },
+    "market": {
+      "title": "Market"
+    },
+    "faq": {
+      "title": "FAQ"
+    },
+    "compliance": {
+      "title": "Compliance Information",
+      "terms": "Terms of Use",
+      "privacy": "Privacy Policy",
+      "contact": "Contact Us"
+    }
+  },
+  "about_company": "Company Introduction",
+  "about_project": "Project Introduction",
+  "partners": "Partners",
+  "team": "Team",
+  "market": "Market",
+  "faq": "FAQ",
+  "compliance": "Compliance",
+  "terms": "Terms of Use",
+  "privacy": "Privacy Policy",
+  "contact": "Contact",
+  "assets": {
+    "my_assets": "My Assets",
+    "ksc_balance": "KSC Balance",
+    "withdraw": "Withdraw",
+    "stake": "Stake",
+    "ksc_transaction_history": "KSC Transaction History",
+    "time": "Time",
+    "type": "Type",
+    "amount": "Amount",
+    "status": "Status",
+    "buy": "Buy",
+    "success": "Success",
+    "ksc_staking": "KSC Staking",
+    "stake_amount": "Stake Amount",
+    "earnings": "Earnings",
+    "action": "Action",
+    "all": "All",
+    "staked": "Staked",
+    "unstaked": "Unstaked",
+    "name": "Name"
+  },
+  "property_detail": {
+    "hakone_gora_villa": "Hakone Gora Villa"
+  },
+  "invite_rank": {
+    "title": "Invite Rank Page",
+    "page_content": "Invite Rank"
+  },
+  "language_switcher": {
+    "japanese": "Japanese",
+    "chinese": "Chinese",
+    "ja_short": "JA",
+    "en_short": "EN",
+    "zh_short": "CN"
+  },
+  "right_bar": {
+    "slogan": "Start your future journey"
+  },
+  "orange_slide": {
+    "title": "Join KISHU CITY and Share in Asset Appreciation Dividends",
+    "join_kishu_city": "Join KISHU CITY",
+    "share_asset_appreciation": "Share in Asset Appreciation Dividends",
+    "balance": "Balance",
+    "min_amount": "Min",
+    "buy_now": "Buy Now",
+    "unlocked": "Unlocked",
+    "withdrawn": "Withdrawn",
+    "sales_progress": "Sales Progress"
+  },
+  "cards_slide": {
+    "mask_title": "Everyone who joins Kishu is a narrator, a governor, and a creator. Choose your affiliated clan...",
+    "join_clan_button": "Join Clan",
+    "clan_names": {
+      "sonik_clan_sub": "Sound Clan",
+      "kage_clan_sub": "Shadow Clan",
+      "mono_clan_sub_1": "Creation Clan",
+      "mono_clan_sub_2": "Culture Clan",
+      "sage_clan_sub": "Machine Clan",
+      "neon_clan_sub": "Neon Clan",
+      "yoru_clan_sub": "Night Clan",
+      "genka_clan_sub": "Illusion Clan"
+    },
+    "clan_tags": {
+      "sonik_clan_tags": "Music Production / DJ / Sound Art",
+      "kage_clan_tags": "Film & Television / Theater / Performance / Character Narrative",
+      "mono_clan_tags_1": "Architecture / Handicraft / Spatial Aesthetics",
+      "mono_clan_tags_2": "Writing / Curation / Editorial Publishing",
+      "sage_clan_tags": "AI Art / Algorithmic Aesthetics / Technical Creation",
+      "neon_clan_tags": "Virtual Characters / ACGN / Illustration / Vtuber Culture",
+      "yoru_clan_tags": "Party Culture / Brand Operations / Social Experiment",
+      "genka_clan_tags": "Immersive Play Space / Metaverse Entrance Station"
+    }
+  }
+}

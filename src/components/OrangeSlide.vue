@@ -1,12 +1,12 @@
 <template>
   <div :class="['slide2', { entered: isEntered, leaving: isLeaving }]">
     <div class="bg"></div>
-    <slide-mask title="加入 KISHU CITY 共享资产升值红利" subtitle="ICO COMING SOON" maskOpacity="0.7"></slide-mask>
-    <div class="content"  v-if="false">
+    <slide-mask :title="$t('orange_slide.title')" subtitle="ICO COMING SOON" maskOpacity="0.7"></slide-mask>
+    <div class="content" v-if="false">
       <div class="title">
-        <span>加入 KISHU CITY</span>
+        <span>{{ $t('orange_slide.join_kishu_city') }}</span>
         <br />
-        <span>共享资产升值红利</span>
+        <span>{{ $t('orange_slide.share_asset_appreciation') }}</span>
       </div>
       <div class="panel left">
         <div class="card line">
@@ -16,8 +16,8 @@
           </div>
           <div class="vline"></div>
           <div class="infoCol">
-            <div class="balance">余额：102000.00</div>
-            <div class="pill min">最小100</div>
+            <div class="balance">{{ $t('orange_slide.balance') }}：102000.00</div>
+            <div class="pill min">{{ $t('orange_slide.min_amount') }}100</div>
           </div>
         </div>
         <div class="divider">
@@ -37,11 +37,11 @@
         </div>
         <div class="vline"></div>
         <div class="infoCol">
-          <div class="balance">余额：102000.00</div>
+          <div class="balance">{{ $t('orange_slide.balance') }}：102000.00</div>
           <div class="pill input">13000.00</div>
         </div>
       </div>
-      <button class="buy">立即购买</button>
+      <button class="buy">{{ $t('orange_slide.buy_now') }}</button>
     </div>
     <div class="panel right" v-if="false">
       <div class="circle">
@@ -53,11 +53,11 @@
       </div>
       <div class="legend">
         <span class="dot"></span>
-        <span>已解锁</span>
+        <span>{{ $t('orange_slide.unlocked') }}</span>
         <span class="dot on" style="margin-left: .4rem"></span>
-        <span>已提取</span>
+        <span>{{ $t('orange_slide.withdrawn') }}</span>
       </div>
-      <div class="progress">销售进度</div>
+      <div class="progress">{{ $t('orange_slide.sales_progress') }}</div>
     </div>
   </div>
 </template>
@@ -65,6 +65,9 @@
 <script setup>
 import { ref, watch, onMounted, onUnmounted } from 'vue';
 import SlideMask from './SlideMaskAlways.vue';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 
 const props = defineProps({
   active: { type: Boolean, default: false },

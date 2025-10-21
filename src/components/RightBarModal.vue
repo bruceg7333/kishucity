@@ -5,8 +5,8 @@
         <div class="logoh">
           <img :src="logoImage" alt="" draggable="false" />
         </div>
-        <span>目 录</span>
-        <button class="close-button" @click="closeModal">X</button>
+        <span>{{ t('menu.catalog') }}</span>
+        <button class="close-button" @click="closeModal">{{ t('menu.close') }}</button>
       </header>
       <div class="grid">
         <div class="cell">
@@ -15,13 +15,13 @@
               <img :src="a6Image" alt="" draggable="false" />
             </div>
             <div class="texts">
-              <div class="title">生态</div>
+              <div class="title">{{ t('menu.ecology.title') }}</div>
               <div class="subs">
-                <a href="/properties">创作者生态</a>
+                <a href="/properties">{{ t('menu.ecology.creator') }}</a>
                 <i class="sep"></i>
-                <a>物件生态</a>
+                <a>{{ t('menu.ecology.object') }}</a>
                 <i class="sep"></i>
-                <a>经济生态</a>
+                <a>{{ t('menu.ecology.economy') }}</a>
               </div>
             </div>
           </div>
@@ -32,11 +32,11 @@
               <img :src="a7Image" alt="" draggable="false" />
             </div>
             <div class="texts">
-              <div class="title">财务</div>
+              <div class="title">{{ t('menu.finance.title') }}</div>
               <div class="subs">
-                <a>质押</a>
+                <a>{{ t('menu.finance.pledge') }}</a>
                 <i class="sep"></i>
-                <a>NFT商城</a>
+                <a>{{ t('menu.finance.nft_mall') }}</a>
               </div>
             </div>
           </div>
@@ -47,15 +47,15 @@
               <img :src="a8Image" alt="" draggable="false" />
             </div>
             <div class="texts">
-              <div class="title">关于我们</div>
+              <div class="title">{{ t('menu.about_us.title') }}</div>
               <div class="subs">
-                <a @click.stop="goToAbout">公司介绍</a>
+                <a @click.stop="goToAbout">{{ t('menu.about_us.company_intro') }}</a>
                 <i class="sep"></i>
-                <a>项目介绍</a>
+                <a href="/properties">{{ t('menu.about_us.project_intro') }}</a>
                 <i class="sep"></i>
-                <a>合作伙伴</a>
+                <a href="/properties">{{ t('menu.about_us.partners') }}</a>
                 <i class="sep"></i>
-                <a>团队介绍</a>
+                <a href="/properties">{{ t('menu.about_us.team_intro') }}</a>
               </div>
             </div>
           </div>
@@ -66,7 +66,7 @@
               <img :src="a9Image" alt="" draggable="false" />
             </div>
             <div class="texts">
-              <div class="title">市场</div>
+              <div class="title">{{ t('menu.market.title') }}</div>
             </div>
           </div>
         </div>
@@ -76,7 +76,7 @@
               <img :src="a10Image" alt="" draggable="false" />
             </div>
             <div class="texts">
-              <div class="title">常见问题</div>
+              <div class="title">{{ t('menu.faq.title') }}</div>
             </div>
           </div>
         </div>
@@ -86,16 +86,16 @@
               <img :src="a11Image" alt="" draggable="false" />
             </div>
             <div class="texts">
-              <div class="title">合规信息</div>
+              <div class="title">{{ t('menu.compliance.title') }}</div>
             </div>
           </div>
         </div>
       </div>
       <footer class="menu-footer">
         <div class="links">
-          <a>使用条款</a>
-          <a>隐私政策</a>
-          <a>联系方式</a>
+          <a href="/properties">{{ t('menu.compliance.terms') }}</a>
+<a href="/properties">{{ t('menu.compliance.privacy') }}</a>
+<a href="/properties">{{ t('menu.compliance.contact') }}</a>
         </div>
       </footer>
     </div>
@@ -104,7 +104,9 @@
 
 <script setup>
 import { useRouter } from 'vue-router'; // Assuming vue-router is used
+import { useI18n } from 'vue-i18n';
 
+const { t } = useI18n();
 
 const emit = defineEmits(['close']);
 const router = useRouter();

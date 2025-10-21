@@ -2,13 +2,16 @@
   <div :class="['splash', { entered: isEntered, leaving: isLeaving }]">
     <div class="logod logo">
     </div>
-    <SlideMask :title="$i18n.t('slides.splash.title')" :subtitle="$i18n.t('slides.splash.subtitle')" maskOpacity="0.7"></SlideMask>
+    <SlideMask :title="t('slides.splash.title')" :subtitle="t('slides.splash.subtitle')" maskOpacity="0.7"></SlideMask>
   </div>
 </template>
 
 <script setup>
 import { ref, watch, onMounted, onUnmounted } from 'vue';
 import SlideMask from './SlideMask.vue';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 
 const props = defineProps({
   active: { type: Boolean, default: false },

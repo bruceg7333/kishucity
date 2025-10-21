@@ -1,11 +1,14 @@
 <template>
   <div class="page invite-rank">
-    <h1>邀请排行 Page</h1>
-    <p>This is a placeholder for the 邀请排行 page content.</p>
+    <h1>{{ $t('invite_rank.title') }}</h1>
+    <p>This is a placeholder for the {{ $t('invite_rank.page_content') }} content.</p>
   </div>
 </template>
 
 <script setup>
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 // Script for InviteRank component
 </script>
 

@@ -2,10 +2,10 @@
   <header class="page-header">
     <div class="logo" @click="goToHome"></div>
     <nav class="nav">
-      <router-link to="/properties" class="nav-link">properties</router-link>
-      <router-link to="/about" class="nav-link">about us</router-link>
-      <router-link to="/how-it-works" class="nav-link">how it works</router-link>
-      <router-link to="/white-papers" class="nav-link">white papers</router-link>
+      <router-link to="/properties" class="nav-link">{{ $t('header.properties') }}</router-link>
+      <router-link to="/about" class="nav-link">{{ $t('header.about_us') }}</router-link>
+      <router-link to="/how-it-works" class="nav-link">{{ $t('header.how_it_works') }}</router-link>
+      <router-link to="/white-papers" class="nav-link">{{ $t('header.white_papers') }}</router-link>
     </nav>
     <FabButton class="mobile" @click="handleFabClick" />
     <LanguageSwitcher class="mobile-lang-wrapper" />
@@ -16,6 +16,9 @@
 import { useRouter } from 'vue-router';
 import FabButton from './FabButton.vue';
 import LanguageSwitcher from './LanguageSwitcher.vue';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 
 const router = useRouter();
 const emit = defineEmits(['fab-click']);

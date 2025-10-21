@@ -4,7 +4,6 @@ import router from './router';
 import './assets/global.css'; // Import global CSS
 import i18n from './i18n';
 
-// Responsive font size logic from original index.e7397e71.js
 (function () {
   function setFontSize() {
     var e = document.documentElement,
@@ -18,9 +17,6 @@ import i18n from './i18n';
 
 const app = createApp(App);
 app.use(router);
-
-// Make i18n available globally
-app.config.globalProperties.$i18n = i18n;
-app.provide('i18n', i18n);
+app.use(i18n);
 
 app.mount('#app');

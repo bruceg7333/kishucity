@@ -1,0 +1,118 @@
+{
+  "properties": "资产",
+  "about_us": "关于我们",
+  "how_it_works": "使用说明",
+  "white_papers": "白皮书",
+  "header": {
+    "properties": "资产",
+    "about_us": "关于我们",
+    "how_it_works": "使用说明",
+    "white_papers": "白皮书"
+  },
+  "menu": {
+    "catalog": "目 录",
+    "ecology": {
+      "title": "生态",
+      "creator": "创作者生态",
+      "object": "物件生态",
+      "economy": "经济生态"
+    },
+    "finance": {
+      "title": "财务",
+      "pledge": "质押",
+      "nft_mall": "NFT商城"
+    },
+    "about_us": {
+      "title": "关于我们",
+      "company_intro": "公司介绍",
+      "project_intro": "项目介绍",
+      "partners": "合作伙伴",
+      "team_intro": "团队介绍"
+    },
+    "market": {
+      "title": "市场"
+    },
+    "faq": {
+      "title": "常见问题"
+    },
+    "compliance": {
+      "title": "合规信息",
+      "terms": "使用条款",
+      "privacy": "隐私政策",
+      "contact": "联系方式"
+    }
+  },
+  "assets": {
+    "my_assets": "我的资产",
+    "ksc_balance": "KSC 余额",
+    "withdraw": "提现",
+    "stake": "质押",
+    "ksc_transaction_history": "KSC 交易历史",
+    "time": "时间",
+    "type": "类型",
+    "amount": "数量",
+    "status": "状态",
+    "buy": "购买",
+    "success": "成功",
+    "ksc_staking": "KSC 质押",
+    "stake_amount": "质押数量",
+    "earnings": "收益",
+    "action": "操作",
+    "all": "全部",
+    "staked": "已质押",
+    "unstaked": "未质押",
+    "name": "名称"
+  },
+  "property_detail": {
+    "hakone_gora_villa": "箱根强罗别墅"
+  },
+  "invite_rank": {
+    "title": "邀请排行页面",
+    "page_content": "邀请排行"
+  },
+  "language_switcher": {
+    "japanese": "日语",
+    "chinese": "中文",
+    "ja_short": "JA",
+    "en_short": "EN",
+    "zh_short": "CN"
+  },
+  "right_bar": {
+    "slogan": "开启您的未来之旅"
+  },
+  "orange_slide": {
+    "title": "加入 KISHU CITY 共享资产升值红利",
+    "join_kishu_city": "加入 KISHU CITY",
+    "share_asset_appreciation": "共享资产升值红利",
+    "balance": "余额",
+    "min_amount": "最小",
+    "buy_now": "立即购买",
+    "unlocked": "已解锁",
+    "withdrawn": "已提取",
+    "sales_progress": "销售进度"
+  },
+  "cards_slide": {
+    "mask_title": "每一个加入纪州的人，都是叙事者、治理者、创造者。选择你的归属藩......",
+    "join_clan_button": "加入部藩",
+    "clan_names": {
+      "sonik_clan_sub": "音 藩",
+      "kage_clan_sub": "影 藩",
+      "mono_clan_sub_1": "造 藩",
+      "mono_clan_sub_2": "文 藩",
+      "sage_clan_sub": "機 藩",
+      "neon_clan_sub": "霓 藩",
+      "yoru_clan_sub": "夜 藩",
+      "genka_clan_sub": "幻 藩"
+    },
+    "clan_tags": {
+      "sonik_clan_tags": "音乐制作 / DJ / 声音艺术",
+      "kage_clan_tags": "影视 / 剧场 / 表演 / 角色叙事",
+      "mono_clan_tags_1": "建筑 / 手工艺 / 空间美学",
+      "mono_clan_tags_2": "写作 / 策展 / 编辑出版",
+      "sage_clan_tags": "AI艺术 / 算法美学 / 技术创作",
+      "neon_clan_tags": "虚拟角色 / ACGN / 插画 / Vtuber文化",
+      "yoru_clan_tags": "派对文化 / 品牌运营 / 社交实验",
+      "genka_clan_tags": "沉浸式Play空间 / Metaverse入口站"
+    }
+  }
+}

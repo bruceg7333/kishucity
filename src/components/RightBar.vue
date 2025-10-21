@@ -6,7 +6,7 @@
       </div>
       <div class="divider"></div>
       <slot name="extra"></slot>
-      <div class="slogan">{{ slogan }}</div>
+      <div class="slogan">{{ displaySlogan }}</div>
     </div>
     <LanguageSwitcher class="language-switcher-wrapper" :showLangs="showLangs" />
   </aside>
@@ -15,11 +15,17 @@
 <script setup>
 import { noticeImage } from '../assets/base64_images';
 import LanguageSwitcher from './LanguageSwitcher.vue';
+import { useI18n } from 'vue-i18n';
+import { computed } from 'vue';
+
+const { t } = useI18n();
 
 const props = defineProps({
-  slogan: { type: String, default: '开启您的未来之旅' },
+  slogan: { type: String },
   showLangs: { type: Boolean, default: false },
 });
+
+const displaySlogan = computed(() => props.slogan || t('right_bar.slogan'));
 </script>
 
 <style scoped>
