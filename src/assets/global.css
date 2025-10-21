@@ -39,22 +39,13 @@ body {
 }
 .page {
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   /* overflow: hidden; */
   background: #fff;
   position: relative;
   margin-right: 1.45rem; /* Added to account for RightBar width */
 }
-.page-header {
-  width: 100%;
-  height: calc(1.55rem + 2px);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 0.2rem;
-  border-bottom: 2px solid #000;
-  z-index: 100;
-}
+
 .logo {
   width: 1.62rem;
   height: 1rem;
@@ -84,35 +75,6 @@ body {
   color: #caa45f;
   font-weight: bold;
   transition: all 0.3s ease;
-}
-.page-main {
-  display: flex;
-  flex: 1;
-  height: calc(100% - 1.45rem - 2px);
-}
-
-@media (max-width: 768px) {
-
-  .page-main {
-    flex-direction: column;
-    height: auto;
-    margin-right: 0;
-  }
-
-  .page-header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    border-bottom: 0;
-    /* background-color: white; */
-    .logo {
-      border-right: 0;
-      width: 0.75rem;
-      position: absolute;
-      top: 0.1rem;
-    }
-  }
-
 }
 .mm-enter-from {
   opacity: 0;

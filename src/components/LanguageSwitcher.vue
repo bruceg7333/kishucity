@@ -1,96 +1,96 @@
 <template>
   <div class="language-switcher">
-    <div class="selected-language" @click="toggleDropdown">
-      {{ $i18n.t(currentLanguageDisplay) }}
-    </div>
-    <div class="language-dropdown" v-if="isOpen">
-      <div 
-        v-for="(name, code) in availableLanguages" 
-        :key="code" 
-        class="language-option"
-        :class="{ active: currentLanguage === code }"
-        @click="selectLanguage(code)"
-      >
-        {{ $i18n.t(name) }}
-      </div>
-    </div>
-  </div>
+       <!-- <template v-if="showLangOptions"> -->
+        <div class="lang"  @click="setLang('ja')">
+          <span class="dot ja" v-if="currentLang === 'ja'">
+            <img :src="jaFlag" alt="" draggable="false" />
+          </span>
+          <span style="font-size: 0.21rem;">JA</span>
+        </div>
+        <div class="lang"  @click="setLang('en')">
+          <span class="dot en" v-if="currentLang === 'en'">
+            <img :src="enFlag" alt="" draggable="false" />
+          </span>
+          <span>EN</span>
+        </div>
+        <div class="lang" @click="setLang('zh')">
+          <span class="dot zh"  v-if="currentLang === 'zh'">
+            <img :src="zhFlag" alt="" draggable="false" />
+          </span>
+          <span>CN</span>
+        </div>
+      <!-- </template> -->
+      <!-- <div v-else class="lang" @click="toggleLangOptions">
+        <span v-if="currentLang === 'ja'" class="dot ja">
+          <img :src="jaFlag" alt="" draggable="false" />
+        </span>
+        <span v-else-if="currentLang === 'en'" class="dot en">
+          <img :src="enFlag" alt="" draggable="false" />
+        </span>
+        <span v-else-if="currentLang === 'zh'" class="dot zh">
+          <img :src="zhFlag" alt="" draggable="false" />
+        </span>
+        <span>{{ currentLang === 'ja' ? '日本語' : currentLang === 'en' ? 'EN' : '中文' }}</span>
+      </div> -->
+   </div>
 </template>
 
 <script setup>
-import { ref, computed } from 'vue';
-import i18n from '../i18n';
+import { ref, watch } from 'vue';
+import { jaFlag, enFlag, zhFlag } from '../assets/base64_images';
 
-const isOpen = ref(false);
-const currentLanguage = computed(() => i18n.currentLanguage.value);
-const availableLanguages = i18n.availableLanguages;
-
-const currentLanguageDisplay = computed(() => {
-  return availableLanguages[currentLanguage.value];
+const props = defineProps({
+  showLangs: { type: Boolean, default: false },
 });
 
-const toggleDropdown = () => {
-  isOpen.value = !isOpen.value;
-};
+const showLangOptions = ref(false);
+const currentLang = ref('zh');
 
-const selectLanguage = (lang) => {
-  i18n.setLanguage(lang);
-  isOpen.value = false;
-};
+function toggleLangOptions() {
+  showLangOptions.value = !showLangOptions.value;
+}
 
-// Close dropdown when clicking outside
-const handleClickOutside = (event) => {
-  if (!event.target.closest('.language-switcher')) {
-    isOpen.value = false;
+function setLang(lang) {
+  currentLang.value = lang;
+  showLangOptions.value = false;
+}
+
+// Watch for changes in props.showLangs to update internal state
+watch(
+  () => props.showLangs,
+  (newVal) => {
+    showLangOptions.value = newVal;
   }
-};
-
-// Add event listener when component is mounted
-window.addEventListener('click', handleClickOutside);
+);
 </script>
 
 <style scoped>
 .language-switcher {
   position: relative;
-  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .lang {
+    color: white !important;
+  }
+}
+
+.lang {
+  display: flex;
+  padding-left: 0.13rem;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.06rem;
+  font-size: 0.20rem;
   cursor: pointer;
-  user-select: none;
-  margin-left: 1rem;
+  img {
+    width: 0.26rem;
+  }
 }
 
-.selected-language {
-  padding: 0.3rem 0.6rem;
-  border-radius: 4px;
-  background: rgba(255, 255, 255, 0.1);
-  color: #fff;
-  font-size: 0.8rem;
-}
-
-.language-dropdown {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  margin-top: 0.5rem;
-  background: #1a1a1a;
-  border-radius: 4px;
-  overflow: hidden;
-  z-index: 100;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-.language-option {
-  padding: 0.5rem 1rem;
-  white-space: nowrap;
-  transition: background 0.2s;
-  color: #fff;
-  font-size: 0.8rem;
-}
-
-.language-option:hover {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.language-option.active {
-  background: rgba(255, 255, 255, 0.2);
+.dot {
+  /* width: 0.26rem; */
+  display: inline-block;
+  margin-right: 0.01rem;
 }
 </style>

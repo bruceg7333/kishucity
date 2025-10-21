@@ -21,7 +21,6 @@ import { useRouter } from 'vue-router';
 import RightBar from './RightBar.vue';
 import RightBarModal from './RightBarModal.vue';
 import FabButton from './FabButton.vue';
-import AppHeader from './AppHeader.vue';
 
 const router = useRouter();
 
@@ -62,7 +61,7 @@ onUnmounted(() => {
 .app-layout {
   position: relative;
   width: 100%;
-  height: 100%;
+  flex: 1;
 }
 .router-area {
   height: 100%;
@@ -80,6 +79,9 @@ onUnmounted(() => {
 }
 
 @media (max-width: 768px) {
+  .router-area {
+    padding-right: 0;
+  }
   .app-layout > :deep(.right-bar) {
     display: none;
   }

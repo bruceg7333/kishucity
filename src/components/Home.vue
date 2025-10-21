@@ -1,11 +1,7 @@
 <template>
-  <div class="page">
-    <div class="content-wrapper">
-      <main class="page-main">
-        <Slider :slides="slides" />
-      </main>
-    </div>
-  </div>
+    <main class="page-main">
+      <Slider :slides="slides" />
+    </main>
 </template>
 
 <script setup>
@@ -64,7 +60,6 @@ onUnmounted(() => {
 /* Styles for the main Home component */
   .page {
     width: 100%;
-    min-height: 100vh; /* Use min-height to allow content to extend beyond viewport */
     display: flex;
     flex-direction: column;
     position: relative; /* Keep relative for children that might need absolute positioning relative to the page */
@@ -78,9 +73,17 @@ onUnmounted(() => {
   }
 
   .page-main {
+    display: flex;
     width: 100%; /* Will be overridden by flex-grow in content-wrapper */
     flex-grow: 1; /* Allow main content to take up available horizontal space */
-    /* Removed margin-right as it's now handled by flex layout */
+  }
+  
+  @media (max-width: 768px) {
+
+    .page-main {
+      flex-direction: column;
+      margin-right: 0;
+    }
   }
 
 .logo2 {

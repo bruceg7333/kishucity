@@ -1108,16 +1108,6 @@ function selectNftFilter(filter) {
 
 
 @media (max-width: 768px) {
-
-  .page-main {
-
-    flex-direction: column;
-
-    height: auto;
-    margin-right: 0;
-
-  }
-
   .sidebar {
 
     width: 100%;

@@ -1,12 +1,6 @@
 <template>
   <div id="app">
-    <AppHeader>
-      <router-link to="/" class="nav-link">Home</router-link>
-      <router-link to="/assets" class="nav-link">我的资产</router-link>
-      <router-link to="/invite-rank" class="nav-link">邀请排行</router-link>
-      <a href="#" @click.prevent="copyAddress" class="nav-link">复制地址</a>
-      <a href="#" @click.prevent="disconnectWallet" class="nav-link">断开链接</a>
-    </AppHeader>
+    <AppHeader />
     <AppLayout>
       <router-view v-slot="{ Component }">
         <transition name="route-fade" mode="out-in">
@@ -37,6 +31,12 @@ function disconnectWallet() {
 
 <style>
 /* Global styles if any */
+#app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
 body {
   margin: 0;
   font-family: "SourceHanSansCN-Regular", Avenir, Helvetica, Arial, sans-serif;
