@@ -1,8 +1,16 @@
 <template>
-  <button class="fab">
+  <button class="fab" @click="handleClick">
     <slot>+</slot>
   </button>
 </template>
+
+<script setup>
+const emit = defineEmits(['click']);
+
+function handleClick() {
+  emit('click');
+}
+</script>
 
 <style>
 .fab {
@@ -17,7 +25,7 @@
   transition:
     transform 0.35s ease,
     background-image 0s linear 0.35s;
-  z-index: 100;
+  z-index: 500;
 }
 
 .fab.open {

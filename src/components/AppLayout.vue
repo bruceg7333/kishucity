@@ -8,10 +8,6 @@
         </div>
       </template>
     </RightBar>
-    <FabButton v-if="!isMobile" :class="{ open: isFabOpen }" class="fab-desktop" @click="toggleFab" />
-    <Transition name="mm">
-      <RightBarModal v-if="isFabOpen" @close="closeFab" />
-    </Transition>
   </div>
 </template>
 
@@ -19,12 +15,8 @@
 import { ref, onMounted, onUnmounted } from 'vue';
 import { useRouter } from 'vue-router';
 import RightBar from './RightBar.vue';
-import RightBarModal from './RightBarModal.vue';
-import FabButton from './FabButton.vue';
 
 const router = useRouter();
-
-const isFabOpen = ref(false);
 const isMobile = ref(false);
 
 function goToHome() {
@@ -33,14 +25,6 @@ function goToHome() {
 
 function goToAbout() {
   router.push('/about');
-}
-
-function toggleFab() {
-  isFabOpen.value = !isFabOpen.value;
-}
-
-function closeFab() {
-  isFabOpen.value = false;
 }
 
 function checkScreenSize() {
@@ -70,12 +54,6 @@ onUnmounted(() => {
 }
 .desktop-right-bar {
   height: 100%;
-}
-.fab-desktop {
-  position: fixed;
-  right: 0.3rem;
-  bottom: 1.8rem;
-  z-index: 100;
 }
 
 @media (max-width: 768px) {

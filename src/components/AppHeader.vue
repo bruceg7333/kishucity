@@ -8,7 +8,7 @@
       <a href="#" @click.prevent="copyAddress" class="nav-link">复制地址</a>
       <a href="#" @click.prevent="disconnectWallet" class="nav-link">断开链接</a>
     </nav>
-    <FabButton class="mobile" />
+    <FabButton class="mobile" @click="handleFabClick" />
     <LanguageSwitcher class="mobile-lang-wrapper" />
   </header>
 </template>
@@ -19,9 +19,14 @@ import FabButton from './FabButton.vue';
 import LanguageSwitcher from './LanguageSwitcher.vue';
 
 const router = useRouter();
+const emit = defineEmits(['fab-click']);
 
 function goToHome() {
   router.push('/');
+}
+
+function handleFabClick() {
+  emit('fab-click');
 }
 </script>
 
@@ -45,7 +50,7 @@ function goToHome() {
 }
 
 @media (min-width: 769px) {
-  .mobile {
+  .mobile,.mobile-lang-wrapper {
     display: none;
   }
 }

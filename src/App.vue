@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <AppHeader />
+    <AppHeader @fab-click="toggleFab" />
     <AppLayout>
       <router-view v-slot="{ Component }">
         <transition name="route-fade" mode="out-in">
@@ -8,15 +8,45 @@
         </transition>
       </router-view>
     </AppLayout>
+    <FabButton v-if="!isMobile" :class="{ open: isFabOpen }" class="fab-desktop" @click="toggleFab" />
+    <Transition name="mm">
+      <RightBarModal v-if="isFabOpen" @close="closeFab" />
+    </Transition>
   </div>
 </template>
 
 <script setup>
+import { ref, onMounted, onUnmounted } from 'vue';
 import AppHeader from './components/AppHeader.vue';
 import AppLayout from './components/AppLayout.vue';
+import RightBarModal from './components/RightBarModal.vue';
+import FabButton from './components/FabButton.vue';
 import { useRouter } from 'vue-router';
 
 const router = useRouter();
+const isFabOpen = ref(false);
+const isMobile = ref(false);
+
+function toggleFab() {
+  isFabOpen.value = !isFabOpen.value;
+}
+
+function closeFab() {
+  isFabOpen.value = false;
+}
+
+function checkScreenSize() {
+  isMobile.value = window.innerWidth <= 768;
+}
+
+onMounted(() => {
+  checkScreenSize();
+  window.addEventListener('resize', checkScreenSize);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('resize', checkScreenSize);
+});
 
 function copyAddress() {
   alert('Address copied!');
@@ -55,5 +85,24 @@ body {
 .route-fade-enter-active,
 .route-fade-leave-active {
   transition: all 0.3s ease-out;
+}
+
+/* Modal transition styles */
+.mm-enter-active,
+.mm-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.mm-enter-from,
+.mm-leave-to {
+  opacity: 0;
+}
+
+/* FabButton styles */
+.fab-desktop {
+  position: fixed;
+  right: 0.3rem;
+  bottom: 1.8rem;
+  z-index: 100;
 }
 </style>
