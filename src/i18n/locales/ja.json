@@ -1,1 +1,222 @@
-{"header":{"home":"ホーム","about":"概要","language_switcher":{"ja_short":"JP","en_short":"EN","zh_short":"ZH","japanese":"日本語","chinese":"中国語"}},"home":{"welcome":"岸和田シティへようこそ","description":"クリエイターとイノベーターのためのデジタルコミュニティ","join":"今すぐ参加","learn":"詳細を見る"},"slides":{"orange":{"title":"岸和田シティ","subtitle":"デジタルコミュニティ","description":"デジタルアーティストとイノベーターのためのクリエイティブハブ"},"cards":{"title":"コミュニティ地区","subtitle":"様々なクリエイティブゾーンを探索","districts":{"music":{"name":"音 藩","tags":"音楽制作 / DJ / サウンドアート"},"film":{"name":"影 藩","tags":"映画 / 劇場 / パフォーマンス / ナラティブ"},"craft":{"name":"造 藩","tags":"建築 / 工芸 / 空間美学"},"writing":{"name":"文 藩","tags":"執筆 / キュレーション / 出版"},"tech":{"name":"機 藩","tags":"AIアート / アルゴリズム美学 / テクノロジー創作"},"anime":{"name":"霓 藩","tags":"バーチャルキャラクター / ACGN / イラスト / Vtuber文化"},"social":{"name":"夜 藩","tags":"パーティー文化 / ブランド運営 / ソーシャル実験"},"meta":{"name":"幻 藩","tags":"没入型プレイスペース / メタバース入口"}}},"cloud":{"title":"クラウドイノベーション","subtitle":"クリエイターのためのデジタルインフラ"},"floatD":{"title":"デジタル体験","subtitle":"バーチャル世界を探索"},"floatE":{"title":"コミュニティイベント","subtitle":"クリエイター仲間とつながる"},"splash":{"title":"Kishu World","subtitle":"ようこそ、あなただけの旅へ"},"slide2":{"title":"Kishu World","subtitle":"ブロックチェーンの最先端を、現実の資産へとつなぐ"},"slide3":{"title":"Kishu World","subtitle":"デジタルが、ここで現実の価値へと変わる"},"slide4":{"title":"Kishu World","subtitle":"誰でも参加できる、効率的で透明な新時代のエコシステムを築く"}},"about":{"title":"岸和田シティについて","description":"岸和田シティは、様々な分野のクリエイターが繋がり、協力し、共に革新するためのデジタルコミュニティプラットフォームです。","mission":"私たちの使命は、デジタルの創造性が繁栄する活気あるエコシステムを構築することです。"},"buttons":{"back":"戻る","next":"次へ","close":"閉じる"},"menu":{"catalog":"目次","ecology":{"title":"エコロジー","creator":"クリエイターエコロジー","object":"オブジェクトエコロジー","economy":"エコノミーエコロジー"},"finance":{"title":"ファイナンス","pledge":"質押","nft_mall":"NFTモール"},"about_us":{"title":"私たちについて","company_intro":"会社紹介","project_intro":"プロジェクト紹介","partners":"パートナー","team_intro":"チーム紹介"},"market":{"title":"市場"},"faq":{"title":"よくある質問"},"compliance":{"title":"コンプライアンス情報","terms":"利用規約","privacy":"プライバシーポリシー","contact":"お問い合わせ","close":"閉じる"}}}
+{
+  "properties": "資産",
+  "about_us": "私たちについて",
+  "how_it_works": "利用方法",
+  "white_papers": "ホワイトペーパー",
+  "header": {
+    "properties": "資産",
+    "about_us": "私たちについて",
+    "how_it_works": "利用方法",
+    "white_papers": "ホワイトペーパー",
+    "home": "ホーム",
+    "about": "概要",
+    "language_switcher": {
+      "ja_short": "JP",
+      "en_short": "EN",
+      "zh_short": "ZH",
+      "japanese": "日本語",
+      "chinese": "中国語"
+    }
+  },
+  "menu": {
+    "catalog": "目次",
+    "ecology": {
+      "title": "エコロジー",
+      "creator": "クリエイターエコロジー",
+      "object": "オブジェクトエコロジー",
+      "economy": "エコノミーエコロジー"
+    },
+    "finance": {
+      "title": "ファイナンス",
+      "pledge": "質押",
+      "nft_mall": "NFTモール"
+    },
+    "about_us": {
+      "title": "私たちについて",
+      "company_intro": "会社紹介",
+      "project_intro": "プロジェクト紹介",
+      "partners": "パートナー",
+      "team_intro": "チーム紹介"
+    },
+    "market": {
+      "title": "市場"
+    },
+    "faq": {
+      "title": "よくある質問"
+    },
+    "compliance": {
+      "title": "コンプライアンス情報",
+      "terms": "利用規約",
+      "privacy": "プライバシーポリシー",
+      "contact": "お問い合わせ",
+      "close": "閉じる"
+    }
+  },
+  "home": {
+    "welcome": "岸和田シティへようこそ",
+    "description": "クリエイターとイノベーターのためのデジタルコミュニティ",
+    "join": "今すぐ参加",
+    "learn": "詳細を見る"
+  },
+  "about_company": "会社紹介",
+  "about_project": "プロジェクト紹介",
+  "partners": "パートナー",
+  "team": "チーム",
+  "market": "市場",
+  "faq": "よくある質問",
+  "compliance": "コンプライアンス",
+  "terms": "利用規約",
+  "privacy": "プライバシーポリシー",
+  "contact": "お問い合わせ",
+  "assets": {
+    "my_assets": "マイアセット",
+    "ksc_balance": "KSC残高",
+    "withdraw": "出金",
+    "stake": "質押",
+    "ksc_transaction_history": "KSC取引履歴",
+    "time": "時間",
+    "type": "タイプ",
+    "amount": "数量",
+    "status": "ステータス",
+    "buy": "購入",
+    "success": "成功",
+    "ksc_staking": "KSCステーキング",
+    "stake_amount": "質押数量",
+    "earnings": "収益",
+    "action": "操作",
+    "all": "全て",
+    "staked": "質押済み",
+    "unstaked": "未質押",
+    "name": "名称"
+  },
+  "property_detail": {
+    "hakone_gora_villa": "箱根強羅ヴィラ"
+  },
+  "invite_rank": {
+    "title": "招待ランキングページ",
+    "page_content": "招待ランキング"
+  },
+  "language_switcher": {
+    "japanese": "日本語",
+    "chinese": "中国語",
+    "ja_short": "JA",
+    "en_short": "EN",
+    "zh_short": "CN"
+  },
+  "slides": {
+    "splash": {
+      "title": "Kishu World",
+      "subtitle": "ようこそ、あなただけの旅へ"
+    },
+    "slide2": {
+      "title": "Kishu World",
+      "subtitle": "ブロックチェーンの最先端を、現実の資産へとつなぐ"
+    },
+    "slide3": {
+      "title": "Kishu World",
+      "subtitle": "デジタルが、ここで現実の価値へと変わる"
+    },
+    "slide4": {
+      "title": "Kishu World",
+      "subtitle": "誰でも参加できる、効率的で透明な新時代のエコシステムを築く"
+    },
+    "orange": {
+      "title": "岸和田シティ",
+      "subtitle": "デジタルコミュニティ",
+      "description": "デジタルアーティストとイノベーターのためのクリエイティブハブ"
+    },
+    "cards": {
+      "title": "コミュニティ地区",
+      "subtitle": "様々なクリエイティブゾーンを探索",
+      "districts": {
+        "music": {
+          "name": "音 藩",
+          "tags": "音楽制作 / DJ / サウンドアート"
+        },
+        "film": {
+          "name": "影 藩",
+          "tags": "映画 / 劇場 / パフォーマンス / ナラティブ"
+        },
+        "craft": {
+          "name": "造 藩",
+          "tags": "建築 / 工芸 / 空間美学"
+        },
+        "writing": {
+          "name": "文 藩",
+          "tags": "執筆 / キュレーション / 出版"
+        },
+        "tech": {
+          "name": "機 藩",
+          "tags": "AIアート / アルゴリズム美学 / テクノロジー創作"
+        },
+        "anime": {
+          "name": "霓 藩",
+          "tags": "バーチャルキャラクター / ACGN / イラスト / Vtuber文化"
+        },
+        "social": {
+          "name": "夜 藩",
+          "tags": "パーティー文化 / ブランド運営 / ソーシャル実験"
+        },
+        "meta": {
+          "name": "幻 藩",
+          "tags": "没入型プレイスペース / メタバース入口"
+        }
+      }
+    },
+    "cloud": {
+      "title": "クラウドイノベーション",
+      "subtitle": "クリエイターのためのデジタルインフラ"
+    },
+    "floatD": {
+      "title": "デジタル体験",
+      "subtitle": "バーチャル世界を探索"
+    },
+    "floatE": {
+      "title": "コミュニティイベント",
+      "subtitle": "クリエイター仲間とつながる"
+    }
+  },
+  "right_bar": {
+    "slogan": "未来への旅を始めましょう"
+  },
+  "orange_slide": {
+    "title": "KISHU CITYに参加して資産価値向上の恩恵を分かち合いましょう",
+    "join_kishu_city": "KISHU CITYに参加",
+    "share_asset_appreciation": "資産価値向上の恩恵を分かち合う",
+    "balance": "残高",
+    "min_amount": "最小額",
+    "buy_now": "今すぐ購入",
+    "unlocked": "ロック解除済み",
+    "withdrawn": "引き出し済み",
+    "sales_progress": "販売進捗"
+  },
+  "cards_slide": {
+    "mask_title": "紀州に参加する誰もが語り手であり、統治者であり、創造者です。あなたの所属する藩を選んでください...",
+    "join_clan_button": "藩に参加",
+    "clan_names": {
+      "sonik_clan_sub": "音 藩",
+      "kage_clan_sub": "影 藩",
+      "mono_clan_sub_1": "造 藩",
+      "mono_clan_sub_2": "文 藩",
+      "sage_clan_sub": "機 藩",
+      "neon_clan_sub": "霓 藩",
+      "yoru_clan_sub": "夜 藩",
+      "genka_clan_sub": "幻 藩"
+    },
+    "clan_tags": {
+      "sonik_clan_tags": "音楽制作 / DJ / サウンドアート",
+      "kage_clan_tags": "映画 / 劇場 / パフォーマンス / キャラクターナラティブ",
+      "mono_clan_tags_1": "建築 / 工芸 / 空間美学",
+      "mono_clan_tags_2": "執筆 / キュレーション / 出版",
+      "sage_clan_tags": "AIアート / アルゴリズム美学 / テクノロジー創作",
+      "neon_clan_tags": "バーチャルキャラクター / ACGN / イラスト / Vtuber文化",
+      "yoru_clan_tags": "パーティー文化 / ブランド運営 / ソーシャル実験",
+      "genka_clan_tags": "没入型プレイスペース / メタバース入口"
+    }
+  },
+  "buttons": {
+    "back": "戻る",
+    "next": "次へ",
+    "close": "閉じる"
+  }
+}
