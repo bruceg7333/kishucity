@@ -1,7 +1,7 @@
 <template>
   <div :class="['slide2', { entered: isEntered, leaving: isLeaving }]">
     <div class="bg"></div>
-    <slide-mask :title="$t('orange_slide.title')" subtitle="ICO COMING SOON" maskOpacity="0.7"></slide-mask>
+    <slide-mask :title="t('slides.slide4.title')" :subtitle="t('slides.slide4.subtitle')" maskOpacity="0.7"></slide-mask>
     <div class="content" v-if="false">
       <div class="title">
         <span>{{ $t('orange_slide.join_kishu_city') }}</span>

@@ -87,6 +87,24 @@
     "en_short": "EN",
     "zh_short": "CN"
   },
+  "slides": {
+    "splash": {
+      "title": "Kishu World",
+      "subtitle": "Start Your Personalized Journey"
+    },
+    "slide2": {
+      "title": "Kishu World",
+      "subtitle": "Connecting blockchain frontiers to real-world assets"
+    },
+    "slide3": {
+      "title": "Kishu World",
+      "subtitle": "Where digital tokens acquire tangible value"
+    },
+    "slide4": {
+      "title": "Kishu World",
+      "subtitle": "Empowers a new era of efficient, transparent, and inclusive ecosystems"
+    }
+  },
   "right_bar": {
     "slogan": "Start your future journey"
   },

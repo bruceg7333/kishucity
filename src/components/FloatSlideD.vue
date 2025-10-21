@@ -10,13 +10,16 @@
         draggable="false"
       />
     </div>
-    <SlideMask title="Float Slide D" subtitle="Dynamic elements" maskOpacity="0.7"></SlideMask>
+    <SlideMask :title="t('slides.slide3.title')" :subtitle="t('slides.slide3.subtitle')" maskOpacity="0.7"></SlideMask>
   </div>
 </template>
 
 <script setup>
 import SlideMask from './SlideMask.vue';
 import { ref, watch, onMounted, onUnmounted } from 'vue';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 
 const props = defineProps({
   active: { type: Boolean, default: false },

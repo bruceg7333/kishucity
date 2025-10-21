@@ -80,6 +80,24 @@
   "right_bar": {
     "slogan": "开启您的未来之旅"
   },
+  "slides": {
+    "splash": {
+      "title": "Kishu World",
+      "subtitle": "开启您的专属旅程"
+    },
+    "slide2": {
+      "title": "Kishu World",
+      "subtitle": "连通区块链前沿与真实世界资产"
+    },
+    "slide3": {
+      "title": "Kishu World",
+      "subtitle": "数字通证在此获得实体价值"
+    },
+    "slide4": {
+      "title": "Kishu World",
+      "subtitle": "赋能一个高效、透明、普惠的新生态系统"
+    }
+  },
   "orange_slide": {
     "title": "加入 KISHU CITY 共享资产升值红利",
     "join_kishu_city": "加入 KISHU CITY",
