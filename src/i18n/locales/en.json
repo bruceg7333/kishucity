@@ -137,24 +137,24 @@
     "white_papers": "White Papers"
   },
   "menu": {
-    "catalog": "Catalog",
+    "catalog": "MENU",
     "ecology": {
-      "title": "Ecology",
-      "creator": "Creator Ecology",
-      "object": "Object Ecology",
-      "economy": "Economic Ecology"
+      "title": "Ecosystem",
+      "creator": "Creator Ecosystem",
+      "object": "Properties Ecosystem",
+      "economy": "Economic Ecosystem"
     },
     "finance": {
       "title": "Finance",
-      "pledge": "Pledge",
-      "nft_mall": "NFT Mall"
+      "pledge": "Staking",
+      "nft_mall": "NFT Marketplace"
     },
     "about_us": {
-      "title": "About Us",
+      "title": "About us",
       "company_intro": "Company Introduction",
       "project_intro": "Project Introduction",
       "partners": "Partners",
-      "team_intro": "Team Introduction"
+      "team_intro": "Our Team"
     },
     "market": {
       "title": "Market"
@@ -163,7 +163,7 @@
       "title": "FAQ"
     },
     "compliance": {
-      "title": "Compliance Information",
+      "title": "Compliance",
       "terms": "Terms of Use",
       "privacy": "Privacy Policy",
       "contact": "Contact Us"

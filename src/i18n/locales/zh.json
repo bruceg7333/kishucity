@@ -136,7 +136,7 @@
     "white_papers": "白皮书"
   },
   "menu": {
-    "catalog": "目 录",
+    "catalog": "目录",
     "ecology": {
       "title": "生态",
       "creator": "创作者生态",
@@ -162,10 +162,10 @@
       "title": "常见问题"
     },
     "compliance": {
-      "title": "合规信息",
+      "title": "合规",
       "terms": "使用条款",
       "privacy": "隐私政策",
-      "contact": "联系方式"
+      "contact": "联系我们"
     }
   },
   "assets": {

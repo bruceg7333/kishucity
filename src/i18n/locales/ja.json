@@ -147,33 +147,33 @@
     }
   },
   "menu": {
-    "catalog": "目次",
+    "catalog": "メニュー",
     "ecology": {
-      "title": "エコロジー",
-      "creator": "クリエイターエコロジー",
-      "object": "オブジェクトエコロジー",
-      "economy": "エコノミーエコロジー"
+      "title": "エコシステム",
+      "creator": "クリエイターエコシステム",
+      "object": "資産エコシステム",
+      "economy": "経済エコシステム"
     },
     "finance": {
       "title": "ファイナンス",
-      "pledge": "質押",
-      "nft_mall": "NFTモール"
+      "pledge": "ステーキング",
+      "nft_mall": "NFTマーケットプレイス"
     },
     "about_us": {
-      "title": "私たちについて",
-      "company_intro": "会社紹介",
-      "project_intro": "プロジェクト紹介",
-      "partners": "パートナー",
+      "title": "企業情報",
+      "company_intro": "会社概要",
+      "project_intro": "事業紹介",
+      "partners": "パートナー企業",
       "team_intro": "チーム紹介"
     },
     "market": {
-      "title": "市場"
+      "title": "マーケット"
     },
     "faq": {
-      "title": "よくある質問"
+      "title": "よくあるご質問"
     },
     "compliance": {
-      "title": "コンプライアンス情報",
+      "title": "コンプライアンス",
       "terms": "利用規約",
       "privacy": "プライバシーポリシー",
       "contact": "お問い合わせ",
