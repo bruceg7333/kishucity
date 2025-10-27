@@ -34,6 +34,7 @@ const displaySlogan = computed(() => props.slogan || t('right_bar.slogan'));
   margin-bottom: 0.2rem;
 }
 .right-bar {
+    background: #fff;
     position: fixed;
     top: 0;
     right: 0;
@@ -52,6 +53,7 @@ const displaySlogan = computed(() => props.slogan || t('right_bar.slogan'));
   flex-direction: column;
   align-items: center;
   position: relative;
+  width: 100%;
 }
 .notice {
   height: 1.55rem;
@@ -61,7 +63,8 @@ const displaySlogan = computed(() => props.slogan || t('right_bar.slogan'));
 }
 .divider {
   width: 100%;
-  height: 0;
+  height: 2px;
+  background-color: #000;
 }
 .slogan {
   writing-mode: vertical-rl;

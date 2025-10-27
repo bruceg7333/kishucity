@@ -1,16 +1,17 @@
 <template>
-  <div class="properties-page">
+  <div class="clans-page">
     <div class="container">
-      <h2>{{ t('header.properties') }}</h2>
+      <h2>{{ t('clans.title') }}</h2>
       <div class="card-list">
-        <PropertyCard
-          v-for="property in list"
-          :key="property.id"
-          :id="property.id"
-          :title="t(property.title_key)"
-          :subtitle="t(property.subtitle_key)"
-          :summary="t(property.summary_key)"
-          :cover="property.cover"
+        <ClanCard
+          v-for="clan in clans"
+          :key="clan.id"
+          :id="clan.id"
+          :name="t(clan.name_key)"
+          :field="t(clan.field_key)"
+          :type="t(clan.type_key)"
+          :keyword="t(clan.keyword_key)"
+          :color="clan.color"
         />
       </div>
     </div>
@@ -19,14 +20,12 @@
 
 <script setup>
 import { ref } from 'vue';
-import PropertyCard from './PropertyCard.vue';
+import ClanCard from './Card.vue';
 import { useI18n } from 'vue-i18n';
 
 const { t } = useI18n();
 
-import { properties } from './data.js';
-
-const list = ref(properties || []);
+import { clans } from './data.js';
 </script>
 
 <style scoped>

@@ -131,6 +131,7 @@
   "white_papers": "White Papers",
   "header": {
     "properties": "Properties",
+    "clans": "Clans",
     "about_us": "About Us",
     "how_it_works": "How it works",
     "white_papers": "White Papers"
@@ -267,6 +268,51 @@
       "neon_clan_tags": "Virtual Characters / ACGN / Illustration / Vtuber Culture",
       "yoru_clan_tags": "Party Culture / Brand Operations / Social Experiment",
       "genka_clan_tags": "Immersive Play Space / Metaverse Entrance Station"
+    }
+  },
+  "clans": {
+    "title": "Creative Clans",
+    "sonik_clan": {
+      "name": "Sound Clan (Sonik Clan)",
+      "field": "Music Production / DJ / Sound Art",
+      "type": "Forest Live Space / DJ Lounge / Sound Workstation",
+      "keyword": "Analog Synthesizers, Cyber Sound Waves, Spectrum Visuals, Film Cassettes, Zen Sound Rooms, Violet Lighting"
+    },
+    "kage_clan": {
+      "name": "Shadow Clan (Kage Clan)",
+      "field": "Film & Television / Theater / Performance / Character Narrative",
+      "type": "Black Box Theater / Immersive Multi-functional Performance Space",
+      "keyword": "Black Gold Tones, Noh Masks, Shadow Puppet Screens, Red Lanterns, Curtain Installations, Afterimage Trails"
+    },
+    "mono_clan": {
+      "name": "Creation Clan (Mono Clan)",
+      "field": "Architecture / Handicraft / Spatial Aesthetics",
+      "type": "Traditional Townhouse Renovation Space / Artisan Workshop / Exhibition Inn",
+      "keyword": "Wooden Lattice Windows, Tatami Mats, Sukiya Style, Handmade Pottery, White Walls + Wooden Beams, Folk Art Totems"
+    },
+    "scripta_clan": {
+      "name": "Culture Clan (Scripta Clan)",
+      "field": "Writing / Curation / Editorial Publishing",
+      "type": "Bookstore-style Inn / Small Library / Literary Salon",
+      "keyword": "Parchment, Brush Calligraphy, Meiji Literati, Antique Maps, Letters, Paper Layering"
+    },
+    "sage_clan": {
+      "name": "Machine Clan (Sage Clan)",
+      "field": "AI Art / Algorithmic Aesthetics / Technical Creation",
+      "type": "Digital Laboratory / Zen Minimalist AI Space",
+      "keyword": "White-Gray Minimalism, Turing Circuits, Quantum Gate Symbols, Floating Pixels, Exposed Concrete"
+    },
+    "neon_clan": {
+      "name": "Neon Clan (Neon Clan)",
+      "field": "Virtual Characters / ACGN / Illustration / Vtuber Culture",
+      "type": "Anime-themed Dormitory / Vtuber Experience Space / Character Gallery",
+      "keyword": "Cyber Neon, Transparent Fluorescence, Cartoon Textures, AI-generated Art, Character Standees, Urban Light Pollution Aesthetics"
+    },
+    "yoru_clan": {
+      "name": "Night Clan (Yoru Clan)",
+      "field": "Party Culture / Brand Operations / Social Experiment",
+      "type": "🍸 Speakeasy Bar / Hidden Entrance Street Gathering Place",
+      "keyword": "Disco Balls, Smoke, Low-key Lighting, Wine Bottle Arrays, Moonlit Japanese Bar Counter, Midnight Blue & Dark Gold"
     }
   }
 }

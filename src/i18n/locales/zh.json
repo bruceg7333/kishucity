@@ -258,5 +258,50 @@
       "yoru_clan_tags": "派对文化 / 品牌运营 / 社交实验",
       "genka_clan_tags": "沉浸式Play空间 / Metaverse入口站"
     }
+  },
+  "clans": {
+    "title": "创作藩族",
+    "sonik_clan": {
+      "name": "音藩 (Sonik Clan)",
+      "field": "音乐制作 / DJ / 声音艺术",
+      "type": "森林Live Space / DJ Lounge / 声音工作站",
+      "keyword": "模拟合成器、赛博音浪、频谱波形、胶片卡带、禅式音室、蓝紫灯光"
+    },
+    "kage_clan": {
+      "name": "影藩 (Kage Clan)",
+      "field": "影视 / 剧场 / 表演 / 角色叙事",
+      "type": "黑箱剧场 / 沉浸式多功能演出空间",
+      "keyword": "黑金色调、能剧面具、影绘布幕、红灯笼、幕布装置、残影拖尾"
+    },
+    "mono_clan": {
+      "name": "造藩 (Mono Clan)",
+      "field": "建筑 / 手工艺 / 空间美学",
+      "type": "古町家改造空间 / 匠人工坊 / 展示型客栈",
+      "keyword": "木格窗、榻榻米、数寄屋、手工陶器、白墙+木梁、民艺图腾"
+    },
+    "scripta_clan": {
+      "name": "文藩 (Scripta Clan)",
+      "field": "写作 / 策展 / 编辑出版",
+      "type": "书屋式旅馆 / 小型图书馆 / 文学Saloon",
+      "keyword": "羊皮纸、毛笔字迹、明治文人、古地图、信札、纸片叠层"
+    },
+    "sage_clan": {
+      "name": "机藩 (Sage Clan)",
+      "field": "AI艺术 / 算法美学 / 技术创作",
+      "type": "数字实验室 / 禅式极简AI空间",
+      "keyword": "白灰极简、图灵电路、量子门符号、悬浮像素、清水混凝土"
+    },
+    "neon_clan": {
+      "name": "霓藩 (Neon Clan)",
+      "field": "虚拟角色 / ACGN / 插画 / Vtuber文化",
+      "type": "二次元主题宿舍 / Vtuber体验空间 / 角色展示馆",
+      "keyword": "赛博霓虹、透明荧光、卡通纹理、AI生成图、角色立绘、都市光污染美学"
+    },
+    "yoru_clan": {
+      "name": "夜藩 (Yoru Clan)",
+      "field": "派对文化 / 品牌运营 / 社交实验",
+      "type": "🍸 Speakeasy酒吧 / 隐藏入口街头聚会场所",
+      "keyword": "灯球、烟雾、低光调、红酒瓶阵列、月下日式吧台、午夜蓝与暗金色"
+    }
   }
 }

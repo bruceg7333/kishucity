@@ -12,6 +12,7 @@
     <Transition name="mm">
       <RightBarModal v-if="isFabOpen" @close="closeFab" />
     </Transition>
+    <AppFooter />
   </div>
 </template>
 
@@ -22,6 +23,7 @@ import AppLayout from './components/AppLayout.vue';
 import RightBarModal from './components/RightBarModal.vue';
 import FabButton from './components/FabButton.vue';
 import { useRouter } from 'vue-router';
+import AppFooter from './components/AppFooter.vue';
 
 const router = useRouter();
 const isFabOpen = ref(false);

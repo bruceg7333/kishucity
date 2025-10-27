@@ -5,6 +5,8 @@ import Assets from '../components/Assets.vue';
 import InviteRank from '../components/InviteRank.vue';
 import Properties from '../components/properties/Properties.vue';
 import PropertyDetail from '../components/properties/PropertyDetail.vue';
+import ClanList from '../components/clans/List.vue';
+import ClanDetail from '../components/clans/Detail.vue';
 
 const routes = [
   {
@@ -36,6 +38,16 @@ const routes = [
     path: '/properties/:id',
     name: 'property-detail',
     component: PropertyDetail,
+  },
+  {
+    path: '/clans',
+    name: 'clans',
+    component: ClanList,
+  },
+  {
+    path: '/clans/:id',
+    name: 'clan-detail',
+    component: ClanDetail,
   }
 ];
 

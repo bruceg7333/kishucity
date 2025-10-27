@@ -3,6 +3,7 @@
     <div class="logo" @click="goToHome"></div>
     <nav class="nav">
       <router-link to="/properties" class="nav-link">{{ $t('header.properties') }}</router-link>
+      <router-link to="/clans" class="nav-link">{{ $t('header.clans') }}</router-link>
       <router-link to="/about" class="nav-link">{{ $t('header.about_us') }}</router-link>
       <router-link to="/how-it-works" class="nav-link">{{ $t('header.how_it_works') }}</router-link>
       <router-link to="/white-papers" class="nav-link">{{ $t('header.white_papers') }}</router-link>

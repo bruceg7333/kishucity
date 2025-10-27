@@ -91,13 +91,7 @@
           </div>
         </div>
       </div>
-      <footer class="menu-footer">
-        <div class="links">
-          <a href="/properties">{{ t('menu.compliance.terms') }}</a>
-<a href="/properties">{{ t('menu.compliance.privacy') }}</a>
-<a href="/properties">{{ t('menu.compliance.contact') }}</a>
-        </div>
-      </footer>
+      <AppFooter :alwaysShow="true" />
     </div>
   </div>
 </template>
@@ -105,6 +99,7 @@
 <script setup>
 import { useRouter } from 'vue-router'; // Assuming vue-router is used
 import { useI18n } from 'vue-i18n';
+import AppFooter from './AppFooter.vue';
 
 const { t } = useI18n();
 
