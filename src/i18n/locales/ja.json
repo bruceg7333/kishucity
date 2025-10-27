@@ -368,7 +368,17 @@
     "ecosystem_mechanism": {
       "title": "エコシステムメカニズム"
     }
-},
+  },
+  "object_ecosystem": {
+    "hero_title": "空間は、インスピレーションの器である。",
+    "hero_subtitle": "私たちは、創造にはリアルな空間が必要だと信じています。 Kishu World はネットの中だけでなく、現実の土地と建築へと拡張します。Creator Space のあらゆる場が、インスピレーション・生活・コミュニティを結ぶハブとなります。",
+    "concept_subtitle": "物件エコシステム",
+    "concept_body": "価値はコミュニティによって創造され、コミュニティに還元される。Kishu Worldでは、経済は一方的な取引ではなく、共創のサイクルです。私たちは「多層トークンモデル」と「ポイントインセンティブシステム」を通じて、実物資産に裏打ちされ、コミュニティガバナンスによって推進される文化経済体を構築します。",
+    "showcase_title": "ショーケース",
+    "gallery_title": "ギャラリー",
+    "gallery_description": "25の物件の詳細内容",
+    "developing_vision_title": "開発ビジョン"
+  },
   "clans": {
     "title": "創作藩族",
     "sonik_clan": {

@@ -56,7 +56,7 @@ function toggleLangOptions() {
 function setLang(lang) {
   locale.value = lang;
   currentLang.value = lang;
-  localStorage.setItem('lang', lang);
+  localStorage.setItem('language', lang);
   showLangOptions.value = false;
 }
 

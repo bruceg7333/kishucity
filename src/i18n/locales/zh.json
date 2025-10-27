@@ -281,7 +281,17 @@
     "ecosystem_mechanism": {
       "title": "生态机制"
     }
-},
+  },
+  "object_ecosystem": {
+    "hero_title": "空间是灵感的容器。",
+    "hero_subtitle": "我们相信，创意需要真实的空间来孕育。因此，Kishu World 不仅存在于网络之中，更延伸至现实世界的土地与建筑。 Creator Space 中每一处空间都是连接灵感、生活与社群的节点。",
+    "concept_subtitle": "物件生态",
+    "concept_body": "价值由社区创造，也回归于社区。在 Kishu World，经济并非单向的交易，而是一个共创循环。 我们通过「多层代币模型」与「积分激励体系」，构建一个由真实 资产支撑、由社群治理驱动的文化经济体。",
+    "showcase_title": "展示",
+    "gallery_title": "画廊",
+    "gallery_description": "25处物业的详细内容",
+    "developing_vision_title": "发展愿景"
+  },
   "clans": {
     "title": "创作藩族",
     "sonik_clan": {
