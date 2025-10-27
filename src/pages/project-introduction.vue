@@ -1,25 +1,214 @@
 <template>
   <div class="project-introduction">
-    <section class="summary">
-      <h2>项目概要</h2>
-      <p>Kishu World 是一个以纪州铁道为起点的 Web3 文创与会员生态项目，通过代币、DAO治理与RWA机制，将真实世界的不动产、文化与创作整合进一个开放的数字网络。我们致力于构建一个以创作者与社区为中心的“新型会员制文化城市”。</p>
+    <section class="section-wrapper left-layout" style="background-image: url(/assets/banner2.85b3f4da.jpg);">
+      <div class="content-container">
+        <h2>{{ t('project_introduction.project_overview_title') }}</h2>
+        <p>{{ t('project_introduction.project_overview') }}</p>
+      </div>
     </section>
-    <section class="vision">
-      <h2>项目愿景</h2>
-      <p>我们的愿景是让「真实资产 × 数字文化 × 社群共创」形成一种新的生活方式，让创意与土地、文化与技术、艺术与经济重新连接。</p>
+    <section class="section-wrapper right-layout" style="background-image: url(/assets/banner3.32d11929.png);">
+      <div class="content-container">
+        <h2>{{ t('project_introduction.vision_title') }}</h2>
+        <p>{{ t('project_introduction.vision') }}</p>
+      </div>
     </section>
-    <section class="structure">
-      <h2>项目结构</h2>
-      <p>Kishu World 由三大生态组成：</p>
+    <section class="section-wrapper left-layout" style="background-image: url(/assets/banner5.f4c6c54b.png);">
+      <div class="content-container">
+        <h2>{{ t('project_introduction.structure_title') }}</h2>
+        <p>{{ t('project_introduction.structure.description') }}</p>
       <ul>
-        <li>创作者生态（Creators Ecosystem）：连接艺术家、设计师、创作者与文化社区。</li>
-        <li>物件生态（Property Ecosystem）：以现实空间为载体的 Creator Space 网络，实现RWA资产化。</li>
-        <li>经济生态（Economic Ecosystem）：通过代币与积分体系，让价值在社区内部循环与再分配。</li>
+        <li>{{ t('project_introduction.structure.creator_ecosystem') }}</li>
+        <li>{{ t('project_introduction.structure.property_ecosystem') }}</li>
+        <li>{{ t('project_introduction.structure.economic_ecosystem') }}</li>
       </ul>
-      <p>三者共同构成一个自我生长的文化经济体：创作 → 空间 → 价值 → 再创作。</p>
+      <p>{{ t('project_introduction.structure.conclusion') }}</p>
+      </div>
+    </section>
+    <section class="section-wrapper right-layout" style="background-image: url(/assets/banner2.95462274.png);">
+      <div class="content-container">
+        <h2>{{ t('project_introduction.kishu_clans_title') }}</h2>
+        <p>{{ t('project_introduction.kishu_clans.background') }}</p>
+      </div>
     </section>
   </div>
 </template>
 <script>
-export default { name: 'ProjectIntroduction' }
+import { useI18n } from 'vue-i18n';
+
+export default {
+  name: 'ProjectIntroduction',
+  setup() {
+    const { t } = useI18n();
+    return { t };
+  },
+};
 </script>
+
+<style scoped>
+.project-introduction {
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  background-color: #fdfdfd;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.section-wrapper {
+  padding: 60px 15px;
+  max-width: 100%; /* Changed to 100% to allow background image to span full width */
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  min-height: 400px; /* Ensure enough height for background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  color: #fff; /* Text color for better contrast on background images */
+}
+
+.section-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Overlay for better text readability */
+  z-index: 1;
+}
+
+.content-container {
+  position: relative;
+  z-index: 2;
+  max-width: 50%; /* Content takes half width */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.left-layout .content-container {
+  margin-right: auto; /* Pushes content to the left */
+  margin-left: 5%;
+}
+
+.right-layout .content-container {
+  margin-left: auto; /* Pushes content to the right */
+  margin-right: 5%;
+}
+
+.project-introduction section h2 {
+  font-size: 24px;
+  text-align: left; /* Align title to content container */
+  margin-bottom: 30px;
+  color: #fff; /* White color for titles on background */
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.project-introduction section h2::after {
+  content: '';
+  position: absolute;
+  left: 0; /* Align underline to title */
+  bottom: 0;
+  width: 40px;
+  height: 2px;
+  background-color: #c0392b;
+  border-radius: 1px;
+}
+
+.project-introduction p,
+.project-introduction li {
+  font-size: 16px;
+  line-height: 1.7;
+  text-align: left; /* Align text to content container */
+  margin-bottom: 10px;
+  color: #fff; /* White color for text on background */
+}
+
+.project-introduction ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+/* Responsive adjustments */
+.section-image {
+  display: block;
+  max-width: 80%;
+  height: auto;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 992px) {
+  .section-wrapper {
+    padding: 40px 10px;
+    min-height: 300px;
+  }
+  .content-container {
+    max-width: 70%; /* Content takes more width on smaller screens */
+    margin: 0 auto; /* Center content */
+  }
+  .project-introduction section h2 {
+    font-size: 20.8px;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+  .project-introduction section h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .project-introduction p,
+  .project-introduction li {
+    font-size: 14.4px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-wrapper {
+    padding: 30px 10px;
+    min-height: 250px;
+  }
+  .content-container {
+    max-width: 80%;
+  }
+  .project-introduction section h2 {
+    font-size: 17.6px;
+    margin-bottom: 20px;
+  }
+  .project-introduction p,
+  .project-introduction li {
+    font-size: 12.8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-wrapper {
+    padding: 20px 10px;
+    min-height: 200px;
+  }
+  .content-container {
+    max-width: 90%;
+    padding: 10px;
+  }
+  .project-introduction section h2 {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  .project-introduction p,
+  .project-introduction li {
+    font-size: 11.2px;
+  }
+}
+
+.section-image {
+  display: none; /* Hide the image as it's now a background */
+}
+</style>

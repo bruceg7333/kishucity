@@ -130,11 +130,12 @@
   "how_it_works": "How it works",
   "white_papers": "White Papers",
   "header": {
-    "properties": "Properties",
+    "properties": "Real World Assets",
     "clans": "Clans",
     "about_us": "About Us",
     "how_it_works": "How it works",
-    "white_papers": "White Papers"
+    "white_papers": "White Papers",
+    "project_introduction": "Project"
   },
   "menu": {
     "catalog": "MENU",
@@ -160,7 +161,10 @@
       "title": "Market"
     },
     "faq": {
-      "title": "FAQ"
+      "title": "FAQ",
+      "faq": "FAQ",
+      "blog_news": "Blog News",
+      "whitepaper": "Whitepaper"
     },
     "compliance": {
       "title": "Compliance",
@@ -168,6 +172,9 @@
       "privacy": "Privacy Policy",
       "contact": "Contact Us",
       "end_user_terms": "End User Terms"
+    },
+    "treasury": {
+      "title": "Treasury"
     }
   },
   "about_company": "Company Introduction",
@@ -303,7 +310,45 @@
     "gallery_description": "Detailed content of 25 properties",
     "developing_vision_title": "Developing Vision"
   },
-  "clans": {
+  "economic_ecosystem": {
+    "hero_title": "Value is created by the community — and ultimately returns to the community.",
+    "hero_subtitle": "In Kishu World, the economy is not a one-way transaction, but a co-creative cycle. Through a multi-layer token model and incentive point system, we are building a culture-driven economic ecosystem—supported by real-world assets and governed by the community.",
+    "key_sectors": {
+      "title": "Key Sectors",
+      "finance": "Finance",
+      "technology": "Technology",
+      "manufacturing": "Manufacturing",
+      "services": "Services",
+      "sustainability": "Sustainability"
+    },
+    "model": {
+      "title": "Tokenomics Overview",
+      "body_1": "The Kishu World economic system is built on a sustainable, long-term token model, designed to balance the relationships between creator incentives, community governance, and project growth.",
+      "body_2": "$KSC serves as the ecosystem’s core token—circulating across creative rewards, staking returns, DAO governance, and the real-world asset (RWA) value cycle. All token issuance and distribution follow a transparent and traceable on-chain mechanism, ensuring that value flows organically within the ecosystem rather than being centrally controlled. Detailed token allocation and release schedules will be published in the upcoming White Paper. We believe that only clear economic logic and real asset backing can give a token true long-term value."
+    },
+    "collaboration": {
+      "title": "DAO Governance",
+      "body": "The governance system of Kishu World is community-driven, where all major decisions are made collectively through token-holder participation and voting. True decentralization, in our view, is not the absence of structure—but the presence of transparent consensus and collaborative action. Governance Framework: Proposal: Any user holding or staking $KSC can submit proposals related to fund usage, partnerships, or community initiatives. Voting: Voting power is calculated based on staked or held tokens, with each proposal voted on during a defined period. Execution: Approved proposals are automatically executed by the DAO Treasury, covering fund allocation, reward distribution, or token buybacks. Transparency: All governance records and voting data are published on-chain, allowing real-time tracking of the DAO Treasury's asset flow."
+    }
+  },
+  "company_introduction": {
+    "company_overview": "Kishu Railway Co., Ltd., founded in 1912, is one of Japan's oldest private regional railways. Now operated under the Poliking Group, its business spans railway operations, hospitality, real estate development, and cultural tourism. Headquartered in Gobo City, Wakayama Prefecture, we have expanded our presence with operations and investment bases in 26 cities across Japan, including offices in Tokyo and Karuizawa.",
+    "vision": "Our vision is to carry forward the century-old spirit of Kishu Railway into the digital age. Through blockchain innovation, digitalization, and global collaboration, we aim to transform \"Kishu Railway\" from a single local line into a worldwide network linking people, land, culture, and technology. The railway, for us, has always been more than infrastructure — it is a living bridge across generations and geographies. We believe that true innovation begins with co-creation, and technology serves only to enhance the human spirit of collaboration. Kishu Railway and Kishu World together represent a future where \"connection\" becomes the foundation of cultural evolution.",
+    "business_scope": {
+      "railway_operations": "Management and maintenance of the Kishu Line (Gobo – Nishi-Gobo).",
+      "hospitality": "Operation of hotels and ryokans, including Kishu Railway Karuizawa Hotel and Enoshima Ryokan.",
+      "real_estate": "Revitalization of regional architecture, RWA tokenization, and cultural redevelopment projects.",
+      "web3_innovation": "Launch of Kishu World, a DAO-based membership ecosystem integrating blockchain and culture."
+    },
+    "history": {
+      "1912": "Founded as Gobo Light Railway Co., Ltd. (predecessor of Kishu Railway)",
+      "1931": "Renamed to Kishu Railway Co., Ltd.",
+      "1970-2000s": "Expanded into hospitality and real estate sectors",
+      "2020s": "Initiated Kishu World: a cultural and Web3 fusion program"
+    },
+    "team_culture": "Our team brings together experts from Japan, USA, China, and other international markets, spanning fields such as railway management, hospitality, architecture, blockchain, and cultural design. Kishu World is a Web3 cultural and membership ecosystem inspired by the historic Kishu Railway. Through tokenization, DAO governance, and RWA integration, we are building an open digital network where creativity, land, and community converge to create a new lifestyle—a creator-centric 'new membership-based cultural city'."
+  },
+    "clans": {
     "title": "Creative Clans",
     "sonik_clan": {
       "name": "Sound Clan (Sonik Clan)",
@@ -346,6 +391,24 @@
       "field": "Party Culture / Brand Operations / Social Experiment",
       "type": "🍸 Speakeasy Bar / Hidden Entrance Street Gathering Place",
       "keyword": "Disco Balls, Smoke, Low-key Lighting, Wine Bottle Arrays, Moonlit Japanese Bar Counter, Midnight Blue & Dark Gold"
+    }
+  },
+  "project_introduction": {
+    "project_overview_title": "Project Overview",
+    "project_overview": "Kishu World is a Web3 cultural and membership ecosystem starting from Kishu Railway. We integrate real-world assets, local culture, and creative projects into an open digital network. Here, creativity, land, and community come together to form a new way of living — a creator-centered cultural city for the Web3 era.",
+    "vision_title": "Vision",
+    "vision": "We believe that when real-world assets, digital culture, and community co-creation converge, a new lifestyle emerges. Kishu World redefines the bond between creativity and land, culture and technology, art and economy. It is a cultural network city co-created by its community — rooted in reality, expanding into the digital realm.",
+    "structure_title": "Structure",
+    "structure": {
+      "description": "Kishu World consists of three interconnected ecosystems:",
+      "creator_ecosystem": "Creator Ecosystem – connecting artists, designers, and cultural communities through networks of collaboration and creativity.",
+      "property_ecosystem": "Property Ecosystem – transforming real-world spaces into a network of Creator Spaces through RWA tokenization.",
+      "economic_ecosystem": "Economic Ecosystem – enabling value circulation and redistribution via tokens and community incentives.",
+      "conclusion": "Together, they form a self-evolving cultural economy: Creation → Space → Value → Re-creation."
+    },
+    "kishu_clans_title": "Kishu Clans",
+    "kishu_clans": {
+      "background": "In the final moments of the old world's collapse, networks were disrupted, sovereignty dissolved, and cities lost their maps. Humanity experienced an era known as 'The Great Exodus' - a catastrophe where blocks became new territories, chains replaced old laws, and the boundary between reality and virtuality completely disappeared."
     }
   }
 }

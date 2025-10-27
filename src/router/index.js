@@ -7,23 +7,23 @@ import Properties from '../components/properties/Properties.vue';
 import PropertyDetail from '../components/properties/PropertyDetail.vue';
 import ClanList from '../components/clans/List.vue';
 import ClanDetail from '../components/clans/Detail.vue';
-import CreatorsEcosystem from '@pages/creators-ecosystem.vue';
-import ObjectEcosystem from '@pages/object-ecosystem.vue';
-import EconomicEcosystem from '@pages/economic-ecosystem.vue';
-import Staking from '@pages/staking.vue';
-import Mall from '@pages/mall.vue';
+
 import CompanyIntroduction from '@pages/company-introduction.vue';
 import ProjectIntroduction from '@pages/project-introduction.vue';
 import Partners from '@pages/partners.vue';
 import ClanHome from '@pages/clan-home.vue';
 import FAQ from '@pages/faq.vue';
-import BlogNews from '@pages/blog-news.vue';
-import Whitepaper from '@pages/whitepaper.vue';
+
 import PrivacyPolicy from '@pages/privacy-policy.vue';
 import TermsOfUse from '@pages/terms-of-use.vue';
 import CopyrightTerms from '@pages/copyright-terms.vue';
 import EndUserTerms from '@pages/end-user-terms.vue';
 import TeamIntroduction from '@pages/team-introduction.vue';
+import Market from '@pages/market.vue';
+import ComingSoon from '../components/ComingSoon.vue';
+import CreatorsEcosystem from '../pages/creators-ecosystem.vue';
+import ObjectEcosystem from '../pages/object-ecosystem.vue';
+import EconomicEcosystem from '../pages/economic-ecosystem.vue';
 
 const routes = [
   {
@@ -84,12 +84,12 @@ const routes = [
   {
     path: '/staking',
     name: 'staking',
-    component: Staking,
+    component: ComingSoon,
   },
   {
     path: '/mall',
     name: 'mall',
-    component: Mall,
+    component: ComingSoon,
   },
   {
     path: '/company-introduction',
@@ -119,12 +119,12 @@ const routes = [
   {
     path: '/blog-news',
     name: 'blog-news',
-    component: BlogNews,
+    component: ComingSoon,
   },
   {
     path: '/whitepaper',
     name: 'whitepaper',
-    component: Whitepaper,
+    component: ComingSoon,
   },
   {
     path: '/privacy-policy',
@@ -150,6 +150,11 @@ const routes = [
     path: '/team-introduction',
     name: 'team-introduction',
     component: TeamIntroduction,
+  },
+  {
+    path: '/market',
+    name: 'market',
+    component: Market,
   }
 ];
 

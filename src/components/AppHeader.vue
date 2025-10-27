@@ -4,9 +4,9 @@
     <nav class="nav">
       <router-link to="/properties" class="nav-link">{{ $t('header.properties') }}</router-link>
       <router-link to="/clans" class="nav-link">{{ $t('header.clans') }}</router-link>
-      <router-link to="/about" class="nav-link">{{ $t('header.about_us') }}</router-link>
-      <router-link to="/how-it-works" class="nav-link">{{ $t('header.how_it_works') }}</router-link>
-      <router-link to="/white-papers" class="nav-link">{{ $t('header.white_papers') }}</router-link>
+      <router-link to="/company-introduction" class="nav-link">{{ $t('header.about_us') }}</router-link>
+      <router-link to="/res/onepager.pdf" target="_blank" class="nav-link">{{ $t('header.project_introduction') }}</router-link>
+      <!-- <router-link to="/white-papers" class="nav-link">{{ $t('header.white_papers') }}</router-link> -->
     </nav>
     <!-- <FabButton class="mobile" @click="handleFabClick" /> -->
     <BurgerButton class="mobile" @click="handleFabClick" lineColor="#fcc89e" />

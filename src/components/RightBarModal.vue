@@ -66,7 +66,10 @@
               <img :src="a9Image" alt="" draggable="false" />
             </div>
             <div class="texts">
-              <div class="title"><a href="/clan-home">{{ t('menu.market.title') }}</a></div>
+              <div class="title">{{ t('menu.treasury.title') }}</div>
+              <div class="subs">
+                <a href="/market">{{ t('menu.treasury.title') }}</a> 
+              </div>
             </div>
           </div>
         </div>
@@ -101,7 +104,7 @@
                 <i class="sep"></i>
                 <a href="/copyright-terms">{{ t('menu.compliance.contact') }}</a>
                 <i class="sep"></i>
-                <a href="/end-user-terms">{{ t('menu.compliance.end_user_terms') }}</a>
+                <!-- <a href="/end-user-terms">{{ t('menu.compliance.end_user_terms') }}</a> -->
               </div>
             </div>
           </div>
@@ -291,7 +294,7 @@ function closeModal() {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.24rem;
+  gap: 0.14rem;
   font-size: 0.27rem;
   color: #111;
   cursor: pointer;

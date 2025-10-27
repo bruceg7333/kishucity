@@ -62,6 +62,24 @@ export default { name: 'ObjectEcosystem' }
   z-index: 1;
 }
 
+.hero-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  z-index: 1; /* Ensure it's above the background image but below the text */
+}
+
+.hero p {
+  font-size: 24.4px;
+  max-width: 700px;
+  z-index: 2; /* Ensure text is above the overlay */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.82);
+}
+
 .hero-background {
   position: absolute;
   top: 0;

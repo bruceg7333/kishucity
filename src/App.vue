@@ -1,5 +1,4 @@
 <template>
-  <div id="app">
     <AppHeader @fab-click="toggleFab" />
     <AppLayout>
       <router-view v-slot="{ Component }">
@@ -13,7 +12,6 @@
       <RightBarModal v-if="isFabOpen" @close="closeFab" />
     </Transition>
     <AppFooter />
-  </div>
 </template>
 
 <script setup>

@@ -130,10 +130,11 @@
   "how_it_works": "使用说明",
   "white_papers": "白皮书",
   "header": {
-    "properties": "资产",
+    "properties": "现实资产",
     "about_us": "关于我们",
     "how_it_works": "使用说明",
-    "white_papers": "白皮书"
+    "white_papers": "白皮书",
+    "project_introduction": "项目介绍"
   },
   "menu": {
     "catalog": "目录",
@@ -159,7 +160,10 @@
       "title": "市场"
     },
     "faq": {
-      "title": "常见问题"
+      "title": "常见问题",
+      "faq": "常见问题",
+      "blog_news": "博客新闻",
+      "whitepaper": "白皮书"
     },
     "compliance": {
       "title": "合规",
@@ -167,6 +171,9 @@
       "privacy": "隐私政策",
       "contact": "联系我们",
       "end_user_terms": "最终用户条款"
+    },
+    "treasury": {
+      "title": "财库"
     }
   },
   "assets": {
@@ -292,7 +299,45 @@
     "gallery_description": "25处物业的详细内容",
     "developing_vision_title": "发展愿景"
   },
-  "clans": {
+  "economic_ecosystem": {
+    "hero_title": "价值由社区创造，也回归于社区。",
+    "hero_subtitle": "在 Kishu World，经济并非单向的交易，而是一个共创循环。我们通过「多层代币模型」与「积分激励体系」，构建一个由真实资产支撑、由社群治理驱动的文化经济体。",
+    "key_sectors": {
+      "title": "关键领域",
+      "finance": "金融",
+      "technology": "科技",
+      "manufacturing": "制造",
+      "services": "服务",
+      "sustainability": "可持续发展"
+    },
+    "model": {
+      "title": "经济模型",
+      "body_1": "Kishu World 的经济系统以长期可持续的代币模型为基础，旨在平衡创作者激励、社区治理与项目发展的关系。",
+      "body_2": "$KSC 作为生态的核心代币，贯穿于创作激励、质押收益、DAO治理、以及现实资产（RWA）的价值循环中。所有代币的分配与释放都基于透明、可追溯的机制，确保价值能够在生态内部自然流动，而非被集中控制。代币的详细分配与释放计划将随白皮书正式公开。我们相信，清晰的经济逻辑与真实资产支撑，才能让代币具备真正的长期价值。"
+    },
+    "collaboration": {
+      "title": "DAO 治理",
+      "body": "Kishu World 的治理体系由社区驱动，所有重大决策均由持币者共同参与与投票决定。我们相信，真正的去中心化不是放任，而是让参与者在透明规则下达成共识与协作。治理机制包括：提案机制（Proposal）：持有或质押 $KSC 的用户可发起资金用途、项目合作、活动方向等提案。投票机制（Voting）：按质押或持仓比例分配投票权，在固定周期内进行表决。执行机制（Execution）：通过提案的决议由 DAO Treasury 自动执行，包括资金拨付、激励发放与代币回购。透明审计（Transparency）：所有治理记录与投票数据链上公开，DAO 财库流向可实时追踪。"
+    }
+  },
+  "company_introduction": {
+    "company_overview": "纪州铁道株式会社（Kishu Railway Co., Ltd.）成立于1912年，是日本历史最悠久的地方私营铁道之一。现由Poliking集团旗下运营，业务涵盖铁路、酒店、不动产及文旅项目开发。公司总部位于日本和歌山县御坊市，并在日本26处城市设有运营与投资据点。",
+    "vision": "我们的愿景是让百年企业的精神在新时代中延续。通过数字化与全球化的创新，将\"纪州铁道\"从一条铁路，拓展为连接人、土地与文化的世界网络。铁路不只是交通工具，更是跨越时间与空间、连接世人的文化桥梁。",
+    "business_scope": {
+      "railway_operations": "铁路运营：纪州铁道本线（御坊站—西御坊站）运营维护",
+      "hospitality": "酒店事业：旗下拥有多家酒店与旅馆，包括纪州铁道轻井泽酒店、江之岛旅馆等",
+      "real_estate": "不动产开发：进行地方老旧建筑翻新、RWA资产化与文化项目改造",
+      "web3_innovation": "Web3项目：推出Kishu World项目，结合区块链与DAO治理创新会员制体系"
+    },
+    "history": {
+      "1912": "御坊轻便铁道株式会社成立（纪州铁道前身）",
+      "1931": "更名为纪州铁道株式会社",
+      "1970-2000s": "事业拓展至酒店与不动产领域",
+      "2020s": "推出文化创生与Web3融合计划\"Kishu World\""
+    },
+    "team_culture": "我们的团队由来自日本、美国、中国与国际市场的多领域专业人士组成，覆盖铁路、酒店、建筑设计、区块链技术与文化创意等领域。我们相信，文化创新的本质是\"共创\"，而技术只是让共创更自由的语言。纪州铁道与Kishu World将会开启新篇章：用\"连接\"，塑造未来文化。在这里，创意、土地与社群共同构建出一种新的生活方式——一个以创作者为核心的「新型会员制文化城市」。"
+  },
+    "clans": {
     "title": "创作藩族",
     "sonik_clan": {
       "name": "音藩 (Sonik Clan)",
@@ -335,6 +380,24 @@
       "field": "派对文化 / 品牌运营 / 社交实验",
       "type": "🍸 Speakeasy酒吧 / 隐藏入口街头聚会场所",
       "keyword": "灯球、烟雾、低光调、红酒瓶阵列、月下日式吧台、午夜蓝与暗金色"
+    }
+  },
+  "project_introduction": {
+    "project_overview_title": "项目概述",
+    "project_overview": "Kishu World 是一个以纪州铁道为起点的 Web3 文创与会员生态项目。我们通过代币机制、DAO 治理与 RWA 模型，将现实世界的不动产、文化与创作，整合进一个开放的数字网络。在这里，创意、土地与社群共同构建出一种新的生活方式——一个以创作者为核心的「新型会员制文化城市」。",
+    "vision_title": "项目愿景",
+    "vision": "我们相信，当真实资产 × 数字文化 × 社群共创相互交织，将诞生一种全新的生活方式。我们希望让创意重新扎根于土地，让文化与技术、艺术与经济重新连接。Kishu World 是一座由社区共建的\"文化网络城市\"——它既存在于现实，也延伸于数字空间。",
+    "structure_title": "项目结构",
+    "structure": {
+      "description": "Kishu World 由三大生态构成：",
+      "creator_ecosystem": "创作者生态（Creator Ecosystem）连接艺术家、设计师、创作者与文化社区，构建创意与合作的网络。",
+      "property_ecosystem": "物件生态（Property Ecosystem）以现实空间为载体打造 Creator Space 网络，实现 RWA 资产化。",
+      "economic_ecosystem": "经济生态（Property Ecosystem）借助代币与积分体系，让价值在社区中循环与再分配。",
+      "conclusion": "三者形成一个自我生长的文化经济体：创作 → 空间 → 价值 → 再创作。"
+    },
+    "kishu_clans_title": "纪州藩",
+    "kishu_clans": {
+      "background": "在旧世界崩解的终焉时刻，网络中断，主权消解，城市失去了地图。人类经历了被称为「数字大迁徙（The Great Exodus）」的时代灾变：区块成为新的疆域，链条取代旧法典，现实与虚拟的边界彻底消失。"
     }
   }
 }
