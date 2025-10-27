@@ -32,11 +32,9 @@
               <img :src="a7Image" alt="" draggable="false" />
             </div>
             <div class="texts">
-              <div class="title">{{ t('menu.finance.title') }}</div>
+              <div class="title">{{ t('menu.clan.system') }}</div>
               <div class="subs">
-                <a href="/staking">{{ t('menu.finance.pledge') }}</a>
-                <i class="sep"></i>
-                <a href="/mall">{{ t('menu.finance.nft_mall') }}</a>
+                <a href="/clans">{{ t('menu.clan.title') }}</a>
               </div>
             </div>
           </div>
@@ -52,10 +50,10 @@
                 <a @click.stop="goToCompanyIntroduction">{{ t('menu.about_us.company_intro') }}</a>
                 <i class="sep"></i>
                 <a href="/project-introduction">{{ t('menu.about_us.project_intro') }}</a>
-                <i class="sep"></i>
+                <!-- <i class="sep"></i>
                 <a href="/partners">{{ t('menu.about_us.partners') }}</a>
                 <i class="sep"></i>
-                <a href="/team-introduction">{{ t('menu.about_us.team_intro') }}</a>
+                <a href="/team-introduction">{{ t('menu.about_us.team_intro') }}</a> -->
               </div>
             </div>
           </div>
@@ -90,7 +88,7 @@
             </div>
           </div>
         </div>
-        <div class="cell">
+        <div class="cell" v-if="false">
           <div class="cell-inner">
             <div class="icon">
               <img :src="a11Image" alt="" draggable="false" />

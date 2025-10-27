@@ -175,6 +175,10 @@
     },
     "treasury": {
       "title": "Treasury"
+    },
+    "clan": {
+      "title": "Clan",
+      "system": "Clan System"
     }
   },
   "about_company": "Company Introduction",
@@ -410,5 +414,7 @@
     "kishu_clans": {
       "background": "In the final moments of the old world's collapse, networks were disrupted, sovereignty dissolved, and cities lost their maps. Humanity experienced an era known as 'The Great Exodus' - a catastrophe where blocks became new territories, chains replaced old laws, and the boundary between reality and virtuality completely disappeared."
     }
-  }
+  },
+   "Device_show_title": "High-quality assets throughout Japan",
+   "Device_show_subtitle": "The Kishu World project integrates real-world real estate, culture, and creation into an open digital network. Here, creativity, land, and community together build a new lifestyle - a 'new membership-based cultural city' centered on creators."
 }

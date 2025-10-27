@@ -41,6 +41,7 @@ const maskBackground = computed(() => `rgba(0, 0, 0, ${props.maskOpacity})`);
   background: v-bind(maskBackground); /* Use v-bind to apply dynamic style */
   color: #fff;
   pointer-events: none; /* Allow clicks to pass through the mask */
+  z-index: 100;
 }
 @media (min-width: 769px) { /* Hide on larger screens */
   .mask-content {

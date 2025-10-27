@@ -45,7 +45,7 @@ function handleFabClick() {
   align-items: center;
   padding: 0 0.2rem;
   border-bottom: 2px solid #000;
-  z-index: 100;
+  z-index: 1;
   box-sizing: border-box;
 }
 
@@ -76,6 +76,7 @@ function handleFabClick() {
     top: 0;
     left: 0;
     border-bottom: 0;
+    z-index: 1300;
     /* background-color: white; */
     .logo {
       border-right: 0;

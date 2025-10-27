@@ -151,7 +151,7 @@
     },
     "about_us": {
       "title": "关于我们",
-      "company_intro": "公司介绍",
+      "company_intro": "共建体介绍",
       "project_intro": "项目介绍",
       "partners": "合作伙伴",
       "team_intro": "团队介绍"
@@ -174,7 +174,11 @@
     },
     "treasury": {
       "title": "财库"
-    }
+    },
+  "clan": {
+    "title": "部藩",
+    "system": "部藩系统"
+  }
   },
   "assets": {
     "my_assets": "我的资产",
@@ -399,5 +403,7 @@
     "kishu_clans": {
       "background": "在旧世界崩解的终焉时刻，网络中断，主权消解，城市失去了地图。人类经历了被称为「数字大迁徙（The Great Exodus）」的时代灾变：区块成为新的疆域，链条取代旧法典，现实与虚拟的边界彻底消失。"
     }
-  }
+  },
+  "Device_show_title": "遍布日本全境的优质资产",
+  "Device_show_subtitle": "Kishu World 项目将现实世界的不动产、文化与创作，整合进一个开放的数字网络。在这里，创意、土地与社群共同构建出一种新的生活方式——一个以创作者为核心的「新型会员制文化城市」。"
 }

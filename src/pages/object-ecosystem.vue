@@ -14,17 +14,22 @@
         </div>
       </div>
     </section>
-    <section class="showcase">
+    <!-- <section class="showcase">
       <div class="showcase-wrapper">
         <h2>{{ $t('object_ecosystem.showcase_title') }}</h2>
         <div class="interactive-map"></div>
       </div>
-    </section>
+    </section> -->
     <section class="gallery">
-      <div class="gallery-wrapper">
-        <h2>{{ $t('object_ecosystem.gallery_title') }}</h2>
-        <p>{{ $t('object_ecosystem.gallery_description') }}</p>
-      </div>
+      <router-link to="/properties" class="gallery-link">
+        <div class="gallery-wrapper">
+          <h2>{{ $t('object_ecosystem.gallery_title') }}</h2>
+          <!-- <p>{{ $t('object_ecosystem.gallery_description') }}</p> -->
+          <div class="gallery-images">
+            <img v-for="(image, index) in galleryImages" :key="index" :src="image" :alt="`Gallery Image ${index + 1}`" class="gallery-image">
+          </div>
+        </div>
+      </router-link>
     </section>
     <section class="developing-vision">
       <div class="developing-vision-wrapper">
@@ -35,7 +40,68 @@
   </div>
 </template>
 <script>
-export default { name: 'ObjectEcosystem' }
+export default {
+  name: 'ObjectEcosystem',
+  data() {
+    return {
+      galleryImages: [
+        '/properties/covers/image1.jpg',
+        '/properties/covers/image10.png',
+        '/properties/covers/image11.jpg',
+        '/properties/covers/image12.png',
+        '/properties/covers/image13.png',
+        '/properties/covers/image14.png',
+        '/properties/covers/image15.png',
+        '/properties/covers/image16.jpg',
+        '/properties/covers/image17.jpg',
+        '/properties/covers/image18.jpg',
+        '/properties/covers/image19.png',
+        '/properties/covers/image2.jpg',
+        '/properties/covers/image20.png',
+        '/properties/covers/image21.jpg',
+        '/properties/covers/image22.png',
+        '/properties/covers/image23.png',
+        '/properties/covers/image24.png',
+        '/properties/covers/image25.jpg',
+        '/properties/covers/image3.png',
+        '/properties/covers/image4.jpg',
+        '/properties/covers/image5.jpg',
+        '/properties/covers/image6.jpg',
+        '/properties/covers/image7.jpg',
+        '/properties/covers/image8.jpg',
+        '/properties/covers/image9.jpg',
+      ],
+      flippedImageIndex: -1
+    }
+  },
+  mounted() {
+    this.startFlipping();
+  },
+  beforeUnmount() {
+    clearInterval(this.flipInterval);
+  },
+  methods: {
+    startFlipping() {
+      this.flipInterval = setInterval(() => {
+        this.flipRandomImage();
+      }, 3000); // Flip an image every 3 seconds
+    },
+    flipRandomImage() {
+      let randomIndex;
+      do {
+        randomIndex = Math.floor(Math.random() * this.galleryImages.length);
+      } while (randomIndex === this.flippedImageIndex); // Ensure a different image is flipped
+      this.flippedImageIndex = randomIndex;
+
+      // Reset after a short delay to allow the animation to complete
+      setTimeout(() => {
+        if (this.flippedImageIndex === randomIndex) {
+          this.flippedImageIndex = -1;
+        }
+      }, 1500); // Reset after 1.5 seconds (half of the interval, allowing flip to complete)
+    }
+  }
+}
 </script>
 <style scoped>
 .hero {
@@ -216,5 +282,31 @@ export default { name: 'ObjectEcosystem' }
   .gallery-wrapper p {
     font-size: 16px;
   }
+}
+.gallery-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.gallery-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.7s ease-in-out;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.gallery-image.flipped {
+  transform: rotateY(180deg);
 }
 </style>
