@@ -260,6 +260,28 @@
       "genka_clan_tags": "沉浸式Play空间 / Metaverse入口站"
     }
   },
+  "creators_ecosystem": {
+    "hero_title": "纪州创作者生态",
+    "hero_subtitle": "在这里，艺术、技术与生活交织，每一位创作者都能找到属于自己的舞台。",
+    "hero_body": "Kishu World is built upon the spirit of co-creation, inviting creators from across art, design, music, architecture, film, literature, and more to collaborate within a shared ecosystem. Through the combination of RWA and Web3 mechanisms, we aim to bridge creativity and real-world value, shaping a truly decentralized creative network.",
+    "concept_subtitle": "创作不止于表达，而是共创未来。",
+    "concept_body": "Kishu World 以「共创」为核心，邀请来自艺术、设计、音乐、建筑、影像、文学等领域的创作者共同参与。我们希望通过 RWA + Web3 机制，将创作与真实世界的价值链接，打造一个去中心化的生态。",
+    "mechanism_body_1": "Kishu World 的生态机制以 「创作 → 社群 → 经济 → 再创作」 为核心循环，形成一个持续生长的文化生态网络。在这里，创作不仅是灵感的表达，更是连接价值与社群的桥梁。每一位创作者所产出的作品（无论是音乐、影像、设计、建筑还是文字）都将通过区块链技术被记录、确权，并映射为可流通的「物件资产」（RWA）。这些作品进入物件生态（Object Ecosystem）后，不仅具备收藏价值，更成为推动整个社区文化与经济的关键节点。",
+    "mechanism_body_2": "Kishu World 致力于构建一个开放、公平、共赢的创作者生态，让每一位创作者都能在这里找到属于自己的舞台，实现价值，共创未来。",
+    "creator_types": {
+      "title": "创作者类型",
+      "artist": "艺术家",
+      "designer": "设计师",
+      "musician": "音乐人",
+      "architect": "建筑师",
+      "video_creator": "影像创作者",
+      "literary_creator": "文学创作者",
+      "description": "Kishu World 合作网络连接全球创作者，共同探索 Web3 时代的无限可能。"
+    },
+    "ecosystem_mechanism": {
+      "title": "生态机制"
+    }
+},
   "clans": {
     "title": "创作藩族",
     "sonik_clan": {

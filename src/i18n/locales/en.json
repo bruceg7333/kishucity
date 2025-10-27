@@ -271,6 +271,28 @@
       "genka_clan_tags": "Immersive Play Space / Metaverse Entrance Station"
     }
   },
+  "creators_ecosystem": {
+    "hero_title": "Kishu Creator Ecosystem",
+    "hero_subtitle": "Here, art, technology, and life intertwine, where every creator finds their stage.",
+    "hero_body": "Kishu World is built upon the spirit of co-creation, inviting creators from across art, design, music, architecture, film, literature, and more to collaborate within a shared ecosystem. Through the combination of RWA and Web3 mechanisms, we aim to bridge creativity and real-world value, shaping a truly decentralized creative network.",
+    "concept_subtitle": "Creation is more than expression — let us co-create the future.",
+    "concept_body": "Kishu World is built on a self-sustaining cycle of Creation → Community → Economy → Re-Creation, forming an ever-evolving cultural network. Here, creation is not only an act of inspiration — it is the bridge between value and community. Every creative work — whether music, film, design, architecture, or literature — is recorded and authenticated through blockchain technology, transforming into a tradable object asset.",
+    "mechanism_body_1": "Once these works enter the Object Ecosystem, they gain not only collectible and cultural value but also become essential nodes driving the community’s cultural and economic growth.",
+    "mechanism_body_2": "Creators and holders together participate in building the Economic Ecosystem — through token rewards, governance voting, project proposals, and event collaborations, ensuring a positive feedback loop between creativity and value distribution. As creators gain influence and recognition, the system automatically rewards them through the network, encouraging continuous high-quality content and collaborative innovation. This mechanism transforms creation from individual expression into collective construction — from the birth of inspiration, to the generation of value, and finally to community feedback — forming a living, ever-growing creative ecosystem within Kishu World.",
+    "creator_types": {
+      "title": "Creator Types",
+      "artist": "Artist",
+      "designer": "Designer",
+      "musician": "Musician",
+      "architect": "Architect",
+      "video_creator": "Video Creator",
+      "literary_creator": "Literary Creator",
+      "description": "Kishu World's collaborative network connects global creators to jointly explore the infinite possibilities of the Web3 era."
+    },
+    "ecosystem_mechanism": {
+      "title": "Ecosystem Mechanism"
+    }
+  },
   "clans": {
     "title": "Creative Clans",
     "sonik_clan": {
