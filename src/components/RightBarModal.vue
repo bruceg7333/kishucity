@@ -17,11 +17,11 @@
             <div class="texts">
               <div class="title">{{ t('menu.ecology.title') }}</div>
               <div class="subs">
-                <a href="/properties">{{ t('menu.ecology.creator') }}</a>
+                <a href="/creators-ecosystem">{{ t('menu.ecology.creator') }}</a>
                 <i class="sep"></i>
-                <a>{{ t('menu.ecology.object') }}</a>
+                <a href="/object-ecosystem">{{ t('menu.ecology.object') }}</a>
                 <i class="sep"></i>
-                <a>{{ t('menu.ecology.economy') }}</a>
+                <a href="/economic-ecosystem">{{ t('menu.ecology.economy') }}</a>
               </div>
             </div>
           </div>
@@ -34,9 +34,9 @@
             <div class="texts">
               <div class="title">{{ t('menu.finance.title') }}</div>
               <div class="subs">
-                <a>{{ t('menu.finance.pledge') }}</a>
+                <a href="/staking">{{ t('menu.finance.pledge') }}</a>
                 <i class="sep"></i>
-                <a>{{ t('menu.finance.nft_mall') }}</a>
+                <a href="/mall">{{ t('menu.finance.nft_mall') }}</a>
               </div>
             </div>
           </div>
@@ -49,13 +49,13 @@
             <div class="texts">
               <div class="title">{{ t('menu.about_us.title') }}</div>
               <div class="subs">
-                <a @click.stop="goToAbout">{{ t('menu.about_us.company_intro') }}</a>
+                <a @click.stop="goToCompanyIntroduction">{{ t('menu.about_us.company_intro') }}</a>
                 <i class="sep"></i>
-                <a href="/properties">{{ t('menu.about_us.project_intro') }}</a>
+                <a href="/project-introduction">{{ t('menu.about_us.project_intro') }}</a>
                 <i class="sep"></i>
-                <a href="/properties">{{ t('menu.about_us.partners') }}</a>
+                <a href="/partners">{{ t('menu.about_us.partners') }}</a>
                 <i class="sep"></i>
-                <a href="/properties">{{ t('menu.about_us.team_intro') }}</a>
+                <a href="/team-introduction">{{ t('menu.about_us.team_intro') }}</a>
               </div>
             </div>
           </div>
@@ -66,7 +66,7 @@
               <img :src="a9Image" alt="" draggable="false" />
             </div>
             <div class="texts">
-              <div class="title">{{ t('menu.market.title') }}</div>
+              <div class="title"><a href="/clan-home">{{ t('menu.market.title') }}</a></div>
             </div>
           </div>
         </div>
@@ -77,6 +77,13 @@
             </div>
             <div class="texts">
               <div class="title">{{ t('menu.faq.title') }}</div>
+              <div class="subs">
+                <a href="/faq">{{ t('menu.faq.faq') }}</a>
+                <i class="sep"></i>
+                <a href="/blog-news">{{ t('menu.faq.blog_news') }}</a>
+                <i class="sep"></i>
+                <a href="/whitepaper">{{ t('menu.faq.whitepaper') }}</a>
+              </div>
             </div>
           </div>
         </div>
@@ -87,6 +94,15 @@
             </div>
             <div class="texts">
               <div class="title">{{ t('menu.compliance.title') }}</div>
+              <div class="subs">
+                <a href="/privacy-policy">{{ t('menu.compliance.privacy') }}</a>
+                <i class="sep"></i>
+                <a href="/terms-of-use">{{ t('menu.compliance.terms') }}</a>
+                <i class="sep"></i>
+                <a href="/copyright-terms">{{ t('menu.compliance.contact') }}</a>
+                <i class="sep"></i>
+                <a href="/end-user-terms">{{ t('menu.compliance.end_user_terms') }}</a>
+              </div>
             </div>
           </div>
         </div>
@@ -119,6 +135,11 @@ function handleMaskClick(event) {
   if (event.target === event.currentTarget) {
     emit('close');
   }
+}
+
+function goToCompanyIntroduction() {
+  router.push('/company-introduction');
+  emit('close');
 }
 
 function goToAbout() {

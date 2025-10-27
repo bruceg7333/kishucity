@@ -1,9 +1,10 @@
 <template>
   <footer class="menu-footer" :class="{ 'show-footer': showFooter, 'always-show': props.alwaysShow }">
     <div class="links">
-      <a href="/properties">{{ t('menu.compliance.terms') }}</a>
-      <a href="/properties">{{ t('menu.compliance.privacy') }}</a>
-      <a href="/properties">{{ t('menu.compliance.contact') }}</a>
+      <a href="/terms-of-use">{{ t('menu.compliance.terms') }}</a>
+      <a href="/privacy-policy">{{ t('menu.compliance.privacy') }}</a>
+      <a href="/copyright-terms">{{ t('menu.compliance.contact') }}</a>
+      <a href="/end-user-terms">{{ t('menu.compliance.end_user_terms') }}</a>
     </div>
   </footer>
 </template>

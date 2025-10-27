@@ -6,6 +6,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': '/src', // Optional: setup an alias for easier imports
+      '@pages': '/src/pages',
     },
   },
 });
