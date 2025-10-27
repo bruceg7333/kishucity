@@ -2,25 +2,31 @@
   <div class="property-detail">
     <!-- Cover Section -->
     <section class="cover-section">
-      <img :src="property.coverImage" alt="Property Cover" class="cover-image" />
+      <img :src="property.cover" alt="Property Cover" class="cover-image" />
       <div class="cover-overlay"></div>
-      <h1 class="property-title">{{ t(property.title_key) }}</h1>
+      <div style="z-index: 1;">
+         <h1 class="property-title">
+          {{ t(property.title_key) }}
+        </h1>
+
+        <p class="property-summary">{{ t(property.summary_key) }}</p>
+      </div>
+     
     </section>
 
     <!-- Summary Section -->
-    <section class="summary-section">
-      <p class="property-summary">{{ t(property.summary_key) }}</p>
-    </section>
+    <!-- <section class="summary-section">
+    </section> -->
 
     <!-- Details Section -->
-    <section class="details-section">
+    <!-- <section class="details-section">
       <div v-for="(detail, key) in property.details" :key="key" class="detail-item">
         <div v-if="detail.image" class="detail-image-container">
           <img :src="detail.image" :alt="key + ' image'" class="detail-image" />
           <div class="detail-image-overlay"></div>
         </div>
       </div>
-    </section>
+    </section> -->
   </div>
 </template>
 
@@ -28,35 +34,14 @@
 import { ref } from 'vue';
 import { useRoute } from 'vue-router';
 import { useI18n } from 'vue-i18n';
+import { properties } from './data.js';
 
 const { t } = useI18n();
 const route = useRoute();
 
 const propertyId = route.params.id;
-
-const property = ref({
-  title_key: 'property_detail.hakone_gora_villa.title',
-  summary_key: 'property_detail.hakone_gora_villa.summary',
-  coverImage: '/properties/hotel1/cover.png',
-  details: {
-    designedBy: {
-      text_key: 'property_detail.hakone_gora_villa.designed_by.text',
-      image: '/properties/hotel1/image1.jpg',
-    },
-    concept: {
-      text_key: 'property_detail.hakone_gora_villa.concept.text',
-      image: '/properties/hotel1/image2.png',
-    },
-    mind: {
-      text_key: 'property_detail.hakone_gora_villa.mind.text',
-      image: '/properties/hotel1/image3.jpg',
-    },
-    body: {
-      text_key: 'property_detail.hakone_gora_villa.body.text',
-      image: '/properties/hotel1/image4.png',
-    },
-  },
-});
+console.log(propertyId)
+const property = ref(properties.find(p => p.id == propertyId));
 
 // In a real application, you would fetch property data based on propertyId
 // For now, we'll use static data.
@@ -66,13 +51,12 @@ const property = ref({
 <style scoped>
 .property-detail {
   font-family: 'Arial', sans-serif;
-  color: #333;
   line-height: 1.6;
 }
 
 .cover-section {
   position: relative;
-  height: 60vh;
+  height: 100%;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -99,7 +83,7 @@ const property = ref({
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* 50% opaque black */
+  background-color: rgba(0, 0, 0, 0.32); /* 50% opaque black */
   z-index: 0; /* Ensure it's above the image but below the title */
 }
 
@@ -119,8 +103,8 @@ const property = ref({
 
 .property-summary {
   font-size: .5em;
-  color: #555;
   line-height: 1.2;
+  padding: 1em;
 }
 
 .details-section {
@@ -134,7 +118,6 @@ const property = ref({
 
 .details-section h2 {
   text-align: center;
-  color: #333;
   margin-bottom: 40px;
   font-size: 2.5em;
 }

@@ -1,5 +1,131 @@
 {
-  "properties": "资产",
+  "properties": {
+    "hakoneGora": {
+      "title": "箱根强罗别墅",
+      "subtitle": "GENSENSARYO GEN HAKONE GORA",
+      "summary": "位于神奈川县箱根町强罗，是一家包含度假公寓的日式温泉酒店。酒店拥有80间客房，总面积达3,991平方米，部分客房设有独立汤池，为宾客提供私密的泡汤体验。"
+    },
+    "yutoreroGarden": {
+      "title": "Yutorero花园北轻井泽",
+      "subtitle": "YUTORELO GARDEN KITAKARUIZAWA",
+      "summary": "位于群马县吾妻郡嬬恋村，是一家拥有76间客房的观光度假村。酒店客房总面积达7,763平方米，包含独栋度假小屋，为宾客提供私密的度假空间。"
+    },
+    "awajiSumoto": {
+      "title": "淡路岛洲本别墅",
+      "subtitle": "KISHU RAILWAY AWAJI-SUMOTO VILLA",
+      "summary": "位于兵库县洲本市，是一家拥有60间客房的精品度假式公寓酒店。酒店客房总面积2,538.13平方米，风景宜人。"
+    },
+    "kataseEnoshima": {
+      "title": "片濑江之岛酒店",
+      "subtitle": "KATASE ENOSHIMA HOTEL",
+      "summary": "坐落于神奈川县藤泽市片濑海岸，是一家拥有12间客房的公寓式酒店。酒店客房总面积295.63平方米，为宾客提供温馨舒适的住宿空间。"
+    },
+    "izuIppeki": {
+      "title": "伊豆一碧湖湖畔露台",
+      "subtitle": "IZU IPPEKI LAKE LAKESIDE TERRACE",
+      "summary": "位于静冈县伊东市，是一家拥有49间客房的温泉度假村。酒店客房总面积4,341平方米，兼具日式与西式房间设计，满足不同宾客的住宿偏好。"
+    },
+    "bosoShirahama": {
+      "title": "房总白滨海乡酒店",
+      "subtitle": "BOSO SHIRAHAMA UMISATO HOTEL",
+      "summary": "地处千叶县南房总市白浜町，是一家拥有73间客房的日式温泉酒店。酒店客房总面积达1,882平方米，配备80个停车位，为自驾游客提供便利。"
+    },
+    "nagoyaSakae": {
+      "title": "名古屋荣自然酒店",
+      "subtitle": "HOTEL NATURE NAGOYA SAKAE",
+      "summary": "地处爱知县名古屋市中区，是一家拥有53间客房的城市商务酒店。酒店客房总面积724平方米，地理位置优越。"
+    },
+    "bandaiAtami": {
+      "title": "磐梯热海尤特里罗酒店",
+      "subtitle": "YUTORIRO BANDAI ATAMI",
+      "summary": "位于福岛县郡山市热海町，是一家拥有41间客房的日式温泉度假酒店。酒店巧妙融合西式客房设计与传统日式温泉文化，提供完善的住宿体验。"
+    },
+    "nihombashi": {
+      "title": "日本桥皇家广场",
+      "subtitle": "NIHOMBASHI ROYAL PARK",
+      "summary": "位于东京都中央区的核心区域，毗邻东京站与皇居。作为江户五街道的起点，这座桥至今仍是日本道路网的象征性原点。"
+    },
+    "hakataGrant": {
+      "title": "博多格兰特高地",
+      "subtitle": "HAKATA GRANT HEIGHTS",
+      "summary": "位于九州岛北部福冈市。该城市以其悠久历史和现代活力完美融合而闻名。作为九州地区的交通枢纽，博多站是新干线的重要站点，连接着日本各地。"
+    },
+    "hamanako": {
+      "title": "滨名湖别墅",
+      "subtitle": "HOTEL LISTEL HAMANAKO",
+      "summary": "位于静冈县西部，临近日本著名的咸水湖，以其独特的自然环境与丰富的旅游资源成为备受青睐的度假胜地。"
+    },
+    "nankiShirahama": {
+      "title": "南纪白滨别墅",
+      "subtitle": "NANKI SHIRAHAMA VILLA",
+      "summary": "位于和歌山县南部白滨町。白滨町面朝太平洋，是关西地区最具代表性的海滨度假胜地。"
+    },
+    "biwako": {
+      "title": "琵琶湖别墅",
+      "subtitle": "BIWAKO VILLA",
+      "summary": "位于滋贺县中部，毗邻近日本最大的淡水湖琵琶湖。"
+    },
+    "izusan": {
+      "title": "伊豆山别墅",
+      "subtitle": "IZUSAN VILLA",
+      "summary": "位于于伊豆半岛东北部伊豆山地区。伊豆半岛曾被评为“关东地区最具人气的海滨度假胜地之一”。"
+    },
+    "kusatsu": {
+      "title": "草津别墅",
+      "subtitle": "KUSATSU VILLA",
+      "summary": "位于于群马县西北部草津町。草津町地处海拔约1200米的高原上，被浅间山、白根山等活火山环抱，是日本最具代表性的温泉胜地之一。"
+    },
+    "atamiAjiro": {
+      "title": "热海网代别墅",
+      "subtitle": "ATAMI AJIRO VILLA",
+      "summary": "位于静冈县东部热海市。靠近相模湾畔，距离东京仅约100公里，凭借新干线约50分钟即可抵达。"
+    },
+    "echigoYuzawa": {
+      "title": "越后汤泽别墅",
+      "subtitle": "ECHIGO YUZAWA VILLA",
+      "summary": "位于于新潟县南部的越后山脉腹地。越后汤泽是一座被群山环抱的温泉度假小镇。因诺贝尔文学奖得主川端康成的小说《雪国》而闻名。"
+    },
+    "shinshuSalt": {
+      "title": "信州盐嶺别墅",
+      "subtitle": "KASHIBESSO NATURE VILLAGE SUWAEN",
+      "summary": "坐落于长野县盐尻市，是一家拥有50间客房的度假村。酒店客房总面积3,561平方米，配备110个停车位，主打独栋度假小屋设计。"
+    },
+    "izuShuzenji": {
+      "title": "伊豆修善寺别墅",
+      "subtitle": "IZU SHUZENJI VILLA",
+      "summary": "位于静冈县最南端伊豆半岛，东濒太平洋。这片三面环海的半岛距东京仅约100公里，以温暖的气候、优美的海岸线和丰富的温泉资源闻名。"
+    },
+    "iseToba": {
+      "title": "伊势鸟羽别墅",
+      "subtitle": "ISE TOBA VILLA",
+      "summary": "位于三重县东南部，同属伊势志摩国立公园范围，拥有一条自然与人文完美融合的黄金旅游线路。"
+    },
+    "yonagoKaike": {
+      "title": "米子皆生别墅",
+      "subtitle": "YONAGO KAIKE VILLA",
+      "summary": "位于鸟取县米子市，坐落在日本海沿岸，是一处将海滨风光与温泉文化完美融合的度假胜地。"
+    },
+    "narukoOnsen": {
+      "title": "鸣子温泉别墅",
+      "subtitle": "NARUKO ONSEN VILLA",
+      "summary": "位于宫城县西北部的大崎市，坐落在奥羽山脉的幽静峡谷中。鸣子温泉是日本东北地区最具代表性的温泉乡之一。"
+    },
+    "numajiri": {
+      "title": "沼尻裹磐梯别墅",
+      "subtitle": "NUMAJIRI KOKUSAI RESORT HOTEL",
+      "summary": "坐落在福岛县耶麻郡猪苗代町，是一家以家庭客群为定位的日式温泉度假酒店。酒店拥有35间客房，总面积598.6平方米，营造出温馨舒适的住宿环境。"
+    },
+    "ashizuriMisaki": {
+      "title": "足摺岬别墅",
+      "subtitle": "ASHIZURI MISAKI VILLA",
+      "summary": "位于高知县土佐清水市足摺岬，地处四国岛最南端。足摺岬是足摺宇和海国立公园的核心景观区，被誉为\"四国的天涯海角\"。"
+    },
+    "nasushiohara": {
+      "title": "那须盐原",
+      "subtitle": "NASUSHIOBARA VILLA",
+      "summary": "位于日本栃木县北部。那须盐原位于那须连山脚下，以其丰富的自然景观、温泉和农业资源而闻名，是东京周边热门的旅游目的地之一。"
+    }
+  },
   "about_us": "关于我们",
   "how_it_works": "使用说明",
   "white_papers": "白皮书",
