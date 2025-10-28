@@ -11,11 +11,11 @@
     <Transition name="mm">
       <RightBarModal v-if="isFabOpen" @close="closeFab" />
     </Transition>
-    <AppFooter />
+    <AppFooter v-if="showAppFooter" />
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
+import { ref, onMounted, onUnmounted, computed } from 'vue';
 import AppHeader from './components/AppHeader.vue';
 import AppLayout from './components/AppLayout.vue';
 import RightBarModal from './components/RightBarModal.vue';
@@ -26,6 +26,8 @@ import AppFooter from './components/AppFooter.vue';
 const router = useRouter();
 const isFabOpen = ref(false);
 const isMobile = ref(false);
+
+const showAppFooter = computed(() => router.currentRoute.value.path !== '/');
 
 function toggleFab() {
   isFabOpen.value = !isFabOpen.value;
