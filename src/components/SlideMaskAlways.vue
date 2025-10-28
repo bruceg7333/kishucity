@@ -7,7 +7,8 @@
       </span>
     </div>
     <div class="subtitle" v-if="subtitle">{{ subtitle }}</div>
-    <slot></slot>
+
+    <slot class="slot-wrapper"></slot>
   </div>
 </template>
 
@@ -40,8 +41,7 @@ const maskBackground = computed(() => `rgba(0, 0, 0, ${props.maskOpacity})`);
   text-align: center;
   background: v-bind(maskBackground); /* Use v-bind to apply dynamic style */
   color: #fff;
-  pointer-events: none; /* Allow clicks to pass through the mask */
-}
+ }
 .title {
   font-size: 0.32rem;
   font-weight: bold;
@@ -53,5 +53,5 @@ const maskBackground = computed(() => `rgba(0, 0, 0, ${props.maskOpacity})`);
   font-size: 0.24rem;
   pointer-events: auto; /* Re-enable pointer events for the subtitle */
   z-index: 101; /* Ensure subtitle is above other elements if needed */
-}
+} 
 </style>

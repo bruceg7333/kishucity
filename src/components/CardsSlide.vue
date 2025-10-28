@@ -1,8 +1,9 @@
 <template>
   <div :class="['slide3', { entered: isEntered, leaving: isLeaving }]">
     <div class="bg"></div>
-    <slide-mask title="每一个加入纪州的人，都是叙事者、治理者、创造者。选择你的归属藩......" maskOpacity="0.7">
-      <a class="btn-join">加入部藩</a>
+    <slide-mask :title="t('cards_slide.mask_title')"
+     maskOpacity="0.7">
+      <a class="btn-join" href="/clans">{{ t('cards_slide.join_clan_button') }}</a>
       <div class="cards">
         <div
           class="track"
@@ -19,10 +20,6 @@
               <div class="img">
                 <img :src="card.img" alt="" />
               </div>
-              <!-- <div class="ft">
-                <div class="tags">{{ card.tags }}</div>
-                <button class="btn">加入部藩</button>
-              </div> -->
             </div>
           </div>
           <div class="group clone" style="margin-left: 20px;">
@@ -36,10 +33,6 @@
               <div class="img">
                 <img :src="card.img" alt="" />
               </div>
-              <!-- <div class="ft">
-                <div class="tags">{{ card.tags }}</div>
-                <button class="btn">加入部藩</button>
-              </div> -->
             </div>
           </div>
         </div>
@@ -51,7 +44,9 @@
 <script setup>
 import SlideMask from './SlideMaskAlways.vue';
 import { ref, watch, onMounted, onUnmounted, nextTick } from 'vue';
+import { useI18n } from 'vue-i18n';
 
+const { t } = useI18n();
 const props = defineProps({
   active: { type: Boolean, default: false },
 });
@@ -206,6 +201,8 @@ onUnmounted(() => {
   background: #000; 
   border-radius: 0.24rem; 
   text-decoration: underline;
+  z-index: 1111;
+  transform: translateZ(1px);
 }
 
 .cards {
@@ -293,11 +290,9 @@ onUnmounted(() => {
   height: 0.5rem;
   margin: 0 auto;
   border-radius: 0.24rem;
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJUAAAAzCAYAAACe50q8AAAJV0lEQVR4nO2dCUxU3RHX/28GZhi2AZSKS+pONO4K0oiipi5xQVlaPxVtodFWmlQClmATTzZpqRI+v25pFJWkBuISKRHGDYG0wCchGmIEg9qyVBT1o8omw8wwzG0OeWOmzHszFLAKc38JUWbuezPvvj/3nnfuOecK+Dj4AZgNYAoAL/HH4yN9Fmfo9AB4L/78CgAjAONI+o8x5vea2yjdkIkAtgKIABAC4FujdF7Ox8UCoBVAJYAyAKUATCP9xJGMVAoAGwDsA7AWgDsXwJinC0AhgL8AeDyUA6RGquGKaguANADBwzye8/lzF8BvADxz9E1HQ1TTAfwawHe5KFwCM4BsAKcB6KUu+H8S1eDGgiDEADglGt0OcXNzw4oVK9zDw8Pdh4eH3WbMmOGm1WoFT09PQaPRfKyHA44MPT09TK/Xs/b2dktjY2N/kydPzJWVlaba2lqzlCgk+CeAHzPGntjoYeDfYYlKEAQlgF8B+JGzTw4LC3Pfs2bNntm3btqj9/f2KpqYmc319vZmupKOjw0IXxv/p/3X4+voKAgICFjNnzlTuWLFiv6CgoGTV1tb+wsLChtOnTxsOHz5sduLl6CkxjjFGKxVAQxQBuBPAJseftmrVqu5paWneYWFhqpqamvLz588NX716ZfnednJmzZ6v3LFjhzo6Olozd+5c5e3bt40nT57scSIuup8nGGM5wxIVABqhLgDYJNeAprSMjAyf2NhYj7KyMlNWVlZPTU1Nn6vfsLHGxo0bVUeOHPFeuHChW3Z2tv7UqVM9RqPR0aySDuAchiGq3wL4odybISEh7mfOnNGSYtPS0rpKSkpG7N/gfDroPsbFxXkcO3bM58WLF/0HDx7sbGpq6pf5QqSkRHI/SIlKIXPQbkeCIpspPz/fv66urm/9+vVvuaDGPiSO3Nxcw6ZNm96ZzWbodDr/5cuXy/keTTDKEldN7JASVbDon5CEBHXu3Dltbm6uPiEhobOrq4sb3+OI58+f90dFRbWTGXPlyhW/0NBQOWF5k7tBtLv/i8HTH4nsOoAVUmeJiIhQ5eXl+eXk5OjT09Pfu/oNGM8olUrk5OSoQ0NDVZGRke8aGhrkpsJTjLHf274wWFRfAPhK6sjJkycrSktLJ5SXlxsTExO7huj34IxhVCoVCgoK/Mk9tHnz5ne9vb1SN70XwDrGWIv1Bdvpj4a5n8t1wenTp33fvn1rSUlJ6eaCcg1MJhPIYA8MDFQcP37cW+ai1QB+ZvtCraiiAUyVOioyMlK9du1aVVJSUhd3YLoWra2tlvT09O74+HjN4sWL5aJavhAEYbL1F9vpr0jKllIoFLh3796EqqoqU3Jycrerd7JrUlRU5E/T365duzpkuuBLxtiXsBmpZskZ59HR0R7Tpk1TkmPT1TvWlcnMzHwfERGhXrp0qdxo9T1BdLNbRRUp11/79+/X6HQ6w8uXL/mSiwtTUVHRV1tb2xcfH+8p0wsUwbIENqJaLdVq6tSpClokvnz5ssHVO5UDXLt2zbB161Y1PRXKEA5RVCoxBNiODRs2qDs7O1l5eTn3mHNw/fp1g6+vr8KBp/2DqMieUku2CA9XVVdXmywWPvNxgNevX1saGhrMa9askRuqFkEUleT6DTFv3jy3R48eOYuz4bgQDx8+7Js/f75csT5BEARfEtU0uS6ZPn26kpTJRcOxQss1FIvloEOmKMSFQTsoUlCtVgttbW187uN8gPSg1WrloluIgZFKI/WOl5fXgM+BRyFwbKEVFas2ZPAmUUmuPluNc/KoczhWKHrBydqviRQjufTS3d09cKSPjw/PfuF8gLKhKDvHQY/0kKjapd6hYa67u9tCSzS8SzlWyCH+5s0bR3Z2m0Is0iAJxSg7sfQ5LsacOXPcGhsb5TwCtPLS6lBU... [truncated]  center/cover no-repeat;
   background-size: 100% 100%;
 }
 .btn:hover {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJUAAAAzCAYAAACe50q8AAAJpUlEQVR4nO2de4xUVx3Hv/c5dx47j32yQDuwLC8LK1AoVRr7T4s4FFONRAVLJ1pba320iY8YjdZEo41oqjX9A6qOMbbRWIuQDjFWUsRSpIAUloKsLMzSZdnd2XnszuPeO/feMWe9u447996FXShl53ySm8zj3Ne535zzO7/zO7/LXHj5QVwHggAWAJgNwGtu0nU4EeWqyAPImVsCQDcAZTpVGI7Eqn7jr9GzaQQQAfABAKsBNF+j41KuLwYACwBeB7APwF8BqNM943RExQK4B8CnANwNQKACuOkgz7DN3LYCGAawG8CvAZyazkGnwodMZcdMYVFBzQz8ZiPxF1NYi2ZyV1crqjCA3wD4xVRPSLlpuBfAKwC+BcBzNRdt2/1NNMAS8ehHATSjGt0OMAwLIdgmSMFFguBt4TlPI8/xbgacwDCci6G6eofR5LJhlMpGKW9o+UG9lO/TlHSXqg73aEDZ6VqIPj4PYD2Ah8OR2JmxPxLxqONOjiTiUQ7AdwF8erKyYqhd8Lbe6fY0d7hYXmK1QlIr5fo0JXVWNUoFo2yojndAuX6wvIdhBA8ruJs43613e4ILP1ynqTm92H9czvcekMlzcjh5O4C9iXj0y+FIbPdkF+koqkQ8KgL4OYD7nMpJoUVC3YKITwq2iUq2R82ei+eKg8cVXQ4YVCfvTnhvC+dpXuXyzFrl9s1d55EHTynZ7j15B3G5ADybiEcbw5HYL51uyslPxZm203rbnXkPE1q8uc7berskJ8+o2fN782r2fOmmru0aRGpcLvrbNvhE32w+d/Fvhey5PfmyoTn1Kt8BsBNT8FN9z0lQrmCbEFr2YIBY+oPHd2TkZOe0/RjUG4OcPKnKyc5Ub856yd++qc5Vv0gcOvmrrFYY0G0u6EkA/ab7oQp70d8nANg2Ye7mla6mVV8IacO9pb5DPxyigpoJlJHr/bvcf/hHqXLZQPPqJ0JiYL6dq4gMtrabsyZVWImKuAq+b1dLRFANy6OBXO+hQvLEzmxZK1LjewahF5P64JGfptVsotS08tGgK7jATlg+ADtMu/v/mCgq8v3HRDtWR3E1LBUblm0L5Hr2FzL/+n1ukuEo5SaFjNKTJ3ZkldQ5taHjoSAx6m3uZCmARycT1WYAt1vtzUlBtuG2bYHiwAk50/VSjgpmhlM2MNT5XFYrDmqNHQ8FwYl2/sUvJeLRWyl/qBQVaea+YldT9Uu2+I1Szhg6/fwGbaFqg7KhgxjsrFjHBtvv99ncNOnVvlj5Q6WoPgJgjuVeLatcrobFYuqt54ehK1RRNYQup43s2V0jvrnr3KI/bOcN+HgiHm0d+1IpqgcsizMMggvu8+UvHS5SH1Rtku87JKvDF0r+9k32rRXp5baMfRkTVZudLeVpWSNxUogbvrA3X+uVW8tkz+3NnueXucTAPLvW6mOJeHTU7hoT1Sa3+vLOfZ+bGOd6MUWnXGoYJXWmpI70lrxz7rKLWCARLO9FhajusirFuetZV6BNyPf9Q671SqWQbvAN2d3c4WJYOw8D1sEUlWiGAFchNSxzGZpcllOnqcecguLAMZnjJVaw97SPi6rNnIGuQgq2i2q6W0WZDvgoZCSYMUqFQU0KLa7yopsshykqy/kbglDXyqsjF53ibCg1hprtKZFoBpu7bkjEo34iqrl21cK7GzinOEBFRRlHKwzqvKfJ1qgiy/JYc2KwCoZ3MwzLM7o6Qkd9lHEMdcRgBLfT2obRlspy8pjl/xtLTqMQKJUYulJmndcZ+IioLAOxyuPGOV2nQPkfZFHLJK2MSkQ1YvUPcSXA7AZpnVLGIdEKpjZsyBNRpS3/05WyockGL4WcjDJKjcG7gqzmbGcPsmaSBku0YlLnPc1UVJRxyDpOLW/rESAzL5ccRaUO95bEQJguaaeMIwRu... [truncated]  center/cover no-repeat;
   background-size: 100% 100%;
 }
 .slide3 .title {
