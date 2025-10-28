@@ -10,7 +10,7 @@
         draggable="false"
       />
     </div>
-    <SlideMask :subtitle="t('economic_ecosystem.hero_title')" :title="t('object_ecosystem.title')" maskOpacity="0.7"></SlideMask>
+    <SlideMask :subtitle="t('economic_ecosystem.hero_title')" :title="t('object_ecosystem.hero_title')" maskOpacity="0.7"></SlideMask>
   </div>
 </template>
 
