@@ -7,8 +7,8 @@
         </transition>
       </router-view>
     </AppLayout>
-    <div class="fab-desktop-wrapper">
-      <FabButton v-if="!isMobile" :class="{ open: isFabOpen }" class="fab-desktop" @click="toggleFab" />
+    <div class="fab-desktop-wrapper" v-if="!isMobile">
+      <FabButton :class="{ open: isFabOpen }" class="fab-desktop" @click="toggleFab" />
     </div>
     <Transition name="mm">
       <RightBarModal v-if="isFabOpen" @close="closeFab" />

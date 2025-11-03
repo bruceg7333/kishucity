@@ -80,7 +80,6 @@ export default {
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5); /* Overlay for better text readability */
-  z-index: 1;
 }
 
 .content-container {
@@ -134,6 +133,8 @@ export default {
   list-style-type: disc;
   margin-left: 20px;
   margin-bottom: 20px;
+  margin: 0;
+  padding: 0;
 }
 
 /* Responsive adjustments */

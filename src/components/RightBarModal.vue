@@ -80,29 +80,23 @@
               <div class="title">{{ t('menu.faq.title') }}</div>
               <div class="subs">
                 <a href="/faq">{{ t('menu.faq.faq') }}</a>
-                <i class="sep"></i>
+                <!-- <i class="sep"></i>
                 <a href="/blog-news">{{ t('menu.faq.blog_news') }}</a>
                 <i class="sep"></i>
-                <a href="/whitepaper">{{ t('menu.faq.whitepaper') }}</a>
+                <a href="/whitepaper">{{ t('menu.faq.whitepaper') }}</a> -->
               </div>
             </div>
           </div>
         </div>
-        <div class="cell" v-if="false">
+        <div class="cell">
           <div class="cell-inner">
             <div class="icon">
               <img :src="a11Image" alt="" draggable="false" />
             </div>
             <div class="texts">
-              <div class="title">{{ t('menu.compliance.title') }}</div>
+              <div class="title">{{ t('menu.dao.title') }}</div>
               <div class="subs">
-                <a href="/privacy-policy">{{ t('menu.compliance.privacy') }}</a>
-                <i class="sep"></i>
-                <a href="/terms-of-use">{{ t('menu.compliance.terms') }}</a>
-                <i class="sep"></i>
-                <a href="/copyright-terms">{{ t('menu.compliance.contact') }}</a>
-                <i class="sep"></i>
-                <!-- <a href="/end-user-terms">{{ t('menu.compliance.end_user_terms') }}</a> -->
+                <a href="/dao">{{ t('menu.dao.system') }}</a>
               </div>
             </div>
           </div>

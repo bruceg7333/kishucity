@@ -179,6 +179,10 @@
     "clan": {
       "title": "Clan",
       "system": "Clan System"
+    },
+    "dao": {
+      "title": "DAO Governance",
+      "system": "DAO"
     }
   },
   "about_company": "Company Introduction",
@@ -312,7 +316,8 @@
     "showcase_title": "Showcase",
     "gallery_title": "Gallery",
     "gallery_description": "Detailed content of 25 properties",
-    "developing_vision_title": "Developing Vision"
+    "developing_vision_title": "Developing Vision",
+    "developing_vision_body": "KISHU CREATOR SPACE is a creative sanctuary in Karuizawa, Japan — where legacy, nature, and artistry converge.\n\nNot a hotel. Not a studio.\nBut a living archive of creative souls, designed for musicians, artists, writers, filmmakers, and visionaries inspired by John Lennon, Yoko Ono, Alexander Shaw, and Karuizawa’s quiet dreamers.\n\nEvery room, every stage, every meal shared — is part of an ongoing act of creation.\n\nKishu Creator Space will evolve as a living ecosystem for creativity, built upon real land and tangible experiences:\n\nKISHU STAGE: A performance & film hall for music, theatre, fashion, and live arts — connecting to 8.5M annual Karuizawa visitors.\n\nKISHU STUDIO: A panoramic recording studio and songwriting camp for artists around the world.\n\nKREATOR HALL: A gallery for visual, design, and cultural artists — hosting annual and biannual exhibitions.\n\nKISHU HOTEL: A residency-style retreat with rooms designed for creation — Musician’s Room, Artist’s Room, Writer’s Room, Director’s Room.\n\nKISHU COFFEE & LOUNGE: A meeting ground for exchange and inspiration.\n\nKISHU COMMUNE: A communal kitchen serving private dishes from creators-in-residence.\n\nOUTDOOR LEGENDS: Minimalist Japanese-inspired landmarks such as the Imagine Wall, Shaw Well, and JIN Garden — places for reflection, collaboration, and creative rituals.\n\nKishu Creator Space will serve as a global retreat where creativity is not consumed but cultivated — a new chapter of artistic regeneration, born in Karuizawa."
   },
   "economic_ecosystem": {
     "hero_title": "Value is created by the community — and ultimately returns to the community.",
@@ -415,6 +420,6 @@
       "background": "In the final moments of the old world's collapse, networks were disrupted, sovereignty dissolved, and cities lost their maps. Humanity experienced an era known as 'The Great Exodus' - a catastrophe where blocks became new territories, chains replaced old laws, and the boundary between reality and virtuality completely disappeared."
     }
   },
-   "Device_show_title": "High-quality assets throughout Japan",
+   "Device_show_title": "High Quality Assets Throughout Japan",
    "Device_show_subtitle": "The Kishu World project integrates real-world real estate, culture, and creation into an open digital network. Here, creativity, land, and community together build a new lifestyle - a 'new membership-based cultural city' centered on creators."
 }

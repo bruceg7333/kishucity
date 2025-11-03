@@ -13,6 +13,8 @@ import ProjectIntroduction from '@pages/project-introduction.vue';
 import Partners from '@pages/partners.vue';
 import ClanHome from '@pages/clan-home.vue';
 import Faq from '@pages/faq.vue';
+import Dao from '@pages/dao.vue';
+
 import BlogNews from '@pages/blog-news.vue';
 import Whitepaper from '@pages/whitepaper.vue';
 import Mall from '../pages/mall.vue';
@@ -119,6 +121,11 @@ const routes = [
     path: '/faq',
     name: 'faq',
     component: Faq,
+  },
+  {
+    path: '/dao',
+    name: 'dao',
+    component: Dao,
   },
   {
     path: '/blog-news',

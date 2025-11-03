@@ -35,6 +35,9 @@
       <div class="developing-vision-wrapper">
         <h2>{{ $t('object_ecosystem.developing_vision_title') }}</h2>
         <img src="/fullpic/2-4-1.jpg" alt="Developing Vision Image" class="developing-vision-image">
+        <div class="developing-vision-content">
+          <p v-html="$t('object_ecosystem.developing_vision_body').replace(/\n/g, '<br>')"></p>
+        </div>
       </div>
     </section>
   </div>
@@ -227,6 +230,11 @@ export default {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   display: block;
   margin: 0 auto;
+}
+.developing-vision-content {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 0.35rem;
 }
 
 @media (max-width: 768px) {

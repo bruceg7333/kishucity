@@ -175,10 +175,14 @@
     "treasury": {
       "title": "财库"
     },
-  "clan": {
-    "title": "部藩",
-    "system": "部藩系统"
-  }
+    "clan": {
+      "title": "部藩",
+      "system": "部藩系统"
+    },
+    "dao": {
+      "title": "DAO治理",
+      "system": "DAO"
+    }
   },
   "assets": {
     "my_assets": "我的资产",
@@ -301,7 +305,8 @@
     "showcase_title": "展示",
     "gallery_title": "画廊",
     "gallery_description": "25处物业的详细内容",
-    "developing_vision_title": "发展愿景"
+    "developing_vision_title": "发展愿景",
+    "developing_vision_body": "Kishu Creator Space 是位于日本轻井泽的一处 创意圣地（Creative Sanctuary），\n在这里，传统、自然与艺术交织。\n我们希望以真实的土地为起点，重建一个属于创作者的栖居体系。\n\n它不是酒店，也不仅是工作室——而是一个由艺术家、音乐人、作家、导演与设计师共同组成的 「活的创作档案馆（Living Archive of Creative Soul）」。\n\n在这里，每一间房间、每一个舞台、每一场表演，都是灵感的诞生地。\n\n我们将以多功能空间为核心，构建一个能不断自我进化的艺术生态体系：\n\nKISHU STAGE：演出与影像空间，汇聚音乐、戏剧、演艺与时尚艺术，承载每周现场与全球直播。\n\nKISHU STUDIO：山林中的录音棚，让音乐人能在自然与声音的共鸣中创作。\n\nKREATOR HALL：艺术展厅，展出绘画、雕塑、时尚、设计与视觉艺术，举办纪州双年展。\n\nKISHU HOTEL：为创作者而生的居住空间，每个房间都是一场沉浸的灵感体验。\n\nKISHU COFFEE & LOUNGE：创作者交流的客厅。\n\nKISHU COMMUNE：共享食堂与驻留厨房，孕育思想与味觉的交汇。\n\nOUTDOOR LEGENDS：以自然与文化为媒介的户外空间群，包括 Imagine Wall, Shaw Pavilion, Solitude Walk, ZEN Garden——它们既是打卡地，更是灵感的地图。\n\nKishu Creator Space的目标，是让世界各地的创作者在此长期驻留、创作、演出与交流，\n将灵感与土地、文化与现实重新连接。\n\n这里将诞生新一代的音乐、艺术、故事与思想。\n一个「再生创作」的纪州时代，正在轻井泽悄然苏醒。"
   },
   "economic_ecosystem": {
     "hero_title": "价值由社区创造，也回归于社区。",

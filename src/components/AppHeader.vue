@@ -75,7 +75,7 @@ function handleFabClick() {
     top: 0;
     left: 0;
     border-bottom: 0;
-    z-index: 1300;
+    z-index: 1;
     /* background-color: white; */
     .logo {
       border-right: 0;

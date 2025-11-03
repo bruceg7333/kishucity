@@ -140,6 +140,13 @@ onUnmounted(() => {
 
   .links a {
     font-size: 0.18rem;
+    writing-mode: horizontal-tb;
+  }
+  .a-gap {
+    display: none;
+  }
+  .logo, .logo-text {
+    display: none;
   }
 }
 

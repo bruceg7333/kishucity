@@ -156,7 +156,7 @@ const getDescriptionStyle = (clanId) => {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 1;
+  z-index: -1;
 }
 
 .header-section::before {
@@ -164,7 +164,7 @@ const getDescriptionStyle = (clanId) => {
   position: absolute;
   inset: 0;
   background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
-  z-index: 1;
+  z-index: -1;
 }
 
 .header-content {
@@ -307,15 +307,15 @@ const getDescriptionStyle = (clanId) => {
 /* Responsive Design */
 @media (max-width: 768px) {
   .clan-title {
-    font-size: 2.5em;
+    font-size: 0.8rem;
   }
   
   .clan-field {
-    font-size: 1.2em;
+    font-size: 0.6rem;
   }
   
   .clan-type {
-    font-size: 1em;
+    font-size: 0.3rem;
   }
   
   .clan-details-grid {
@@ -328,21 +328,7 @@ const getDescriptionStyle = (clanId) => {
   }
   
   .description-section h2 {
-    font-size: 2em;
-  }
-}
-
-@media (max-width: 480px) {
-  .clan-title {
-    font-size: 2em;
-  }
-  
-  .header-section {
-    height: 40vh;
-  }
-  
-  .info-section {
-    padding: 60px 15px;
+    font-size: 0.4rem;
   }
 }
 </style>

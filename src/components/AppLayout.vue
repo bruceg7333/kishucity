@@ -43,6 +43,7 @@ onUnmounted(() => {
   position: relative;
   width: 100%;
   flex: 1;
+  z-index: 0;
 }
 .router-area {
   height: 100%;
