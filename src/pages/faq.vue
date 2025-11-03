@@ -1,8 +1,14 @@
 <template>
   <div class="faq pb-gap">
-    <h1>Coming Soon</h1>
+    <ComingSoon />
   </div>
 </template>
 <script>
-export default { name: 'FAQ' }
+import ComingSoon from '../components/ComingSoon.vue';
+export default {
+  name: 'Faq',
+  components: {
+    ComingSoon,
+  },
+}
 </script>

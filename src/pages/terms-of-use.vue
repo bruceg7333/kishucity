@@ -1,8 +1,14 @@
 <template>
   <div class="terms-of-use pb-gap">
-    <h1>Coming Soon</h1>
+    <ComingSoon />
   </div>
 </template>
 <script>
-export default { name: 'TermsOfUse' }
+import ComingSoon from '../components/ComingSoon.vue';
+export default {
+  name: 'TermsOfUse',
+  components: {
+    ComingSoon,
+  },
+}
 </script>

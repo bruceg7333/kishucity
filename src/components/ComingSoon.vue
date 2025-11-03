@@ -30,7 +30,7 @@ export default {
     };
   },
   created() {
-    this.randomImage = this.images[Math.floor(Math.random() * this.images.length)];
+    // this.randomImage = this.images[Math.floor(Math.random() * this.images.length)];
   },
 };
 </script>

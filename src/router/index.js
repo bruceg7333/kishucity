@@ -12,18 +12,22 @@ import CompanyIntroduction from '@pages/company-introduction.vue';
 import ProjectIntroduction from '@pages/project-introduction.vue';
 import Partners from '@pages/partners.vue';
 import ClanHome from '@pages/clan-home.vue';
-import FAQ from '@pages/faq.vue';
+import Faq from '@pages/faq.vue';
+import BlogNews from '@pages/blog-news.vue';
+import Whitepaper from '@pages/whitepaper.vue';
+import Mall from '../pages/mall.vue';
 
+  
 import PrivacyPolicy from '@pages/privacy-policy.vue';
 import TermsOfUse from '@pages/terms-of-use.vue';
 import CopyrightTerms from '@pages/copyright-terms.vue';
 import EndUserTerms from '@pages/end-user-terms.vue';
 import TeamIntroduction from '@pages/team-introduction.vue';
 import Market from '@pages/market.vue';
-import ComingSoon from '../components/ComingSoon.vue';
 import CreatorsEcosystem from '../pages/creators-ecosystem.vue';
 import ObjectEcosystem from '../pages/object-ecosystem.vue';
 import EconomicEcosystem from '../pages/economic-ecosystem.vue';
+import Staking from '../pages/staking.vue';
 
 const routes = [
   {
@@ -84,12 +88,12 @@ const routes = [
   {
     path: '/staking',
     name: 'staking',
-    component: ComingSoon,
+    component: Staking,
   },
   {
     path: '/mall',
     name: 'mall',
-    component: ComingSoon,
+    component: Mall,  
   },
   {
     path: '/company-introduction',
@@ -114,17 +118,17 @@ const routes = [
   {
     path: '/faq',
     name: 'faq',
-    component: FAQ,
+    component: Faq,
   },
   {
     path: '/blog-news',
     name: 'blog-news',
-    component: ComingSoon,
+    component: BlogNews,
   },
   {
     path: '/whitepaper',
     name: 'whitepaper',
-    component: ComingSoon,
+    component: Whitepaper,
   },
   {
     path: '/privacy-policy',

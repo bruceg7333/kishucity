@@ -1,8 +1,14 @@
 <template>
-  <div class="whitepaper">
-    <h1>Coming Soon</h1>
+  <div class="whitepaper pb-gap">
+    <ComingSoon />
   </div>
 </template>
 <script>
-export default { name: 'Whitepaper' }
+import ComingSoon from '../components/ComingSoon.vue';
+export default {
+  name: 'Whitepaper',
+  components: {
+    ComingSoon,
+  },
+}
 </script>

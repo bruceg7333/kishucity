@@ -1,8 +1,14 @@
 <template>
-  <div class="staking">
-    <h1>Coming Soon</h1>
+  <div class="staking pb-gap">
+    <ComingSoon />
   </div>
 </template>
 <script>
-export default { name: 'Staking' }
+import ComingSoon from '../components/ComingSoon.vue';
+export default {
+  name: 'Staking',
+  components: {
+    ComingSoon,
+  },
+}
 </script>

@@ -1,8 +1,14 @@
 <template>
   <div class="team-introduction pb-gap">
-    <h1>Coming Soon</h1>
-  </div>
+    <ComingSoon />
+  </div>  
 </template>
 <script>
-export default { name: 'TeamIntroduction' }
+import ComingSoon from '../components/ComingSoon.vue';
+export default {
+  name: 'TeamIntroduction',
+  components: {
+    ComingSoon,
+  },
+}
 </script>
