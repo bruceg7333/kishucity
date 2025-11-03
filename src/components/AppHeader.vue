@@ -43,7 +43,6 @@ function handleFabClick() {
   flex:none;
   justify-content: space-between;
   align-items: center;
-  padding: 0 0.2rem;
   border-bottom: 2px solid #000;
   z-index: 1;
   box-sizing: border-box;

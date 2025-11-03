@@ -7,7 +7,9 @@
         </transition>
       </router-view>
     </AppLayout>
-    <FabButton v-if="!isMobile" :class="{ open: isFabOpen }" class="fab-desktop" @click="toggleFab" />
+    <div class="fab-desktop-wrapper">
+      <FabButton v-if="!isMobile" :class="{ open: isFabOpen }" class="fab-desktop" @click="toggleFab" />
+    </div>
     <Transition name="mm">
       <RightBarModal v-if="isFabOpen" @close="closeFab" />
     </Transition>
@@ -101,10 +103,19 @@ body {
 }
 
 /* FabButton styles */
-.fab-desktop {
+.fab-desktop-wrapper {
+  width: 1.45rem;
+  height: 100%;
   position: fixed;
-  right: 0.3rem;
-  bottom: 1.8rem;
-  z-index: 100;
+  display: flex;
+  align-items: flex-end;
+  right:0;
+  top: 0;
+  z-index: 33;
+pointer-events: none;
+}
+.fab-desktop {
+  margin-bottom: 1.1rem;
+  pointer-events: auto;
 }
 </style>

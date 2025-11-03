@@ -108,7 +108,7 @@
           </div>
         </div>
       </div>
-      <AppFooter :alwaysShow="true" />
+      <AppFooter :alwaysShow="true" style="min-height: 1.2rem !important;"/>
     </div>
   </div>
 </template>
