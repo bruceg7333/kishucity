@@ -135,11 +135,11 @@ onUnmounted(() => {
   .links {
     margin: 0;
     justify-content: center;
-    gap: 0.8rem;
+    gap: 0.4rem;
   }
 
   .links a {
-    font-size: 0.18rem;
+    font-size: 0.15rem;
     writing-mode: horizontal-tb;
   }
   .a-gap {
