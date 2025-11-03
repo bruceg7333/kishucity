@@ -50,7 +50,7 @@ function handleFabClick() {
 
 .mobile {
   position: absolute;
-  right: 0.5rem;
+  right: 0.25rem;
   top: 0.25rem;
 }
 
@@ -82,6 +82,7 @@ function handleFabClick() {
       width: 0.75rem;
       position: absolute;
       top: 0.1rem;
+      left: 0.15rem;
     }
   }
 
