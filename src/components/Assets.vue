@@ -158,7 +158,7 @@ function selectNftFilter(filter) {
 
   height:1rem;
 
-  background:url(./logo.d7845fb0.png) no-repeat center/contain;
+  background:url(./logo-banner.png) no-repeat center/contain;
 
   border-right:1px solid #3e3a3a;
 

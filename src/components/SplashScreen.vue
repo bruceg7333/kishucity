@@ -79,6 +79,7 @@ onUnmounted(() => {
 }
 
 
+
 @media (max-width: 768px) {
   .logod img {
     width: 1.5rem;

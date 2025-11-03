@@ -124,7 +124,7 @@ const emit = defineEmits(['close']);
 const router = useRouter();
 
 // Image paths
-const logoImage = '/assets/logo.d7845fb0.png';
+const logoImage = '/assets/logo-banner.png';
 const a6Image = '/assets/a6.097be1d1.png';
 const a7Image = '/assets/a7.55faabb4.png';
 const a8Image = '/assets/a8.1d9f5f76.png';

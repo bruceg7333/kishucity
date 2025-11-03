@@ -5,19 +5,19 @@
           <span class="dot ja" v-if="currentLang === 'ja'">
             <img :src="jaFlag" alt="" draggable="false" />
           </span>
-          <span style="font-size: 0.21rem;">ja</span>
-        </div>
-        <div class="lang"  @click="setLang('en')">
-          <span class="dot en" v-if="currentLang === 'en'">
-            <img :src="enFlag" alt="" draggable="false" />
-          </span>
-          <span>en</span>
+          <span style="font-size: 0.21rem;">日本語</span>
         </div>
         <div class="lang" @click="setLang('zh')">
           <span class="dot zh"  v-if="currentLang === 'zh'">
             <img :src="zhFlag" alt="" draggable="false" />
           </span>
-          <span>cn</span>
+          <span>简体中文</span>
+        </div>
+        <div class="lang"  @click="setLang('en')">
+          <span class="dot en" v-if="currentLang === 'en'">
+            <img :src="enFlag" alt="" draggable="false" />
+          </span>
+          <span>Eng</span>
         </div>
       </template>
       <div v-else class="lang" @click="toggleLangOptions">
@@ -30,7 +30,7 @@
         <span v-else-if="currentLang === 'zh'" class="dot zh">
           <img :src="zhFlag" alt="" draggable="false" />
         </span>
-        <span>{{ currentLang === 'ja' ? 'ja' : currentLang === 'en' ? 'en' : 'cn' }}</span>
+        <span>{{ currentLang === 'ja' ? '日本語' : currentLang === 'en' ? 'Eng' : '简体中文' }}</span>
       </div>
    </div>
 </template>
