@@ -31,7 +31,7 @@
       <div class="section-wrapper">
         <h2>沿革</h2>
         <ul class="history-list">
-           <li>{{ $t('company_introduction.history.1912') }}</li>
+           <li>{{ $t('company_introduction.history.1928') }}</li>
            <li>{{ $t('company_introduction.history.1931') }}</li>
            <li>{{ $t('company_introduction.history.1970-2000s') }}</li>
            <li>{{ $t('company_introduction.history.2020s') }}</li>

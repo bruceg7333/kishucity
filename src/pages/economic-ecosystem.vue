@@ -4,7 +4,7 @@
       <h1>{{ $t('economic_ecosystem.hero_title') }}</h1>
       <p>{{ $t('economic_ecosystem.hero_subtitle') }}</p>
       <div class="hero-background"></div>
-      <img src="/public/fullpic/1-1-3.png" alt="Hero Overlay" class="hero-overlay-image"/>
+      <!-- <img src="/public/fullpic/1-1-3.png" alt="Hero Overlay" class="hero-overlay-image"/> -->
     </section>
     <section class="key-sectors">
       <div class="section-wrapper">

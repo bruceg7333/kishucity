@@ -336,7 +336,7 @@
     }
   },
   "company_introduction": {
-    "company_overview": "Kishu Railway Co., Ltd., founded in 1912, is one of Japan's oldest private regional railways. Now operated under the Poliking Group, its business spans railway operations, hospitality, real estate development, and cultural tourism. Headquartered in Gobo City, Wakayama Prefecture, we have expanded our presence with operations and investment bases in 26 cities across Japan, including offices in Tokyo and Karuizawa.",
+    "company_overview": "Kishu Railway Co., Ltd., founded in 1928, is one of Japan's oldest private regional railways. Now operated under the Poliking Group, its business spans railway operations, hospitality, real estate development, and cultural tourism. Headquartered in Tokyo, we have expanded our presence with operations and investment bases in 26 cities across Japan, including offices in Tokyo and Karuizawa.",
     "vision": "Our vision is to carry forward the century-old spirit of Kishu Railway into the digital age. Through blockchain innovation, digitalization, and global collaboration, we aim to transform \"Kishu Railway\" from a single local line into a worldwide network linking people, land, culture, and technology. The railway, for us, has always been more than infrastructure — it is a living bridge across generations and geographies. We believe that true innovation begins with co-creation, and technology serves only to enhance the human spirit of collaboration. Kishu Railway and Kishu World together represent a future where \"connection\" becomes the foundation of cultural evolution.",
     "business_scope": {
       "railway_operations": "Management and maintenance of the Kishu Line (Gobo – Nishi-Gobo).",
@@ -345,7 +345,7 @@
       "web3_innovation": "Launch of Kishu World, a DAO-based membership ecosystem integrating blockchain and culture."
     },
     "history": {
-      "1912": "Founded as Gobo Light Railway Co., Ltd. (predecessor of Kishu Railway)",
+      "1928": "Founded as Gobo Light Railway Co., Ltd. (predecessor of Kishu Railway)",
       "1931": "Renamed to Kishu Railway Co., Ltd.",
       "1970-2000s": "Expanded into hospitality and real estate sectors",
       "2020s": "Initiated Kishu World: a cultural and Web3 fusion program"
