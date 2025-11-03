@@ -1,10 +1,17 @@
 <template>
   <footer class="menu-footer" :class="{ 'show-footer': showFooter, 'always-show': props.alwaysShow }">
+    <div class="logo">
+     </div>
     <div class="links">
       <a href="/terms-of-use">{{ t('menu.compliance.terms') }}</a>
       <a href="/privacy-policy">{{ t('menu.compliance.privacy') }}</a>
+      <div class="a-gap"></div>
       <a href="/copyright-terms">{{ t('menu.compliance.contact') }}</a>
       <a href="/end-user-terms">{{ t('menu.compliance.end_user_terms') }}</a>
+    </div>
+    <div class="logo-text">
+      <h2>KISHU</h2>
+      <h3>WORLD</h3>
     </div>
   </footer>
 </template>
@@ -57,12 +64,28 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
+.logo {
+  margin-top: 20px;
+}
+.a-gap {
+  width: 2rem;
+}
+.logo-text { 
+  h2 {
+    font-size: 0.54rem; 
+    margin: 0;
+   }
+  h3 {
+    font-size: 0.34rem; 
+   }
+}
 .menu-footer {
-  min-height: 1.2rem;
+  min-height: 3.4rem;
   background: #0b0b0b;
   display: flex;
-  align-items: center;
-  padding-left: 1.62rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-right: 2.62rem;
   border-top: 1px solid #000;
   opacity: 0;
   visibility: hidden;
@@ -94,6 +117,8 @@ onUnmounted(() => {
   cursor: pointer;
   transition: all 0.3s ease;
   padding: 0.1rem 0;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
 }
 
 .links a:hover {

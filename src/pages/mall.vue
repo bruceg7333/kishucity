@@ -1,5 +1,5 @@
 <template>
-  <div class="mall">
+  <div class="mall pb-gap">
     <h1>Coming Soon</h1>
   </div>
 </template>

@@ -132,3 +132,7 @@ body {
   opacity: 0;
   transform: translateY(-8px) scale(0.996);
 }
+
+.pb-gap {
+  padding-bottom: 120px;
+}

@@ -1,7 +1,7 @@
 <template>
   <div class="property-detail">
     <!-- Cover Section -->
-    <section class="cover-section">
+    <section class="cover-section pb-gap">
       <img :src="property.cover" alt="Property Cover" class="cover-image" />
       <div class="cover-overlay"></div>
       <div style="z-index: 1;">

@@ -1,5 +1,5 @@
 <template>
-  <div class="clans-page">
+  <div class="clans-page pb-gap">
     <div class="container">
       <h2>{{ t('clans.title') }}</h2>
       <div class="card-list">

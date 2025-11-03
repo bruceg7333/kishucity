@@ -1,5 +1,5 @@
 <template>
-  <div class="creators-ecosystem">
+  <div class="creators-ecosystem pb-gap">
     <section class="hero">
       <h1>{{ $t('creators_ecosystem.hero_title') }}</h1>
       <p>{{ $t('creators_ecosystem.hero_subtitle') }}</p>

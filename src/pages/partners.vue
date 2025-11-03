@@ -1,5 +1,5 @@
 <template>
-  <div class="partners">
+  <div class="partners pb-gap">
     <h1>Coming Soon</h1>
   </div>
 </template>

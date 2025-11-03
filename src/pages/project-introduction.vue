@@ -1,5 +1,5 @@
 <template>
-  <div class="project-introduction">
+  <div class="project-introduction pb-gap">
     <section class="section-wrapper left-layout" style="background-image: url(/assets/banner2.85b3f4da.jpg);">
       <div class="content-container">
         <h2>{{ t('project_introduction.project_overview_title') }}</h2>

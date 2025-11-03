@@ -20,10 +20,6 @@ import RightBar from './RightBar.vue';
 const router = useRouter();
 const isMobile = ref(false);
 
-function goToHome() {
-  router.push('/');
-}
-
 function goToAbout() {
   router.push('/about');
 }

@@ -1,5 +1,7 @@
 <template>
-  <ComingSoon />
+  <div class="market pb-gap">
+    <ComingSoon />
+  </div>
 </template>
 
 <script setup>

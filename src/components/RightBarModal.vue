@@ -329,15 +329,6 @@ function closeModal() {
   transform: translateY(1px);
 }
 
-.menu-footer {
-  min-height: 1.2rem;
-  background: #0b0b0b;
-  display: flex;
-  align-items: center;
-  padding-left: 1.62rem;
-  border-top: 1px solid #000;
-}
-
 .links {
   display: flex;
   gap: 1rem;
@@ -459,22 +450,6 @@ function closeModal() {
   .subs .sep {
     height: 0.16rem;
   }
-
-  .menu-footer {
-    min-height: 1rem;
-    padding: 0.2rem;
-    justify-content: center;
-  }
-
-  .links {
-    margin: 0;
-    justify-content: center;
-    gap: 0.8rem;
-  }
-
-  .links a {
-    font-size: 0.18rem;
-  }
 }
 
 @media (max-width: 375px) {
@@ -508,23 +483,6 @@ function closeModal() {
   .icon img {
     width: 0.6rem;
     height: 0.6rem;
-  }
-
-  .title {
-    font-size: 0.28rem;
-  }
-
-  .subs {
-    font-size: 0.22rem;
-    gap: 0.12rem;
-  }
-
-  .links {
-    gap: 0.6rem;
-  }
-
-  .links a {
-    font-size: 0.16rem;
   }
 }
 

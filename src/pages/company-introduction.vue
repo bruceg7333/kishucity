@@ -1,5 +1,5 @@
 <template>
-  <div class="company-introduction">
+  <div class="company-introduction pb-gap">
     <section class="hero">
       <p>{{ $t('company_introduction.company_overview') }}</p>
       <div class="hero-background">

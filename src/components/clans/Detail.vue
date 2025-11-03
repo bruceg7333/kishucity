@@ -12,7 +12,7 @@
     </section>
 
     <!-- Clan Info Section -->
-    <section class="info-section" :style="getInfoSectionStyle(clan.id)">
+    <section class="info-section pb-gap" :style="getInfoSectionStyle(clan.id)">
       <div class="container">
         <div class="description-section" :style="getDescriptionStyle(clan.id)">
           <h2>About {{ t(clan.name_key) }}</h2>

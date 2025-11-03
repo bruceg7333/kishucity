@@ -1,5 +1,5 @@
 <template>
-  <div class="properties-page">
+  <div class="properties-page pb-gap">
     <div class="container">
       <h2>{{ t('header.properties') }}</h2>
       <div class="card-list">

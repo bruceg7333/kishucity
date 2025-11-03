@@ -85,8 +85,4 @@ onUnmounted(() => {
       margin-right: 0;
     }
   }
-
-.logo2 {
-  /* Styles for the logo in the extra slot of RightBar */
-}
 </style>
