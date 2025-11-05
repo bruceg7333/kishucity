@@ -56,7 +56,7 @@ const property = ref(properties.find(p => p.id == propertyId));
 
 .cover-section {
   position: relative;
-  height: 100%;
+  height: 100vh;
   overflow: hidden;
   display: flex;
   align-items: center;
